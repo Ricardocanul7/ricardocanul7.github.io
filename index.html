@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <title>Home</title>
+    <title>HomePage</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
+    <!-- JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <!-- JavaScript - i18n Library -->
+    <script src="js/CLDRPluralRuleParser.js"></script>
+    <script src="js/jquery.i18n.js"></script>
+    <script src="js/jquery.i18n.messagestore.js"></script>
+    <script src="js/jquery.i18n.fallbacks.js"></script>
+    <script src="js/jquery.i18n.language.js"></script>
+    <script src="js/jquery.i18n.parser.js"></script>
+    <script src="js/jquery.i18n.emitter.js"></script>
+    <script src="js/jquery.i18n.emitter.bidi.js"></script>
+
+    <!-- script to set language -->
+    <script src="js/lang.js"></script>
 </head>
 
 <body>
     <div class="container">
-            <h1>This is ricardocanul7's homepage</h1>
+        <h1 data-i18n="title">This is ricardocanul7's homepage</h1>
+        <ul class="switch-locale">
+            <li>
+                <a href="#" data-locale="en">English</a>
+            </li>
+            <li>
+                <a href="#" data-locale="es">Español</a>
+            </li>
+        </ul>
     </div>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
+
 </body>
+
 </html>
