@@ -1,6 +1,8 @@
 {
-    "title" : " Pagina de Ricardo Canul",
-    "description" : "descripción",
-    "about" : "acerca de",
-    "message" : "mensaje"
+    "Language" : "Español",
+    "Title" : " Pagina de Ricardo Canul",
+    "Description" : "Descripción",
+    "Home" : "Inicio",
+    "Projects" : "Proyectos",
+    "About" : "Acerca de"
 }

@@ -1,6 +1,8 @@
 {
-    "title" : "Ricardo Canul's page",
-    "description" : "description",
-    "about" : "about",
-    "message" : "message"
+    "Language" : "English",
+    "Title" : "Ricardo Canul's page",
+    "Description" : "Description",
+    "Home" : "Home",
+    "Projects" : "Projects",
+    "About" : "About"
 }
