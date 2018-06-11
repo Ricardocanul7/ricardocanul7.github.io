@@ -13,6 +13,8 @@ $(document).ready(function(){
                 $.i18n().locale = 'es';                 // Initialize website in spanish
                 localStorage.setItem('lang', 'es');     // set StorageData lang = "es"
                 language = 'es';                        // update local variable with language = spanish
+                $('body').i18n();                       // load translation into the tag 'body'
+                $('html').attr('lang', language);       // insert attributelang = "es" into html tag
             }else{
                 $.i18n().locale = localStorage['lang'];         // Initialize website in language picked
                 $('body').i18n();
