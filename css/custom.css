@@ -1,3 +1,23 @@
 body {
     background-image: url('../img/bg-triangle.jpg');
 }
+
+.headerArea {
+    padding: 50px;
+    background-image: url('../img/blur.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.headerTextColor{
+    color: lavenderblush;
+}
+
+.contactInfoArea {
+    padding: 150px;
+}
+
+.item-info{
+    display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
