@@ -21,3 +21,12 @@ body {
     display: inline;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+.carousel-icon-color-custom{
+    width: 40px;
+    height: 40px;
+    background-color: darkcyan;
+    outline: black;
+    border: 1px solid black;
+    border-radius: 50%;
+}
