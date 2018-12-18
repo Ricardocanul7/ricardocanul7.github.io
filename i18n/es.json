@@ -5,5 +5,7 @@
     "Home" : "Inicio",
     "Projects" : "Proyectos",
     "Contact" : "Contacto",
-    "DevelopmentMessage" : "Este sitio web está en fase de desarrollo"
+    "DevelopmentMessage" : "Este sitio web está en fase de desarrollo",
+    "Snake-ConsoleApp-Description" : "Es un juego hecho en consola usando el lenguaje C#",
+    "Enigma-Description" : "Es un programa que cifra y descifra mensajes, fue programado en el lenguaje C."
 }

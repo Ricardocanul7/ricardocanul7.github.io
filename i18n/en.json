@@ -5,5 +5,7 @@
     "Home" : "Home",
     "Projects" : "Projects",
     "Contact" : "Contact",
-    "DevelopmentMessage" : "This website is under development"
+    "DevelopmentMessage" : "This website is under development",
+    "Snake-ConsoleApp-Description" : "It's a game made in console using C# language.",
+    "Enigma-Description" : "It's a program that encode and decode messages it was made with C language."
 }
