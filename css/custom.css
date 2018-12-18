@@ -34,3 +34,11 @@ body {
 .card{
     padding: 10px;
 }
+
+.img-profile{
+    background-image: url(../img/indexicons/profile-pic-empty.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
