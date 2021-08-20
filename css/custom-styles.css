@@ -1,0 +1,38 @@
+.project-list .project-item{
+    max-height: 300px;
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 992px) {
+    .project-list .project-item:nth-child(odd){
+        padding-right: .5rem;
+    }
+    .project-list .project-item:nth-child(even){
+        padding-left: .5rem;
+    }
+}
+
+.project-list .project-item .portfolio-item{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-list .project-item .caption{
+    border-radius: 5px;
+}
+
+.project-list .project-item:hover .caption{
+    clip-path: inset(2rem round 5px 5px);
+}
+
+.project-list .project-item:hover .project-image{
+    clip-path: inset(2rem round 5px 5px);
+}
+
+.project-list .project-item .project-image{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 300px;
+}

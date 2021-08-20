@@ -1,0 +1,50 @@
+[
+    {
+        "title" : "Proyecto enigma",
+        "description" : "A program ade in C to encrypt and decrypt texts",
+        "cover_img" : "https://github.com/Ricardocanul7/Proyecto-Enigma/raw/master/readme-media/Enigma2.PNG",
+        "link" : "https://github.com/Ricardocanul7/Proyecto-Enigma"
+    },
+    {
+        "title" : "Snake Console",
+        "description" : "A Snake game made in C# to run on console",
+        "cover_img" : "https://github.com/Ricardocanul7/Snake-ConsoleGame/raw/master/readme-media/Juego.PNG",
+        "link" : "https://github.com/Ricardocanul7/Snake-ConsoleGame"
+    },
+    {
+        "title" : "Gardsoft - Hotel management",
+        "description" : "An application to manage a small hotel (WinForms C#)",
+        "cover_img" : "https://github.com/Ricardocanul7/Hotel/raw/master/readme-media/agrega_habitaciones_color_status.PNG",
+        "link" : "https://github.com/Ricardocanul7/Hotel"
+    },
+    {
+        "title" : "MiniLanding - Triventto",
+        "description" : "",
+        "cover_img" : "/img/projects/triventto.png",
+        "link" : "https://triventto.mx"
+    },
+    {
+        "title" : "Landing - Caminata",
+        "description" : "",
+        "cover_img" : "/img/projects/caminata.png",
+        "link" : "https://caminata.c-urbano.com"
+    },
+    {
+        "title" : "Delivery Store - Cuantica Pizza",
+        "description" : "",
+        "cover_img" : "/img/projects/cuanticapizza.png",
+        "link" : "https://cuanticapizza.com"
+    },
+    {
+        "title" : "Primus",
+        "description" : "Real Estate website with admin panel",
+        "cover_img" : "/img/projects/primus.png",
+        "link" : "https://primusrealtygroup.com/"
+    },
+    {
+        "title" : "Decomarmol",
+        "description" : "Materials website with admin panel",
+        "cover_img" : "img/projects/decomarmol.png",
+        "link" : "https://decomarmol.com.mx/"
+    }
+]
