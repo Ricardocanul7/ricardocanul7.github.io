@@ -18,26 +18,26 @@
         "link" : "https://github.com/Ricardocanul7/Hotel"
     },
     {
-        "title" : "MiniLanding - Triventto",
-        "description" : "",
-        "cover_img" : "/img/projects/triventto.png",
+        "title" : "Landing - Triventto",
+        "description" : "Real estate landing",
+        "cover_img" : "/img/projects/triventto-2.png",
         "link" : "https://triventto.mx"
     },
     {
         "title" : "Landing - Caminata",
-        "description" : "",
+        "description" : "Real estate landing",
         "cover_img" : "/img/projects/caminata.png",
         "link" : "https://caminata.c-urbano.com"
     },
     {
         "title" : "Delivery Store - Cuantica Pizza",
-        "description" : "",
+        "description" : "Food online store",
         "cover_img" : "/img/projects/cuanticapizza.png",
         "link" : "https://cuanticapizza.com"
     },
     {
         "title" : "Primus",
-        "description" : "Real Estate website with admin panel",
+        "description" : "Real estate website with admin panel",
         "cover_img" : "/img/projects/primus.png",
         "link" : "https://primusrealtygroup.com/"
     },
@@ -46,5 +46,17 @@
         "description" : "Materials website with admin panel",
         "cover_img" : "img/projects/decomarmol.png",
         "link" : "https://decomarmol.com.mx/"
+    },
+    {
+        "title" : "ASSO Desarrollos",
+        "description" : "Real state website",
+        "cover_img" : "img/projects/asso-desarrollos.png",
+        "link" : "https://assodesarrollo.com/"
+    },
+    {
+        "title" : "Electromax",
+        "description" : "Landing page for electronics store",
+        "cover_img" : "img/projects/electromax.png",
+        "link" : "#"
     }
 ]
