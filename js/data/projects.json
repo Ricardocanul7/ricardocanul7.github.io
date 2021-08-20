@@ -1,7 +1,7 @@
 [
     {
         "title" : "Proyecto enigma",
-        "description" : "A program ade in C to encrypt and decrypt texts",
+        "description" : "A program made in C to encrypt and decrypt texts",
         "cover_img" : "https://github.com/Ricardocanul7/Proyecto-Enigma/raw/master/readme-media/Enigma2.PNG",
         "link" : "https://github.com/Ricardocanul7/Proyecto-Enigma"
     },
