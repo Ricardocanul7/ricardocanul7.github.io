@@ -2,7 +2,6 @@
 fetch('./js/data/projects.json')
     .then(response => {
         response.json().then((data) => {
-            console.log(data);
             let rawHTML = '';
             const container = document.getElementById('project-list');
 
