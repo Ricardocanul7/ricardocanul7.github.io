@@ -1,0 +1,22 @@
+[
+    {
+        "title" : "PHP",
+        "description" : "<i class='fab fa-laravel'></i> Laravel and CakePHP",
+        "fawesome_icon" : "fab fa-php"
+    },
+    {
+        "title" : "JavaScript",
+        "description" : "JQuery, Ajax, Axios <br/> <i class='fab fa-react'></i> React and <i class='fab fa-vuejs'></i> Vue.js",
+        "fawesome_icon" : "fab fa-js"
+    },
+    {
+        "title" : "Stylesheets",
+        "description" : "CSS and SASS",
+        "fawesome_icon" : "fab fa-sass"
+    },
+    {
+        "title" : "Responsive",
+        "description" : "Looks great on any screen size!",
+        "fawesome_icon" : "icon-screen-smartphone"
+    }
+]
