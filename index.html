@@ -21,8 +21,6 @@
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
-  <link href="css/custom-styles.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -187,12 +185,33 @@
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
 
-  <!-- Load data -->
-  <script src="js/load-data.js"></script>
-
   <script>
     let date = new Date();
     document.getElementById('copy-year').innerHTML = date.getFullYear();
+
+    /* Cache busting */
+    const buildVersion = 1;
+    /* Styles */
+    const styles = [
+      'css/custom-styles.css',  // custom styles for project list items
+    ];
+
+    styles.forEach( src => {
+      const styleElement = document.createElement('link');
+      styleElement.href = src + '?ver=' + buildVersion;
+      styleElement.rel = "stylesheet";
+      document.head.appendChild(styleElement);
+    });
+
+    /* Scripts */
+    const scripts = [
+      'js/load-data.js',  // load skills and projects
+    ]
+    scripts.forEach( src => {
+      const scriptElement = document.createElement('script');
+      scriptElement.src = src + '?ver=' + buildVersion,
+      document.body.appendChild(scriptElement);
+    })
   </script>
 
 </body>
