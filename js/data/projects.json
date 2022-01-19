@@ -58,5 +58,11 @@
         "description" : "Landing page for electronics store",
         "cover_img" : "img/projects/electromax.png",
         "link" : "https://electromax.com.mx/"
+    },
+    {
+        "title" : "Terrakaan",
+        "description" : "Real state website",
+        "cover_img" : "img/projects/terrakaan.png",
+        "link" : "https://terrakaan.org/"
     }
 ]
