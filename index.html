@@ -71,8 +71,13 @@
         <div class="col-lg-10 mx-auto">
           <h2>About Me</h2>
           <p class="lead mb-5">
-            I am a person very passionate about programming.
-            I like to play the guitar, to ride a bike and motorcycle
+            Hello! I'm Ricardo I'm <span id="calculated-age"></span> y.o. and I come from from Mexico, 
+            but living in Poland since 2020.
+            I speak Spanish (Native), English (B2) and a Polish (Basic ~A1),
+            I really enjoy programming which I do as my work and hobby and
+            I like teaching programming when I have the oportinity.
+            <br>
+            Also in my free time I like to play the guitar, ride a bike or motorcycle.
           </p>
           <a class="btn btn-dark btn-xl js-scroll-trigger" href="#skills">Skills</a>
         </div>
@@ -206,10 +211,12 @@
     /* Scripts */
     const scripts = [
       'js/load-data.js',  // load skills and projects
+      'js/custom.js',
     ]
     scripts.forEach( src => {
       const scriptElement = document.createElement('script');
       scriptElement.src = src + '?ver=' + buildVersion,
+      scriptElement.setAttribute('defer', '');
       document.body.appendChild(scriptElement);
     })
   </script>

@@ -1,7 +1,7 @@
 [
     {
         "title" : "PHP",
-        "description" : "<i class='fab fa-laravel'></i> Laravel and CakePHP",
+        "description" : "<i class='fab fa-laravel'></i> Laravel, <i class='fab fa-symfony'></i> Symfony and CakePHP",
         "fawesome_icon" : "fab fa-php"
     },
     {
