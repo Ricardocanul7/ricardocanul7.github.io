@@ -9,5 +9,9 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss()
     ],
+  },
+  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n'],
+  lucide: {
+    namePrefix: 'Icon',
   }
 })
