@@ -5,12 +5,22 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+  i18n: {
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'es', iso: 'es-ES', name: 'Español', file: 'es.json' },
+    ]
+  },
   vite: {
     plugins: [
       tailwindcss()
     ],
   },
-  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n'],
+  modules: [
+    'nuxt-lucide-icons',
+    '@nuxtjs/i18n'
+  ],
   lucide: {
     namePrefix: 'Icon',
   }

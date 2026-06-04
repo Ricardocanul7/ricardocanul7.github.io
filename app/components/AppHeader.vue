@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
     <div>
         <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
@@ -7,10 +10,11 @@
                 <span>MiPortafolio<span class="text-indigo-400">.</span></span>
             </a>
             <nav class="flex gap-6 text-sm font-medium text-slate-400">
-                <NuxtLink to="/" class="hover:text-indigo-400 transition-colors">Home</NuxtLink>
-                <NuxtLink to="/about" class="hover:text-indigo-400 transition-colors">About</NuxtLink>
-                <NuxtLink to="/contact" class="hover:text-indigo-400 transition-colors">Contact</NuxtLink>
+                <NuxtLink :to="$localePath('/')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.home') }}</NuxtLink>
+                <NuxtLink :to="$localePath('/about')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.about') }}</NuxtLink>
+                <NuxtLink :to="$localePath('/projects')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.projects') }}</NuxtLink>
             </nav>
+            <LanguageSwitcher />
         </div>
     </header>
     </div>

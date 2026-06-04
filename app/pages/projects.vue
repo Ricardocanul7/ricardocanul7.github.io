@@ -1,0 +1,5 @@
+<template>
+    <h1 class="text-3xl font-bold underline">
+        Projects Page
+    </h1>
+</template>
