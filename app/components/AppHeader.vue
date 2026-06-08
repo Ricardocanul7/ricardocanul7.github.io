@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -10,9 +11,9 @@
                 <span>MiPortafolio<span class="text-indigo-400">.</span></span>
             </a>
             <nav class="flex gap-6 text-sm font-medium text-slate-400">
-                <NuxtLink :to="$localePath('/')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.home') }}</NuxtLink>
-                <NuxtLink :to="$localePath('/about')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.about') }}</NuxtLink>
-                <NuxtLink :to="$localePath('/projects')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.projects') }}</NuxtLink>
+                <NuxtLink :to="localePath('/')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.home') }}</NuxtLink>
+                <NuxtLink :to="localePath('/about')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.about') }}</NuxtLink>
+                <NuxtLink :to="localePath('/projects')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.projects') }}</NuxtLink>
             </nav>
             <LanguageSwitcher />
         </div>
