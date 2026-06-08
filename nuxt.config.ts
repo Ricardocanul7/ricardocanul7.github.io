@@ -13,7 +13,9 @@ export default defineNuxtConfig({
     locales: [
       { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
       { code: 'es', iso: 'es-ES', name: 'Español', file: 'es.json' },
-    ]
+    ],
+    strategy: 'no_prefix',
+    langDir: 'locales/',
   },
   vite: {
     plugins: [
