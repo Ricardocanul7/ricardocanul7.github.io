@@ -26,5 +26,10 @@ export default defineNuxtConfig({
   ],
   lucide: {
     namePrefix: 'Icon',
+  },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
   }
 })
