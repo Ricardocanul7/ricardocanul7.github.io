@@ -2,7 +2,8 @@
     "appHeader": {
         "home": "Home",
         "about": "About",
-        "projects": "Projects"
+        "projects": "Projects",
+        "experience": "Experience"
     },
     "appFooter": {
         "copy": "© 2026 Ricardo. All rights reserved."

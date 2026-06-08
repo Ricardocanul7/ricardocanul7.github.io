@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/scss/main.scss'],
   i18n: {
     langDir: 'locales',
     defaultLocale: 'en',
@@ -18,10 +18,7 @@ export default defineNuxtConfig({
       tailwindcss()
     ],
   },
-  modules: [
-    'nuxt-lucide-icons',
-    '@nuxtjs/i18n'
-  ],
+  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts'],
   lucide: {
     namePrefix: 'Icon',
   },
