@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    baseURL: '/portfolio/'
+    baseURL: '/'
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -14,8 +14,6 @@ export default defineNuxtConfig({
       { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
       { code: 'es', iso: 'es-ES', name: 'Español', file: 'es.json' },
     ],
-    strategy: 'no_prefix',
-    langDir: 'locales/',
   },
   vite: {
     plugins: [
