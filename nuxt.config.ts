@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: 'portfolio/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
     head: {
       title: 'Portfolio',
       meta: [
