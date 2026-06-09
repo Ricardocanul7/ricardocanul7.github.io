@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
+    baseURL: 'https://ricardocanul7.github.io/portfolio/',
     head: {
       title: 'Portfolio',
       meta: [
