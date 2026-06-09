@@ -1,5 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
+const baseURL = '/portfolio/';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -28,7 +30,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
+    baseURL: process.env.NODE_ENV === 'production' ? baseURL : '/',
     head: {
       title: 'Portfolio',
       meta: [
@@ -36,10 +38,10 @@ export default defineNuxtConfig({
       ],
       htmlAttrs: { lang: 'en' },
       link: [
-        { 
-          rel: 'icon', 
-          type: 'image/x-icon', 
-          href: process.env.NODE_ENV === 'production' ?'/portfolio/favicon.ico' : '/favicon.ico'
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: process.env.NODE_ENV === 'production' ? baseURL + 'favicon.ico' : '/favicon.ico'
         },
       ],
     },
