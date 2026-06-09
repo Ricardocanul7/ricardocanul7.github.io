@@ -7,5 +7,11 @@
     },
     "appFooter": {
         "copy": "© 2026 Ricardo. Todos los derechos reservados."
+    },
+    "homeHero": {
+        "title": "Hola, soy Ricardo Canul",
+        "description": "Un apasionado desarrollador especializado en desarrollo web. Creo sitios web modernos y responsivos que proporcionan experiencias de usuario excepcionales.",
+        "cta": "Ver mi trabajo"
     }
+
 }
