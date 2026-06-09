@@ -5,7 +5,7 @@ const isMenuOpen = ref(false);
 </script>
 
 <template>
-    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
+    <header class="sticky top-0 z-50 bg-slate-900 backdrop-blur-md border-b border-slate-900">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <NuxtLink :to="localePath('/')" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 group plus-jakarta-sans-font">
                 <span class="bg-indigo-600 text-white w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-sm group-hover:scale-105 transition-transform">P</span>
@@ -13,7 +13,7 @@ const isMenuOpen = ref(false);
             </NuxtLink>
 
             <!-- Desktop Navigation -->
-            <nav class="inter-font hidden md:flex gap-6 text-sm font-medium text-slate-400">
+            <nav class="inter-font hidden md:flex gap-6 text-sm font-semibold text-slate-400">
                 <NuxtLink :to="localePath('/')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.home') }}</NuxtLink>
                 <NuxtLink :to="localePath('/projects')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.projects') }}</NuxtLink>
                 <NuxtLink :to="localePath('/experience')" class="hover:text-indigo-400 transition-colors">{{ $t('appHeader.experience') }}</NuxtLink>
@@ -35,7 +35,7 @@ const isMenuOpen = ref(false);
         </div>
 
         <!-- Mobile Navigation -->
-        <div v-show="isMenuOpen" class="md:hidden border-t border-slate-900 bg-slate-950 px-6 py-4 flex flex-col gap-4">
+        <div v-show="isMenuOpen" class="md:hidden border-t border-slate-900 bg-slate-900 px-6 py-4 flex flex-col gap-4 text-center text-sm font-semibold">
             <NuxtLink :to="localePath('/')" @click="isMenuOpen = false" class="text-slate-400 hover:text-indigo-400 transition-colors">{{ $t('appHeader.home') }}</NuxtLink>
             <NuxtLink :to="localePath('/projects')" @click="isMenuOpen = false" class="text-slate-400 hover:text-indigo-400 transition-colors">{{ $t('appHeader.projects') }}</NuxtLink>
             <NuxtLink :to="localePath('/experience')" @click="isMenuOpen = false" class="text-slate-400 hover:text-indigo-400 transition-colors">{{ $t('appHeader.experience') }}</NuxtLink>

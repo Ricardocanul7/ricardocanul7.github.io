@@ -14,7 +14,8 @@ const highlightedCode = computed(() => {
     let highlighted = props.code
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+        .replace(/>/g, "&gt;")
+        .trim();
 
     const tokenRegex = /(["'])(?:(?=(\\?))\2.)*?\1|\b(class|public|private|protected|function|return|new|static|extends|implements|use|namespace|const|var|let|if|else|foreach|as)\b|(\$[a-zA-Z_][a-zA-Z0-9_]*)|(-&gt;[a-zA-Z_][a-zA-Z0-9_]*)|([-=]&gt;|=)|\b([A-Z][a-zA-Z0-9_]*)\b/g;
 

@@ -9,7 +9,7 @@
 
 <style scoped>
     .badge {
-        font-family: 'inter', sans-serif;
+        font-family: 'Jetbrains Mono', sans-serif;
         font-size: 16px;
         font-weight: 700;
         color: #C0C1FF;
