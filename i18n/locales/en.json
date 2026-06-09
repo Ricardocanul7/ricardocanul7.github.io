@@ -7,5 +7,10 @@
     },
     "appFooter": {
         "copy": "© 2026 Ricardo. All rights reserved."
+    },
+    "homeHero": {
+        "title": "Hi, I'm Ricardo Canul",
+        "description": "A passionate software developer specializing in web development. I create modern and responsive websites and applications that provide seamless user experiences.",
+        "cta": "View My Work"
     }
 }
