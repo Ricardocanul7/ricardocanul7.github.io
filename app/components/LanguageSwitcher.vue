@@ -1,12 +1,12 @@
 <script setup>
-const { locale, locales, setLocale } = useI18n()
+const { locale: currentLocale, locales, setLocale } = useI18n()
 const isOpen = ref(false)
 const container = ref(null)
 
 const toggleDropdown = () => isOpen.value = !isOpen.value
 
-const selectLocale = (code) => {
-  setLocale(code)
+const selectLocale = async (code) => {
+  await setLocale(code)
   isOpen.value = false
 }
 
@@ -27,7 +27,7 @@ if (import.meta.client) {
             type="button"
             class="flex items-center gap-2 bg-slate-900/50 text-slate-400 text-xs font-medium border border-slate-800 hover:border-indigo-500/50 hover:text-white rounded-lg px-3 py-1.5 transition-all duration-200"
         >
-            <span class="uppercase">{{ locale }}</span>
+            <span class="uppercase">{{ currentLocale }}</span>
             <svg 
                 class="w-3 h-3 transition-transform duration-200" 
                 :class="{ 'rotate-180': isOpen }"
@@ -52,7 +52,7 @@ if (import.meta.client) {
                         :key="loc.code"
                         @click="selectLocale(loc.code)"
                         :class="[
-                            locale === loc.code ? 'bg-indigo-600/10 text-indigo-400' : 'text-slate-400 hover:bg-slate-900 hover:text-white',
+                            currentLocale === loc.code ? 'bg-indigo-600/10 text-indigo-400' : 'text-slate-400 hover:bg-slate-900 hover:text-white',
                             'block w-full text-left px-4 py-2 text-xs font-medium transition-colors'
                         ]"
                     >
