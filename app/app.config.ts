@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  name: 'MyPortafolio.Dev',
+  name: 'Portfolio',
   version: '0.1.0',
   description: 'A portfolio website built with Vue.js and Nuxt.js',
   projects: [

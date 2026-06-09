@@ -26,5 +26,17 @@ export default defineNuxtConfig({
     prerender: {
       failOnError: false,
     },
+  },
+  app: {
+    head: {
+      title: 'Portfolio',
+      meta: [
+        { name: 'description', content: 'Ricardo Canul\'s portfolio' },
+      ],
+      htmlAttrs: { lang: 'en' },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
   }
 })
