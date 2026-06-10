@@ -23,6 +23,10 @@ export default defineAppConfig({
       {
         name: 'LinkedIn',
         link: 'https://www.linkedin.com/in/ricardo-canul-584534142/'
+      },
+      {
+        name: 'Source Code',
+        link: 'https://github.com/Ricardocanul7/portfolio'
       }
     ]
   }

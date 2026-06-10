@@ -4,18 +4,18 @@ const footer = appConfig.footer;
 </script>
 
 <template>
-    <footer id="contacto" class="bg-slate-950 text-slate-500 py-12 mt-auto border-t border-slate-900 relative">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center text-center">
-            <div class="border-t border-slate-900 w-full mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-4">
+    <footer id="contacto" class="bg-slate-950 text-slate-500 py-6 mt-auto border-t border-slate-900 relative">
+        <LayoutContainer>
+            <div class="w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-4">
                 <p>{{ $t('appFooter.copy') }}</p>
                 <div class="flex gap-4">
                     <div v-for="(link, index) in footer.socialLinks" :key="index" class="social-links">
-                        <a :href="link.link" class="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                        <a :href="link.link" class="font-inter text-xs font-semibold text-slate-300 hover:text-white hover:underline decoration-emerald-300 transition-colors" target="_blank" rel="noopener noreferrer">
                             {{link.name}}
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </LayoutContainer>
     </footer>
 </template>
