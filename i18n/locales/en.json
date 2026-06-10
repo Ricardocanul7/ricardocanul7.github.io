@@ -20,5 +20,8 @@
             "I am a dedicated Backend Developer with a deep-rooted expertise in PHP, having spent over 4 years building enterprise-grade applications using <span class=\"text-violet-300\">Laravel</span> and <span class=\"text-violet-300\">Symfony</span>. My journey has always been driven by the pursuit of clean, maintainable code and system performance.",
             "In recent years, I've expanded my horizons into the Python ecosystem, embracing <span class=\"text-emerald-300\">Django</span>; and <span class=\"text-emerald-300\">FastAPI</span>. This shift was sparked by a growing interest in Data Science and machine learning, allowing me to build smarter, more predictive backend services."
         ]
+    },
+    "projects": {
+        "viewProject": "Visit"
     }
 }

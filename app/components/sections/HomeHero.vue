@@ -19,11 +19,7 @@
                     <NuxtLink :to="localePath('/projects')"
                         class="inline-flex items-center gap-2 bg-violet-300 hover:bg-violet-300 text-indigo-800 font-medium text-sm px-6 py-3 rounded-xl transition-colors shadow-lg shadow-indigo-600/20 group w-fit mx-auto lg:mx-0">
                         {{ $t('homeHero.cta') }}
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
+                        <Icon name="heroicons:arrow-right-20-solid" class="transform group-hover:translate-x-1 transition-transform"/>
                     </NuxtLink>
                 </LayoutColumn>
                 <LayoutColumn span="6">
