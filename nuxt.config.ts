@@ -14,6 +14,10 @@ export default defineNuxtConfig({
       { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
       { code: 'es', iso: 'es-ES', name: 'Español', file: 'es.json' },
     ],
+    compilation: {
+      strictMessage: false,
+      escapeHtml: false,
+    }
   },
   vite: {
     plugins: [

@@ -1,3 +1,4 @@
 <template>
   <SectionsHomeHero />
+  <SectionsHomeAbout />
 </template>

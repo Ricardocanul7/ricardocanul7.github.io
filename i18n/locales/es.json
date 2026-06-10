@@ -12,6 +12,13 @@
         "title": "Hola, soy Ricardo Canul",
         "description": "Un apasionado desarrollador especializado en desarrollo web. Creo sitios web modernos y responsivos que proporcionan experiencias de usuario excepcionales.",
         "cta": "Ver mi trabajo"
+    },
+    "homeAbout": {
+        "title": "Sobre mí",
+        "header": "Dominando el arte de la ingeniería Backend",
+        "description_paragraphs": [
+            "Soy un desarrollador Backend dedicado con una profunda experiencia en PHP, habiendo pasado más de 4 años construyendo aplicaciones de nivel empresarial utilizando &lt;span class=\"text-violet-300\"&gt;Laravel&lt;/span&gt; y &lt;span class=\"text-violet-300\"&gt;Symfony&lt;/span&gt;. Mi trayectoria siempre ha estado impulsada por la búsqueda de un código limpio, mantenible y el rendimiento del sistema.",
+            "En los últimos años, he expandido mis horizontes hacia el ecosistema de Python, adoptando &lt;span class=\"text-emerald-300\"&gt;Django&lt;/span&gt; y &lt;span class=\"text-emerald-300\"&gt;FastAPI&lt;/span&gt;. Este cambio fue impulsado por un creciente interés en la Ciencia de Datos y el aprendizaje automático, permitiéndome construir servicios backend más inteligentes y predictivos."
+        ]
     }
-
 }
