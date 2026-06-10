@@ -1,5 +1,5 @@
 <template>
-    <div class="font-jetbrains-mono text-base font-bold text-[#C0C1FF] rounded-[100px] bg-[#C0C1FF]/10 backdrop-blur-sm border border-[#C0C1FF]/20 py-1 px-4 w-fit">
+    <div class="font-jetbrains-mono text-base font-bold text-violet-300 rounded-[100px] bg-violet-300/10 backdrop-blur-sm border border-violet-300/20 py-1 px-4 w-fit">
         <slot />
     </div>
 </template>

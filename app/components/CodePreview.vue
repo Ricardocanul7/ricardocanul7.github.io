@@ -27,11 +27,11 @@ const highlightedCode = computed(() => {
         const className = args[5];
 
         if (stringQuote) {
-            return `<span class="text-[#8083FF]">${match}</span>`;
+            return `<span class="text-indigo-400">${match}</span>`;
         }
 
         if (keyword) {
-            return `<span class="text-[#89CEFF]">${match}</span>`;
+            return `<span class="text-sky-300">${match}</span>`;
         }
 
         if (variable) {
@@ -41,15 +41,15 @@ const highlightedCode = computed(() => {
         if (methodCall) {
             const op = match.substring(0, 5); // "-&gt;"
             const name = match.substring(5);
-            return `<span class="text-[#4EDEA3]">${op}</span><span class="text-[#4EDEA3]">${name}</span>`;
+            return `<span class="text-emerald-400">${op}</span><span class="text-emerald-400">${name}</span>`;
         }
 
         if (operator) {
-            return `<span class="text-[#4EDEA3]">${match}</span>`;
+            return `<span class="text-emerald-400">${match}</span>`;
         }
         
         if (className) {
-            return `<span class="text-[#DAE2FD]">${match}</span>`;
+            return `<span class="text-indigo-100">${match}</span>`;
         }
 
         return match;
