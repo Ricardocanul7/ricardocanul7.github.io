@@ -1,23 +1,8 @@
 <template>
-    <div class="badge">
+    <div class="font-jetbrains-mono text-base font-bold text-[#C0C1FF] rounded-[100px] bg-[#C0C1FF]/10 backdrop-blur-sm border border-[#C0C1FF]/20 py-1 px-4 w-fit">
         <slot />
     </div>
 </template>
 
 <script setup lang="ts">
 </script>
-
-<style scoped>
-    .badge {
-        font-family: 'Jetbrains Mono', sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        color: #C0C1FF;
-        border-radius: 100px;
-        background: rgba(192, 193, 255, 0.1);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(192, 193, 255, 0.2);
-        padding: 4px 16px;
-        width: fit-content;
-    }
-</style>

@@ -20,13 +20,13 @@ const getClasses = (exact: boolean) => `${linkClasses} ${exact ? exactActiveClas
 <template>
     <header class="sticky top-0 z-50 bg-slate-900 backdrop-blur-md border-b border-slate-900">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <NuxtLink :to="localePath('/')" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 group plus-jakarta-sans-font">
+            <NuxtLink :to="localePath('/')" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 group font-plus-jakarta-sans">
                 <span class="bg-indigo-600 text-white w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-sm group-hover:scale-105 transition-transform">P</span>
                 <span>{{ appConfig.name }}</span>
             </NuxtLink>
 
             <!-- Desktop Navigation -->
-            <nav class="inter-font hidden md:flex gap-6 text-sm font-semibold text-slate-400">
+            <nav class="font-inter hidden md:flex gap-6 text-sm font-semibold text-slate-400">
                 <NuxtLink 
                     v-for="link in navLinks" 
                     :key="link.path" 

@@ -8,10 +8,10 @@
                         &lt;Software Engineer/&gt;
                     </Badge>
 
-                    <h1 class="text-4xl font-bold mb-4 plus-jakarta-sans-font">
+                    <h1 class="text-4xl font-bold mb-4 font-plus-jakarta-sans">
                         {{ $t('homeHero.title') }}
                     </h1>
-                    <p class="text-lg text-slate-400 mb-6 inter-font">
+                    <p class="text-lg text-slate-400 mb-6 font-inter">
                         {{ $t('homeHero.description') }}
                     </p>
                     <NuxtLink :to="localePath('/projects')"

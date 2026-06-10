@@ -1,6 +1,6 @@
 <template>
     <div class="code-preview">
-        <pre class="text-sm leading-relaxed whitespace-pre-wrap"><code v-html="highlightedCode"></code></pre>
+        <pre class="text-sm leading-relaxed whitespace-pre-wrap"><code class="font-liberation-mono" v-html="highlightedCode"></code></pre>
     </div>
 </template>
 
@@ -58,9 +58,3 @@ const highlightedCode = computed(() => {
     return highlighted;
 })
 </script>
-
-<style scoped>
-code {
-    font-family: "Liberation Mono", monospace;
-}
-</style>
