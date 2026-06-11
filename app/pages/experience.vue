@@ -127,46 +127,50 @@ const certifications = [
             </LayoutContainer>
         </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 bg-slate-900">
-            <!-- Education -->
-            <section class="education-section">
-                <div class="education-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
-                    <Icon name="material-symbols:school-outline" />
-                    <h2 class="font-plus-jakarta-sans font-bold text-2xl">Education</h2>
-                </div>
-                <div class="bg-slate-900 py-10 px-4 md:px-10">
-                    <div v-for="(edu, index) in education" :key="index"
-                        class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50">
-                        <p class="text-slate-100 font-inter text-base font-bold">{{ edu.degree }}</p>
-                        <h3 class="text-slate-400 font-inter text-base mt-1">
-                            {{ edu.institution }}
-                        </h3>
-                        <span class="text-emerald-300 font-mono text-sm">{{ edu.dates }}</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Certifications -->
-            <section class="certifications-section">
-                <div class="certifications-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
-                    <Icon name="material-symbols:verified-outline" />
-                    <h2 class="font-plus-jakarta-sans font-bold text-2xl">Certifications</h2>
-                </div>
-                <div class="bg-slate-900 py-10 px-4 md:px-10">
-                    <div v-for="(cert, index) in certifications" :key="index"
-                        class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50 flex items-center gap-5">
-                        <div class="icon-container text-violet-300 text-4xl">
-                            <Icon :name="cert.icon" />
+        <div class="bg-slate-900">
+            <LayoutContainer>
+                <div class="grid grid-cols-1 lg:grid-cols-2 bg-slate-900">
+                    <!-- Education -->
+                    <section class="education-section">
+                        <div class="education-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
+                            <Icon name="material-symbols:school-outline" />
+                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">Education</h2>
                         </div>
-                        <div>
-                            <h3 class="text-slate-100 font-plus-jakarta-sans font-bold text-base mt-1">
-                                {{ cert.title }}
-                            </h3>
-                            <p class="text-slate-400 font-inter italic">{{ cert.institution }} • {{ cert.year }}</p>
+                        <div class="bg-slate-900 py-10 px-4 md:px-10">
+                            <div v-for="(edu, index) in education" :key="index"
+                                class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50">
+                                <p class="text-slate-100 font-inter text-base font-bold">{{ edu.degree }}</p>
+                                <h3 class="text-slate-400 font-inter text-base mt-1">
+                                    {{ edu.institution }}
+                                </h3>
+                                <span class="text-emerald-300 font-mono text-sm">{{ edu.dates }}</span>
+                            </div>
                         </div>
-                    </div>
+                    </section>
+        
+                    <!-- Certifications -->
+                    <section class="certifications-section">
+                        <div class="certifications-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
+                            <Icon name="material-symbols:verified-outline" />
+                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">Certifications</h2>
+                        </div>
+                        <div class="bg-slate-900 py-10 px-4 md:px-10">
+                            <div v-for="(cert, index) in certifications" :key="index"
+                                class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50 flex items-center gap-5">
+                                <div class="icon-container text-violet-300 text-4xl">
+                                    <Icon :name="cert.icon" />
+                                </div>
+                                <div>
+                                    <h3 class="text-slate-100 font-plus-jakarta-sans font-bold text-base mt-1">
+                                        {{ cert.title }}
+                                    </h3>
+                                    <p class="text-slate-400 font-inter italic">{{ cert.institution }} • {{ cert.year }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
+            </LayoutContainer>
         </div>
     </div>
 </template>
