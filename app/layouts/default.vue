@@ -2,9 +2,11 @@
 </script>
 
 <template>
-    <div>
+    <div class="min-h-screen flex flex-col bg-slate-900">
         <AppHeader />
-        <slot />
+        <main class="page-content grow">
+            <slot />
+        </main>
         <AppFooter />
     </div>
 </template>
