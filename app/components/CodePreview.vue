@@ -1,6 +1,6 @@
 <template>
-    <div class="code-preview">
-        <pre class="text-sm leading-relaxed whitespace-pre-wrap"><code class="font-liberation-mono" v-html="highlightedCode"></code></pre>
+    <div class="code-preview overflow-x-auto">
+        <pre class="text-sm leading-relaxed whitespace-pre"><code class="font-liberation-mono" v-html="highlightedCode"></code></pre>
     </div>
 </template>
 
