@@ -1,6 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 
-const baseURL = '/portfolio/';
+const baseURL = '/';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
