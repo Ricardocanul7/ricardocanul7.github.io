@@ -39,7 +39,7 @@
             aplicaciones web modernas. Mi objetivo es transformar datos crudos en experiencias
             interactivas inteligentes.",
             :tags="['PyTorch', 'Data Science', 'Machine Learning']"
-            class="col-span-2"
+            class="lg:col-span-2"
           />
           <InterestCard
             accentColor="violet"
@@ -51,7 +51,7 @@
             mientras se mejora el rendimiento
             drásticamente."
             :tags=null
-            class="col-span-1"
+            class="lg:col-span-1"
           />
           <InterestCard
             accentColor="sky"
@@ -61,7 +61,7 @@
             y la carga progresiva. Menos de 1s de
             LCP es mi estándar personal."
             :tags=null
-            class="col-span-1"
+            class="lg:col-span-1"
           />
           <InterestCard
             accentColor="indigo"
@@ -71,7 +71,7 @@
             herramienta, y las personas son quienes construyen las soluciones reales. Siempre
             abierto a discutir sobre arquitectura, open source o nuevas tendencias en el sector."
             :tags=null
-            class="col-span-2"
+            class="lg:col-span-2"
           />
         </div>
       </LayoutContainer>
