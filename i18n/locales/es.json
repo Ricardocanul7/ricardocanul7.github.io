@@ -85,13 +85,35 @@
     "aboutPage": {
         "title": "Transformando ideas en <br><span class=\"text-violet-300\">sistemas de alto impacto.</span>",
         "description": " Ingeniero de Software especializado en el desarrollo de ecosistemas digitales robustos y escalables. Mi enfoque combina la excelencia técnica en arquitecturas backend con una mentalidad orientada a resultados, optimizando procesos críticos y elevando los estándares de rendimiento para ofrecer experiencias de usuario excepcionales.",
-        "interestsInTech": "Intereses en tecnología"
+        "interestsInTech": "Intereses en tecnología",
+        "interestItems": {
+            "pythonForIA": {
+                "title": "Python para Inteligencia Artificial",
+                "description": "Explorando el ecosistema de PyTorch y TensorFlow para integrar modelos predictivos en aplicaciones web modernas. Mi objetivo es transformar datos crudos en experiencias interactivas inteligentes."
+            },
+            "migration": {
+                "title": "Migración de sistemas legacy",
+                "description": "Modernización de sistemas críticos a arquitecturas basadas en servicios, asegurando la integridad del negocio mientras se mejora el rendimiento drásticamente."
+            },
+            "webPerformance": {
+                "title": "Web Performance",
+                "description": "Enfocado en Core Web Vitals y carga progresiva. Me esfuerzo por lograr un alto rendimiento, apuntando a un LCP de menos de un segundo siempre que sea posible."
+            },
+            "networking": {
+                "title": "Networking Profesional",
+                "description": "Valoro profundamente las conexiones significativas. Creo que el código es solo una herramienta, y las personas son quienes construyen las soluciones reales. Siempre abierto a discutir sobre arquitectura, open source o nuevas tendencias en el sector."
+            }
+        }
     },
     "portfolio": "portafolio",
     "advanced": "Avanzado",
     "basic": "Básico",
     "intermediate": "Intermedio",
     "profesionalSummary": "Resumen profesional",
+    "learning": "Aprendizaje",
+    "experience": "Experiencia",
+    "approach": "Enfoque",
+    "philosophy": "Filosofía",
     "calendar": {
         "january": "Enero",
         "february": "Febrero",

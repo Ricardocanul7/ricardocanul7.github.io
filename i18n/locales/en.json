@@ -85,7 +85,25 @@
     "aboutPage": {
         "title": "Transforming ideas into <br><span class=\"text-violet-300\">high-impact systems.</span>",
         "description": "Software Engineer specializing in the development of robust and scalable digital ecosystems. My approach combines technical excellence in backend architectures with a results-oriented mindset, optimizing critical processes and raising performance standards to deliver exceptional user experiences.",
-        "interestsInTech": "Interests in technology"
+        "interestsInTech": "Interests in technology",
+        "interestItems": {
+            "pythonForIA": {
+                "title": "Python for Artificial Intelligence",
+                "description": "Exploring the PyTorch and TensorFlow ecosystem to integrate predictive models into modern web applications. My goal is to transform raw data into intelligent interactive experiences."
+            },
+            "migration": {
+                "title": "Legacy Systems Migration",
+                "description": "Modernizing critical systems to service-based architectures, ensuring business integrity while drastically improving performance."
+            },
+            "webPerformance": {
+                "title": "Web Performance",
+                "description": "Focused on Core Web Vitals and progressive loading. I strive for high performance, aiming for sub-second LCP whenever possible."
+            },
+            "networking": {
+                "title": "Professional Networking",
+                "description": "I deeply value meaningful connections. I believe code is just a tool, and people are the ones who build real solutions. Always open to discussing architecture, open source, or new trends in the sector."
+            }
+        }
     },
     "portfolio": "portfolio",
     "advanced": "Advanced",
@@ -94,6 +112,8 @@
     "profesionalSummary": "Profesional summary",
     "learning": "Learning",
     "experience": "Experience",
+    "approach": "Approach",
+    "philosophy": "Philosophy",
     "calendar": {
         "january": "January",
         "february": "February",

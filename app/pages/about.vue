@@ -38,43 +38,33 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <InterestCard
             accentColor="emerald"
-            category="En Aprendizaje"
-            title="Python para Inteligencia Artificial"
-            description="Explorando el ecosistema de PyTorch y TensorFlow para integrar modelos predictivos en
-            aplicaciones web modernas. Mi objetivo es transformar datos crudos en experiencias
-            interactivas inteligentes.",
+            :category="$t('learning')"
+            :title="$t('aboutPage.interestItems.pythonForIA.title')"
+            :description="$t('aboutPage.interestItems.pythonForIA.description')",
             :tags="['PyTorch', 'Data Science', 'Machine Learning']"
             class="lg:col-span-2"
           />
           <InterestCard
             accentColor="violet"
-            category="Experiencia"
-            title="Migración PHP Legacy"
-            description="Modernización de sistemas críticos a
-            arquitecturas basadas en servicios,
-            asegurando la integridad del negocio
-            mientras se mejora el rendimiento
-            drásticamente."
+            :category="$t('experience')"
+            :title="$t('aboutPage.interestItems.migration.title')"
+            :description="$t('aboutPage.interestItems.migration.description')"
             :tags=null
             class="lg:col-span-1"
           />
           <InterestCard
             accentColor="sky"
-            category="Enfoque"
-            title="Web Performance"
-            description="Obsesionado con los Core Web Vitals
-            y la carga progresiva. Menos de 1s de
-            LCP es mi estándar personal."
+            :category="$t('approach')"
+            :title="$t('aboutPage.interestItems.webPerformance.title')"
+            :description="$t('aboutPage.interestItems.webPerformance.description')"
             :tags=null
             class="lg:col-span-1"
           />
           <InterestCard
             accentColor="indigo"
-            category="Filosofía"
-            title="Networking Profesional"
-            description="Valoro profundamente las conexiones significativas. Creo que el código es solo una
-            herramienta, y las personas son quienes construyen las soluciones reales. Siempre
-            abierto a discutir sobre arquitectura, open source o nuevas tendencias en el sector."
+            :category="$t('philosophy')"
+            :title="$t('aboutPage.interestItems.networking.title')"
+            :description="$t('aboutPage.interestItems.networking.description')"
             :tags=null
             class="lg:col-span-2"
           />
