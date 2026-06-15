@@ -4,7 +4,15 @@
             <LayoutRow>
                 <LayoutColumn span="5">
                     <div class="photo-container relative p-5">
-                        <img src="https://picsum.photos/400/400" class="rounded-lg border-2 border-violet-300/20">
+                        <NuxtPicture 
+                            format="avif,webp"
+                            src="./images/home-about.webp"
+                            height="400"
+                            width="400"
+                            :imgAttrs="{
+                                class: 'rounded-lg border-2 border-violet-300/20',
+                            }"
+                        />
                         <div class="absolute bottom-0 right-0 w-fit bg-slate-950/40 backdrop-blur-xs border-t border border-violet-300/20 rounded-2xl">
                             <div class="flex flex-col gap-1 items-start justify-center p-5">
                                 <div class="font-jakarta-sans text-3xl text-violet-300">

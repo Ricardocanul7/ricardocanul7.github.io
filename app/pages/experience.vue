@@ -78,7 +78,13 @@ const certifications = [
 
                     <LayoutColumn span="4">
                         <div class="photo-container">
-                            <img src="https://picsum.photos/400/400" class="rounded-lg border-2 border-violet-300/20">
+                            <NuxtPicture 
+                            format="avif,webp"
+                            src="./images/profile.webp"
+                            :imgAttrs="{
+                                class: 'rounded-lg border-2 border-violet-300/20',
+                            }"
+                        />
                         </div>
                     </LayoutColumn>
                 </LayoutRow>

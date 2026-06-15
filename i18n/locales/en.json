@@ -15,10 +15,10 @@
     },
     "homeAbout": {
         "title": "About Me",
-        "header": "Mastering the Art of Backend Engineering",
+        "header": "Building Tomorrow's Backend and Optimizing Today's Frontend",
         "description_paragraphs": [
-            "I am a dedicated Backend Developer with a deep-rooted expertise in PHP, having spent over 4 years building enterprise-grade applications using <span class=\"text-violet-300\">Laravel</span> and <span class=\"text-violet-300\">Symfony</span>. My journey has always been driven by the pursuit of clean, maintainable code and system performance.",
-            "In recent years, I've expanded my horizons into the Python ecosystem, embracing <span class=\"text-emerald-300\">Django</span>; and <span class=\"text-emerald-300\">FastAPI</span>. This shift was sparked by a growing interest in Data Science and machine learning, allowing me to build smarter, more predictive backend services."
+            "Hi! I'm Ricardo Canul, a <span class=\"font-bold text-indigo-100\">Full-Stack developer</span> passionate about writing clean, efficient, and scalable code. I move fluently between backend development with <span class=\"text-violet-300\">PHP</span> / <span class=\"text-emerald-300\">Python</span> and creating dynamic, responsive interfaces.",
+            "My focus isn't just on making things work, but making them work fast: I have proven experience auditing web performance and designing automated pipelines (Docker, Ansible, GitHub Actions) that make life easier for development teams. I live in Poland, speak Spanish, English and basic Polish, and am always ready to join collaborative teams where innovation and creative problem-solving are the priority."
         ]
     },
     "projects": {

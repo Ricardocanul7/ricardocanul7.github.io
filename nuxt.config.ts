@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       tailwindcss()
     ],
   },
-  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon'],
+  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image'],
   lucide: {
     namePrefix: 'Icon',
   },
