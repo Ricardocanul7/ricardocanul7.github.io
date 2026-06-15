@@ -26,7 +26,7 @@ export default defineAppConfig({
       },
       {
         name: 'Source Code',
-        link: 'https://github.com/Ricardocanul7/portfolio'
+        link: 'https://github.com/Ricardocanul7/ricardocanul7.github.io'
       }
     ]
   }
