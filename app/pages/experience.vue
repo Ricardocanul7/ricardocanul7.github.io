@@ -47,12 +47,6 @@ const certifications = [
         institution: "Pimcore",
         year: "2023"
     },
-    {
-        icon: "iconamoon:cloud-yes-fill",
-        title: "AWS Certified Solutions Architect",
-        institution: "Udemy",
-        year: "2023"
-    }
 ]
 </script>
 
