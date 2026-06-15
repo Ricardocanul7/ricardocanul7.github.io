@@ -21,7 +21,43 @@
             "Mi enfoque no es solo hacer que las cosas funcionen, sino que funcionen rápido: cuento con experiencia comprobada auditando el rendimiento web y diseñando pipelines automatizados (Docker, Ansible, GitHub Actions) que facilitan la vida de los equipos de desarrollo. Vivo en Polonia, hablo español, inglés y polaco básico, y siempre estoy listo para unirme a equipos colaborativos donde la innovación y la resolución creativa de problemas sean la prioridad."
         ]
     },
+    "homeSkills": {
+        "header": "Arsenal técnico",
+        "title": "Habilidades y tecnologías destacadas",
+        "skills": {
+            "phpDevelopment": {
+                "title": "Desarrollo con PHP",
+                "description": "Desarrollo backend robusto centrado en ecosistemas modernos y soluciones empresariales."
+            },
+            "pythonDevelopment": {
+                "title": "Desarrollo con Python",
+                "description": "Programación versátil para APIs web, automatización y procesamiento de datos."
+            },
+            "databases": {
+                "title": "Bases de datos",
+                "description": "Gestión relacional y NoSQL."
+            },
+            "webcore": {
+                "title": "Web Core",
+                "description": "Tecnologías web fundamentales."
+            },
+            "testing": {
+                "title": "Testing",
+                "description": "Garantía de calidad y pruebas automatizadas."
+            },
+            "architecture": {
+                "title": "Arquitectura",
+                "description": "Sistemas distribuidos e infraestructura."
+            }
+        }
+    },
     "projects": {
-        "viewProject": "Visitar"
-    }
+        "viewProject": "Visitar",
+        "featuredProjects": "Proyectos destacados",
+        "listingDescription": "Una colección de aplicaciones web y sistemas escalables desarrollados con precisión técnica y un enfoque en la experiencia del usuario."
+    },
+    "portfolio": "portafolio",
+    "advanced": "Avanzado",
+    "basic": "Básico",
+    "intermediate": "Intermedio"
 }

@@ -2,54 +2,58 @@
     <section class="bg-slate-900 text-white py-16">
         <LayoutContainer>
             <div class="flex flex-col items-center justify-center text-center gap-4 mb-4">
-                <h2 class="font-inter font-semibold text-xs text-sky-300 uppercase">Technical arsenal</h2>
-                <h3 class="font-plus-jakarta-sans text-2xl font-bold text-indigo-100 mb-4">Featured Skills & Technologies</h3>
+                <h2 class="font-inter font-semibold text-xs text-sky-300 uppercase">
+                    {{ $t('homeSkills.header') }}
+                </h2>
+                <h3 class="font-plus-jakarta-sans text-2xl font-bold text-indigo-100 mb-4">
+                    {{ $t('homeSkills.title') }}
+                </h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <!-- First Row: Half width each (2/4 columns) -->
                 <SkillCard 
                     class="md:col-span-2"
                     icon="vscode-icons:file-type-php" 
-                    title="PHP Development" 
-                    description="Robust backend development focusing on modern ecosystems and enterprise solutions."
+                    :title="$t('homeSkills.skills.phpDevelopment.title')"
+                    :description="$t('homeSkills.skills.phpDevelopment.description') "
                     :tags="['Laravel', 'Symfony', 'Pimcore', 'Shopware']"
-                    expertise="Advanced"
+                    :expertise="$t('advanced')"
                 />
                 <SkillCard 
                     class="md:col-span-2"
                     icon="vscode-icons:file-type-python" 
-                    title="Python Development" 
-                    description="Versatile programming for web APIs, automation, and data processing."
-                    :tags="['Django', 'FastAPI', 'Pandas']"
-                    expertise="Intermediate"
+                    :title="$t('homeSkills.skills.pythonDevelopment.title')"
+                    :description="$t('homeSkills.skills.pythonDevelopment.description') "                    
+                    :tags="['Django', 'FastAPI']"
+                    :expertise="$t('intermediate')"
                 />
 
                 <!-- Second Row: Quarter width each (1/4 columns) -->
                 <SkillCard 
                     icon="material-symbols:database-outline" 
-                    title="Databases" 
-                    description="Relational and NoSQL management."
+                    :title="$t('homeSkills.skills.databases.title')"
+                    :description="$t('homeSkills.skills.databases.description')"
                     :tags="['MySQL', 'PostgreSQL', 'SQLite', 'Redis', 'Elasticsearch']"
                     :expertise="null"
                 />
                 <SkillCard 
                     icon="material-symbols:public" 
-                    title="Web Core" 
-                    description="Foundational web technologies."
+                    :title="$t('homeSkills.skills.webcore.title')"
+                    :description="$t('homeSkills.skills.webcore.description')"
                     :tags="['HTML5', 'CSS3', 'JS', 'React', 'Vue 3', 'Nuxt']"
                     :expertise="null"
                 />
                 <SkillCard 
                     icon="material-symbols:fact-check-outline" 
-                    title="Testing" 
-                    description="Quality assurance and automated tests."
+                    :title="$t('homeSkills.skills.testing.title')"
+                    :description="$t('homeSkills.skills.testing.description')"
                     :tags="['PHPUnit', 'Pytest', 'Cypress']"
                     :expertise="null"
                 />
                 <SkillCard 
                     icon="material-symbols:settings-applications-outline" 
-                    title="Architecture" 
-                    description="Distributed systems and infrastructure."
+                    :title="$t('homeSkills.skills.architecture.title')" 
+                    :description="$t('homeSkills.skills.architecture.description')"
                     :tags="['RabbitMQ', 'Event-Driven', 'Docker', 'CI/CD', 'Ansible']"
                     :expertise="null"
                 />

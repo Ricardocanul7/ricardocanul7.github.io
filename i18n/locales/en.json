@@ -21,7 +21,43 @@
             "My focus isn't just on making things work, but making them work fast: I have proven experience auditing web performance and designing automated pipelines (Docker, Ansible, GitHub Actions) that make life easier for development teams. I live in Poland, speak Spanish, English and basic Polish, and am always ready to join collaborative teams where innovation and creative problem-solving are the priority."
         ]
     },
+    "homeSkills": {
+        "header": "Technical arsenal",
+        "title": "Featured skills and technologies",
+        "skills": {
+            "phpDevelopment": {
+                "title": "PHP Development",
+                "description": "Robust backend development focusing on modern ecosystems and enterprise solutions."
+            },
+            "pythonDevelopment": {
+                "title": "Python Development",
+                "description": "Versatile programming for web APIs, automation, and data processing."
+            },
+            "databases": {
+                "title": "Databases",
+                "description": "Relational and NoSQL management."
+            },
+            "webcore": {
+                "title": "Web Core",
+                "description": "Foundational web technologies."
+            },
+            "testing": {
+                "title": "Testing",
+                "description": "Quality assurance and automated tests."
+            },
+            "architecture": {
+                "title": "Architecture",
+                "description": "Distributed systems and infrastructure."
+            }
+        }
+    },
     "projects": {
-        "viewProject": "Visit"
-    }
+        "viewProject": "Visit",
+        "featuredProjects": "Featured projects",
+        "listingDescription": " A collection of web applications and scalable systems developed with technical precision and a focus on user experience."
+    },
+    "portfolio": "portfolio",
+    "advanced": "Advanced",
+    "basic": "Basic",
+    "intermediate": "Intermediate"
 }

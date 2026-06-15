@@ -8,12 +8,12 @@ const { data } = await useFetch('/api/projects')
         <section class="projects-header bg-slate-900 pt-16 pb-10 text-center md:text-left">
             <LayoutContainer>
                 <div class="content">
-                    <span class="font-jetbrains-mono text-sm text-violet-300 mb-1.5 uppercase">Portfolio</span>
-                    <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">Featured projects
+                    <span class="font-jetbrains-mono text-sm text-violet-300 mb-1.5 uppercase">{{ $t('portfolio') }}</span>
+                    <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
+                        {{  $t('projects.featuredProjects') }}
                     </h1>
                     <p class="font-inter text-lg text-slate-300 md:max-w-1/2">
-                        A collection of web applications and scalable systems developed with technical precision and a
-                        focus on user experience.
+                        {{ $t('projects.listingDescription') }}
                     </p>
                 </div>
             </LayoutContainer>
