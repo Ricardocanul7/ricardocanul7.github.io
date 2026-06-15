@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const workExperience = [
     {
-        dates: `${ $t('calendar.october') } 2025 - ${ $t('calendar.march') } 2026`,
+        dates: `${$t('calendar.october')} 2025 - ${$t('calendar.march')} 2026`,
         title: "Full Stack Software Engineer - Kiwee Software",
         descriptionPoints: [
             "Develop custom Shopware plugins.",
@@ -12,7 +12,7 @@ const workExperience = [
         ]
     },
     {
-        dates: `${ $t('calendar.december') } 2023 - ${ $t('calendar.october') } 2025`,
+        dates: `${$t('calendar.december')} 2023 - ${$t('calendar.october')} 2025`,
         title: "Full Stack PHP Developer - Affenbits",
         descriptionPoints: [
             "Developed and maintained websites using a proprietary CMS",
@@ -21,7 +21,7 @@ const workExperience = [
         ]
     },
     {
-        dates: `${ $t('calendar.september') } 2021 - ${ $t('calendar.august') } 2023`,
+        dates: `${$t('calendar.september')} 2021 - ${$t('calendar.august')} 2023`,
         title: "PHP Developer - Divante (Cloudflight)",
         descriptionPoints: [
             "Developed and maintained a Pimcore-based project for major shipment company.",
@@ -36,7 +36,7 @@ const education = [
     {
         institution: "Universidad Tecnológica Metropolitana de Mérida",
         degree: $t('experiencePage.itassociate'),
-        dates: `${ $t('calendar.september') } 2018 - ${ $t('calendar.august') } 2020`
+        dates: `${$t('calendar.september')} 2018 - ${$t('calendar.august')} 2020`
     }
 ]
 
@@ -69,7 +69,11 @@ const certifications = [
 
                     <LayoutColumn span="4">
                         <div class="photo-container">
-                            <NuxtPicture format="avif,webp" src="./images/profile.webp" :imgAttrs="{
+                            <NuxtPicture 
+                                format="avif,webp" src="./images/profile.webp",
+                                width="400"
+                                height="400"
+                                :imgAttrs="{
                                 class: 'rounded-lg border-2 border-violet-300/20',
                             }" />
                         </div>
@@ -108,7 +112,7 @@ const certifications = [
                                 {{ $t('experiencePage.workExperience.title') }}
                             </h2>
                             <p class="font-inter text-base text-slate-300">
-                                {{ $t('experiencePage.workExperience.description')  }}
+                                {{ $t('experiencePage.workExperience.description') }}
                             </p>
                         </div>
                     </LayoutColumn>
