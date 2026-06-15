@@ -10,10 +10,10 @@ const { data } = await useFetch('/api/projects')
                 <div class="content">
                     <span class="font-jetbrains-mono text-sm text-violet-300 mb-1.5 uppercase">{{ $t('portfolio') }}</span>
                     <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
-                        {{  $t('projects.featuredProjects') }}
+                        {{  $t('projectsPage.featuredProjects') }}
                     </h1>
                     <p class="font-inter text-lg text-slate-300 md:max-w-1/2">
-                        {{ $t('projects.listingDescription') }}
+                        {{ $t('projectsPage.listingDescription') }}
                     </p>
                 </div>
             </LayoutContainer>

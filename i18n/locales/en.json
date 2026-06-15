@@ -51,12 +51,12 @@
             }
         }
     },
-    "projects": {
+    "projectsPage": {
         "viewProject": "Visit",
         "featuredProjects": "Featured projects",
         "listingDescription": " A collection of web applications and scalable systems developed with technical precision and a focus on user experience."
     },
-    "experience": {
+    "experiencePage": {
         "summary": {
             "description": "Full-Stack Software Engineer with 4+ years of experience specializing in full-stack web application development. Developing both monolithic and microservices architectures . Adept at creating responsive interfaces and streamlining development workflows with Docker. Seeking to apply technical expertise and creative problem-solving to drive impactful results in a collaborative team."
         },
@@ -82,11 +82,18 @@
         "certifications": "Certifications",
         "itassociate": "Information Technology Associate"
     },
+    "aboutPage": {
+        "title": "Transforming ideas into <br><span class=\"text-violet-300\">high-impact systems.</span>",
+        "description": "Software Engineer specializing in the development of robust and scalable digital ecosystems. My approach combines technical excellence in backend architectures with a results-oriented mindset, optimizing critical processes and raising performance standards to deliver exceptional user experiences.",
+        "interestsInTech": "Interests in technology"
+    },
     "portfolio": "portfolio",
     "advanced": "Advanced",
     "basic": "Basic",
     "intermediate": "Intermediate",
     "profesionalSummary": "Profesional summary",
+    "learning": "Learning",
+    "experience": "Experience",
     "calendar": {
         "january": "January",
         "february": "February",

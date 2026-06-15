@@ -35,7 +35,7 @@ const workExperience = [
 const education = [
     {
         institution: "Universidad Tecnológica Metropolitana de Mérida",
-        degree: $t('experience.itassociate'),
+        degree: $t('experiencePage.itassociate'),
         dates: `${ $t('calendar.september') } 2018 - ${ $t('calendar.august') } 2020`
     }
 ]
@@ -68,7 +68,7 @@ const certifications = [
                                 {{ $t('profesionalSummary') }}
                             </h1>
                             <p class="font-inter text-lg text-slate-300 mb-5">
-                                {{ $t('experience.summary.description') }}
+                                {{ $t('experiencePage.summary.description') }}
                             </p>
                         </div>
                     </LayoutColumn>
@@ -90,15 +90,15 @@ const certifications = [
             <LayoutContainer>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <SkillCard icon="material-symbols:terminal"
-                        :title="$t('experience.skills.backendDevelopment.title')"
-                        :description="$t('experience.skills.backendDevelopment.description')"
+                        :title="$t('experiencePage.skills.backendDevelopment.title')"
+                        :description="$t('experiencePage.skills.backendDevelopment.description')"
                         :tags="['PHP', 'Python', 'Laravel', 'Django']" :expertise=null />
-                    <SkillCard icon="material-symbols:api" :title="$t('experience.skills.apiDesign.title')"
-                        :description="$t('experience.skills.apiDesign.description')"
+                    <SkillCard icon="material-symbols:api" :title="$t('experiencePage.skills.apiDesign.title')"
+                        :description="$t('experiencePage.skills.apiDesign.description')"
                         :tags="['FastAPI', 'OpenAPI', 'JWT', 'OAuth2']" , :expertise=null />
                     <SkillCard icon="material-symbols:database-outline"
-                        :title="$t('experience.skills.dataAndDevOps.title')"
-                        :description="$t('experience.skills.dataAndDevOps.description')"
+                        :title="$t('experiencePage.skills.dataAndDevOps.title')"
+                        :description="$t('experiencePage.skills.dataAndDevOps.description')"
                         :tags="['PostgreSQL', 'Docker', 'CI/CD', 'Redis']" , :expertise=null />
                 </div>
             </LayoutContainer>
@@ -111,10 +111,10 @@ const certifications = [
                     <LayoutColumn span="4">
                         <div class="content">
                             <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-violet-300 mb-4">
-                                {{ $t('experience.workExperience.title') }}
+                                {{ $t('experiencePage.workExperience.title') }}
                             </h2>
                             <p class="font-inter text-base text-slate-300">
-                                {{ $t('experience.workExperience.description')  }}
+                                {{ $t('experiencePage.workExperience.description')  }}
                             </p>
                         </div>
                     </LayoutColumn>
@@ -135,7 +135,7 @@ const certifications = [
                         <div class="education-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
                             <Icon name="material-symbols:school-outline" />
                             <h2 class="font-plus-jakarta-sans font-bold text-2xl">
-                                {{ $t('experience.education') }}
+                                {{ $t('experiencePage.education') }}
                             </h2>
                         </div>
                         <div class="bg-slate-900 py-10 px-4 md:px-10">
@@ -155,7 +155,7 @@ const certifications = [
                         <div class="certifications-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
                             <Icon name="material-symbols:verified-outline" />
                             <h2 class="font-plus-jakarta-sans font-bold text-2xl">
-                                {{ $t('experience.certifications') }}
+                                {{ $t('experiencePage.certifications') }}
                             </h2>
                         </div>
                         <div class="bg-slate-900 py-10 px-4 md:px-10">

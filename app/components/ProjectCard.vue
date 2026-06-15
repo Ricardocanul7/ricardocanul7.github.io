@@ -38,7 +38,7 @@ defineProps<{
             <!-- CTA -->
             <a :href="link" target="_blank" rel="noopener noreferrer"
                 class="flex items-center justify-center gap-2 text-violet-300 hover:bg-violet-300 hover:text-indigo-800 px-4 py-2 rounded-lg border-violet-300/50 border transition-colors font-inter text-xs font-semibold">
-                {{ $t('projects.viewProject') || 'View Project' }}
+                {{ $t('projectsPage.viewProject') || 'View Project' }}
                 <Icon name="heroicons:arrow-right-20-solid"
                     class="transform group-hover:translate-x-1 transition-transform" />
             </a>
