@@ -56,8 +56,49 @@
         "featuredProjects": "Proyectos destacados",
         "listingDescription": "Una colección de aplicaciones web y sistemas escalables desarrollados con precisión técnica y un enfoque en la experiencia del usuario."
     },
+    "experience": {
+        "summary": {
+            "description": "Ingeniero de Software Full-Stack con más de 4 años de experiencia especializado en el desarrollo de aplicaciones web integrales. Desarrollo de arquitecturas tanto monolíticas como de microservicios. Experto en la creación de interfaces responsivas y en la optimización de flujos de trabajo de desarrollo con Docker. Buscando aplicar conocimientos técnicos y resolución creativa de problemas para impulsar resultados impactantes en un equipo colaborativo."
+        },
+        "skills": {
+            "backendDevelopment": {
+                "title": "Desarrollo Backend",
+                "description": "Experiencia en la creación de lógica de servidor escalable y flujos de trabajo empresariales complejos."
+            },
+            "apiDesign": {
+                "title": "Diseño de APIs",
+                "description": "Diseño e implementación de APIs RESTful y GraphQL con enfoque en seguridad y rendimiento."
+            },
+            "dataAndDevOps": {
+                "title": "Datos y DevOps",
+                "description": "Gestión de persistencia de datos y automatización de pipelines de despliegue para una entrega confiable."
+            }
+        },
+        "workExperience": {
+            "title": "Experiencia Laboral",
+            "description": "Trayectoria profesional en el desarrollo de productos tecnológicos de alto impacto."
+        },
+        "education": "Educación",
+        "certifications": "Certificaciones",
+        "itassociate": "TSU en Tecnología de la información área Desarrollo de Software Multiplataforma"
+    },
     "portfolio": "portafolio",
     "advanced": "Avanzado",
     "basic": "Básico",
-    "intermediate": "Intermedio"
+    "intermediate": "Intermedio",
+    "profesionalSummary": "Resumen profesional",
+    "calendar": {
+        "january": "Enero",
+        "february": "Febrero",
+        "march": "Marzo",
+        "april": "Abril",
+        "may": "Mayo",
+        "june": "Junio",
+        "july": "Julio",
+        "august": "Agosto",
+        "september": "Septiembre",
+        "october": "Octubre",
+        "november": "Noviembre",
+        "december": "Diciembre"
+    }
 }

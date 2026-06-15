@@ -56,8 +56,49 @@
         "featuredProjects": "Featured projects",
         "listingDescription": " A collection of web applications and scalable systems developed with technical precision and a focus on user experience."
     },
+    "experience": {
+        "summary": {
+            "description": "Full-Stack Software Engineer with 4+ years of experience specializing in full-stack web application development. Developing both monolithic and microservices architectures . Adept at creating responsive interfaces and streamlining development workflows with Docker. Seeking to apply technical expertise and creative problem-solving to drive impactful results in a collaborative team."
+        },
+        "skills": {
+            "backendDevelopment": {
+                "title": "Backend Development",
+                "description": "Expertise in building scalable server-side logic and complex business workflows."
+            },
+            "apiDesign": {
+                "title": "API Design",
+                "description": "Designing and implementing RESTful and GraphQL APIs with a focus on security and performance."
+            },
+            "dataAndDevOps": {
+                "title": "Data & DevOps",
+                "description": "Managing data persistence and automating deployment pipelines for reliable delivery."
+            }
+        },
+        "workExperience": {
+            "title": "Work Experience",
+            "description": "Professional trajectory in the development of high-impact technological products."
+        },
+        "education": "Education",
+        "certifications": "Certifications",
+        "itassociate": "Information Technology Associate"
+    },
     "portfolio": "portfolio",
     "advanced": "Advanced",
     "basic": "Basic",
-    "intermediate": "Intermediate"
+    "intermediate": "Intermediate",
+    "profesionalSummary": "Profesional summary",
+    "calendar": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+    }
 }

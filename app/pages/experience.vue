@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const workExperience = [
     {
-        dates: "October 2025 - March 2026",
+        dates: `${ $t('calendar.october') } 2025 - ${ $t('calendar.march') } 2026`,
         title: "Full Stack Software Engineer - Kiwee Software",
         descriptionPoints: [
             "Develop custom Shopware plugins.",
@@ -12,7 +12,7 @@ const workExperience = [
         ]
     },
     {
-        dates: "December 2023 - October 2025",
+        dates: `${ $t('calendar.december') } 2023 - ${ $t('calendar.october') } 2025`,
         title: "Full Stack PHP Developer - Affenbits",
         descriptionPoints: [
             "Developed and maintained websites using a proprietary CMS",
@@ -21,7 +21,7 @@ const workExperience = [
         ]
     },
     {
-        dates: "September 2021 - August 2023",
+        dates: `${ $t('calendar.september') } 2021 - ${ $t('calendar.august') } 2023`,
         title: "PHP Developer - Divante (Cloudflight)",
         descriptionPoints: [
             "Developed and maintained a Pimcore-based project for major shipment company.",
@@ -35,8 +35,8 @@ const workExperience = [
 const education = [
     {
         institution: "Universidad Tecnológica Metropolitana de Mérida",
-        degree: "Information Technology Associate",
-        dates: "September 2018 - August 2020"
+        degree: $t('experience.itassociate'),
+        dates: `${ $t('calendar.september') } 2018 - ${ $t('calendar.august') } 2020`
     }
 ]
 
@@ -64,27 +64,20 @@ const certifications = [
                 <LayoutRow>
                     <LayoutColumn span="8" class="flex flex-col justify-center">
                         <div class="content">
-                            <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-violet-300 mb-5">Profesional
-                                summary</h1>
+                            <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-violet-300 mb-5">
+                                {{ $t('profesionalSummary') }}
+                            </h1>
                             <p class="font-inter text-lg text-slate-300 mb-5">
-                                Desarrollador Full Stack Senior especializado en arquitecturas escalables con PHP y
-                                Python.
-                                Apasionado por la ingeniería de software limpia y el diseño de APIs robustas.
-                                Con más de 8 años de experiencia transformando requerimientos de negocio en
-                                soluciones técnicas eficientes.
+                                {{ $t('experience.summary.description') }}
                             </p>
                         </div>
                     </LayoutColumn>
 
                     <LayoutColumn span="4">
                         <div class="photo-container">
-                            <NuxtPicture 
-                            format="avif,webp"
-                            src="./images/profile.webp"
-                            :imgAttrs="{
+                            <NuxtPicture format="avif,webp" src="./images/profile.webp" :imgAttrs="{
                                 class: 'rounded-lg border-2 border-violet-300/20',
-                            }"
-                        />
+                            }" />
                         </div>
                     </LayoutColumn>
                 </LayoutRow>
@@ -96,14 +89,16 @@ const certifications = [
         <section class="bg-slate-900 py-10">
             <LayoutContainer>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <SkillCard icon="material-symbols:terminal" title="Backend Development"
-                        description="Expertise in building scalable server-side logic and complex business workflows."
+                    <SkillCard icon="material-symbols:terminal"
+                        :title="$t('experience.skills.backendDevelopment.title')"
+                        :description="$t('experience.skills.backendDevelopment.description')"
                         :tags="['PHP', 'Python', 'Laravel', 'Django']" :expertise=null />
-                    <SkillCard icon="material-symbols:api" title="API Design"
-                        description="Designing and implementing RESTful and GraphQL APIs with a focus on security and performance."
+                    <SkillCard icon="material-symbols:api" :title="$t('experience.skills.apiDesign.title')"
+                        :description="$t('experience.skills.apiDesign.description')"
                         :tags="['FastAPI', 'OpenAPI', 'JWT', 'OAuth2']" , :expertise=null />
-                    <SkillCard icon="material-symbols:database-outline" title="Data & DevOps"
-                        description="Managing data persistence and automating deployment pipelines for reliable delivery."
+                    <SkillCard icon="material-symbols:database-outline"
+                        :title="$t('experience.skills.dataAndDevOps.title')"
+                        :description="$t('experience.skills.dataAndDevOps.description')"
                         :tags="['PostgreSQL', 'Docker', 'CI/CD', 'Redis']" , :expertise=null />
                 </div>
             </LayoutContainer>
@@ -115,12 +110,11 @@ const certifications = [
                 <LayoutRow>
                     <LayoutColumn span="4">
                         <div class="content">
-                            <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-violet-300 mb-4">Work
-                                experience
+                            <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-violet-300 mb-4">
+                                {{ $t('experience.workExperience.title') }}
                             </h2>
                             <p class="font-inter text-base text-slate-300">
-                                Trayectoria profesional en el desarrollo de
-                                productos tecnológicos de alto impacto.
+                                {{ $t('experience.workExperience.description')  }}
                             </p>
                         </div>
                     </LayoutColumn>
@@ -140,7 +134,9 @@ const certifications = [
                     <section class="education-section">
                         <div class="education-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
                             <Icon name="material-symbols:school-outline" />
-                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">Education</h2>
+                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">
+                                {{ $t('experience.education') }}
+                            </h2>
                         </div>
                         <div class="bg-slate-900 py-10 px-4 md:px-10">
                             <div v-for="(edu, index) in education" :key="index"
@@ -153,12 +149,14 @@ const certifications = [
                             </div>
                         </div>
                     </section>
-        
+
                     <!-- Certifications -->
                     <section class="certifications-section">
                         <div class="certifications-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
                             <Icon name="material-symbols:verified-outline" />
-                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">Certifications</h2>
+                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">
+                                {{ $t('experience.certifications') }}
+                            </h2>
                         </div>
                         <div class="bg-slate-900 py-10 px-4 md:px-10">
                             <div v-for="(cert, index) in certifications" :key="index"
@@ -170,7 +168,8 @@ const certifications = [
                                     <h3 class="text-slate-100 font-plus-jakarta-sans font-bold text-base mt-1">
                                         {{ cert.title }}
                                     </h3>
-                                    <p class="text-slate-400 font-inter italic">{{ cert.institution }} • {{ cert.year }}</p>
+                                    <p class="text-slate-400 font-inter italic">{{ cert.institution }} • {{ cert.year }}
+                                    </p>
                                 </div>
                             </div>
                         </div>
