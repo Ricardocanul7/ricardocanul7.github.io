@@ -1,11 +1,3 @@
-export interface Project {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-  tags: string[];
-}
-
 export default defineEventHandler((event) => {
   const imagesDirectory = `/images/projects/`
 
