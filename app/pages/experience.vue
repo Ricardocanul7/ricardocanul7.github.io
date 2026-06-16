@@ -1,53 +1,52 @@
 <script setup lang="ts">
-const workExperience = [
-    {
-        dates: `${$t('calendar.october')} 2025 - ${$t('calendar.march')} 2026`,
-        title: "Full Stack Software Engineer - Kiwee Software",
-        descriptionPoints: [
-            "Develop custom Shopware plugins.",
-            "Automated deployment pipelines by architecting CI/CD workflows with Github Actions, Ansible and Docker.",
-            "Made Improvements to the Storefront theme for Shopware 6",
-            "Perform major migration from Shopware 6.6 to 6.7, refactoring legacy codebases to ensure 100% compatibility",
-            "Led performance audit and execution seeing massive improvements in LCP (33.7%) and INP(74.5%)."
-        ]
-    },
-    {
-        dates: `${$t('calendar.december')} 2023 - ${$t('calendar.october')} 2025`,
-        title: "Full Stack PHP Developer - Affenbits",
-        descriptionPoints: [
-            "Developed and maintained websites using a proprietary CMS",
-            "Translated Figma designs into responsive frontend pages.",
-            "Implemented Docker to streamline team workflows, significantly automating local development and deployment processes."
-        ]
-    },
-    {
-        dates: `${$t('calendar.september')} 2021 - ${$t('calendar.august')} 2023`,
-        title: "PHP Developer - Divante (Cloudflight)",
-        descriptionPoints: [
-            "Developed and maintained a Pimcore-based project for major shipment company.",
-            "Developed backend for an e-commerce platform that automated product bundling improving user experience and sales efficiency.",
-            "Developed KPI tool for internal team statistics using APIs from Gitlab, Jira, and Testrails.",
-            "Led Project migration to the latests BoltCMS version, updating business logic and migrating the database structure."
-        ]
-    }
-];
+const { tm, rt } = useI18n()
 
-const education = [
-    {
-        institution: "Universidad Tecnológica Metropolitana de Mérida",
-        degree: $t('experiencePage.itassociate'),
-        dates: `${$t('calendar.september')} 2018 - ${$t('calendar.august')} 2020`
-    }
-]
+interface WorkExpItem {
+    dates: string;
+    title: string;
+    descriptionPoints: string[];
+}
 
-const certifications = [
-    {
-        icon: "simple-icons:pimcore",
-        title: "Pimcore Developer Senior",
-        institution: "Pimcore",
-        year: "2023"
-    },
-]
+interface EduItem {
+    institution: string;
+    degree: string;
+    dates: string;
+}
+
+interface CertItem {
+    icon: string;
+    title: string;
+    institution: string;
+    year: string;
+}
+
+const workExperience = computed<WorkExpItem[]>(() => {
+    const list = tm('experiencePage.workExperienceList') as any[]
+    return list.map(item => ({
+        dates: rt(item.dates),
+        title: rt(item.title),
+        descriptionPoints: (item.descriptionPoints || []).map((p: any) => rt(p))
+    }))
+})
+
+const education = computed<EduItem[]>(() => {
+    const list = tm('experiencePage.educationList') as any[]
+    return list.map(item => ({
+        institution: rt(item.institution),
+        degree: rt(item.degree),
+        dates: rt(item.dates)
+    }))
+})
+
+const certifications = computed<CertItem[]>(() => {
+    const list = tm('experiencePage.certificationsList') as any[]
+    return list.map(item => ({
+        icon: rt(item.icon),
+        title: rt(item.title),
+        institution: rt(item.institution),
+        year: rt(item.year)
+    }))
+})
 </script>
 
 <template>

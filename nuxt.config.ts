@@ -8,11 +8,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css', '~/assets/scss/main.scss'],
   i18n: {
+    baseUrl: 'https://ricardocanul7.github.io',
     langDir: 'locales',
     defaultLocale: 'en',
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
-      { code: 'es', iso: 'es-ES', name: 'Español', file: 'es.json' },
+      { code: 'en', iso: 'en-US', language: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'es', iso: 'es-ES', language: 'es-ES', name: 'Español', file: 'es.json' },
     ],
     compilation: {
       strictMessage: false,
@@ -23,6 +24,12 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss()
     ],
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+      ]
+    }
   },
   modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image'],
   lucide: {

@@ -12,9 +12,18 @@ defineProps<{
     <div
         class="group bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden hover:border-violet-300/50 transition-all duration-300 flex flex-col h-full">
         <!-- Project Image -->
-        <div class="aspect-video overflow-hidden">
-            <img :src="image" :alt="title"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div class="aspect-video overflow-hidden bg-slate-950">
+            <NuxtPicture 
+                format="avif,webp"
+                :src="image"
+                height="270"
+                width="480"
+                :imgAttrs="{
+                    alt: title,
+                    loading: 'lazy',
+                    class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                }"
+            />
         </div>
 
         <div class="p-6 flex flex-col flex-grow">
@@ -37,6 +46,7 @@ defineProps<{
 
             <!-- CTA -->
             <a :href="link" target="_blank" rel="noopener noreferrer"
+                :aria-label="$t('projectsPage.viewProject') + ': ' + title"
                 class="flex items-center justify-center gap-2 text-violet-300 hover:bg-violet-300 hover:text-indigo-800 px-4 py-2 rounded-lg border-violet-300/50 border transition-colors font-inter text-xs font-semibold">
                 {{ $t('projectsPage.viewProject') || 'View Project' }}
                 <Icon name="heroicons:arrow-right-20-solid"

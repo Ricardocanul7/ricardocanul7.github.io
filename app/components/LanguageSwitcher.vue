@@ -1,37 +1,53 @@
-<script setup>
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue'
+
 const { locale: currentLocale, locales, setLocale } = useI18n()
 const isOpen = ref(false)
-const container = ref(null)
+const container = ref<HTMLElement | null>(null)
 
 const toggleDropdown = () => isOpen.value = !isOpen.value
 
-const selectLocale = async (code) => {
+const selectLocale = async (code: 'en' | 'es') => {
   await setLocale(code)
   isOpen.value = false
 }
 
-// Close dropdown when clicking outside
-if (import.meta.client) {
-  window.addEventListener('click', (e) => {
-    if (container.value && !container.value.contains(e.target)) {
-      isOpen.value = false
-    }
-  })
+const handleClickOutside = (e: MouseEvent) => {
+  if (container.value && !container.value.contains(e.target as Node)) {
+    isOpen.value = false
+  }
 }
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside)
+})
 </script>
 
 <template>
-    <div class="relative inline-block text-left" ref="container">
+    <div 
+        class="relative inline-block text-left" 
+        ref="container"
+        @keydown.escape="isOpen = false"
+    >
         <button 
             @click="toggleDropdown"
             type="button"
             class="flex items-center gap-2 bg-slate-900/50 text-slate-400 text-xs font-medium border border-slate-800 hover:border-indigo-500/50 hover:text-white rounded-lg px-3 py-1.5 transition-all duration-200"
+            aria-haspopup="listbox"
+            :aria-expanded="isOpen"
+            aria-controls="language-options-list"
+            aria-label="Select language / Seleccionar idioma"
         >
             <span class="uppercase">{{ currentLocale }}</span>
             <svg 
                 class="w-3 h-3 transition-transform duration-200" 
                 :class="{ 'rotate-180': isOpen }"
                 fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                aria-hidden="true"
             >
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -45,18 +61,28 @@ if (import.meta.client) {
             leave-from-class="transform opacity-100 scale-100"
             leave-to-class="transform opacity-0 scale-95"
         >
-            <div v-show="isOpen" class="absolute right-0 mt-2 w-24 origin-top-right rounded-xl bg-slate-950 border border-slate-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50 overflow-hidden">
-                <div class="py-1">
+            <div 
+                v-show="isOpen" 
+                class="absolute right-0 mt-2 w-28 origin-top-right rounded-xl bg-slate-950 border border-slate-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50 overflow-hidden"
+            >
+                <div 
+                    id="language-options-list" 
+                    role="listbox" 
+                    class="py-1"
+                    :aria-label="currentLocale === 'es' ? 'Opciones de idioma' : 'Language options'"
+                >
                     <button
                         v-for="loc in locales" 
                         :key="loc.code"
                         @click="selectLocale(loc.code)"
+                        role="option"
+                        :aria-selected="currentLocale === loc.code"
                         :class="[
-                            currentLocale === loc.code ? 'bg-indigo-600/10 text-indigo-400' : 'text-slate-400 hover:bg-slate-900 hover:text-white',
+                            currentLocale === loc.code ? 'bg-indigo-600/10 text-indigo-400 font-semibold' : 'text-slate-400 hover:bg-slate-900 hover:text-white',
                             'block w-full text-left px-4 py-2 text-xs font-medium transition-colors'
                         ]"
                     >
-                        {{ loc.name.toUpperCase() }}
+                        {{ loc.name?.toUpperCase() }}
                     </button>
                 </div>
             </div>

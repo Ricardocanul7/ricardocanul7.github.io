@@ -3,7 +3,9 @@
         "home": "Home",
         "about": "About",
         "projects": "Projects",
-        "experience": "Experience"
+        "experience": "Experience",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu"
     },
     "appFooter": {
         "copy": "Built with Nuxt 4 — Developed by Ricardo Canul"
@@ -80,7 +82,54 @@
         },
         "education": "Education",
         "certifications": "Certifications",
-        "itassociate": "Information Technology Associate"
+        "itassociate": "Information Technology Associate",
+        "workExperienceList": [
+            {
+                "dates": "October 2025 - March 2026",
+                "title": "Full Stack Software Engineer - Kiwee Software",
+                "descriptionPoints": [
+                    "Develop custom Shopware plugins.",
+                    "Automated deployment pipelines by architecting CI/CD workflows with Github Actions, Ansible and Docker.",
+                    "Made Improvements to the Storefront theme for Shopware 6",
+                    "Perform major migration from Shopware 6.6 to 6.7, refactoring legacy codebases to ensure 100% compatibility",
+                    "Led performance audit and execution seeing massive improvements in LCP (33.7%) and INP(74.5%)."
+                ]
+            },
+            {
+                "dates": "December 2023 - October 2025",
+                "title": "Full Stack PHP Developer - Affenbits",
+                "descriptionPoints": [
+                    "Developed and maintained websites using a proprietary CMS",
+                    "Translated Figma designs into responsive frontend pages.",
+                    "Implemented Docker to streamline team workflows, significantly automating local development and deployment processes."
+                ]
+            },
+            {
+                "dates": "September 2021 - August 2023",
+                "title": "PHP Developer - Divante (Cloudflight)",
+                "descriptionPoints": [
+                    "Developed and maintained a Pimcore-based project for major shipment company.",
+                    "Developed backend for an e-commerce platform that automated product bundling improving user experience and sales efficiency.",
+                    "Developed KPI tool for internal team statistics using APIs from Gitlab, Jira, and Testrails.",
+                    "Led Project migration to the latests BoltCMS version, updating business logic and migrating the database structure."
+                ]
+            }
+        ],
+        "educationList": [
+            {
+                "institution": "Universidad Tecnológica Metropolitana de Mérida",
+                "degree": "Information Technology Associate",
+                "dates": "September 2018 - August 2020"
+            }
+        ],
+        "certificationsList": [
+            {
+                "icon": "simple-icons:pimcore",
+                "title": "Pimcore Developer Senior",
+                "institution": "Pimcore",
+                "year": "2023"
+            }
+        ]
     },
     "aboutPage": {
         "title": "Transforming ideas into <br><span class=\"text-violet-300\">high-impact systems.</span>",

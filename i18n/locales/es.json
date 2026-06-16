@@ -3,7 +3,9 @@
         "home": "Inicio",
         "about": "Acerca de",
         "projects": "Proyectos",
-        "experience": "Experiencia"
+        "experience": "Experiencia",
+        "openMenu": "Abrir menú",
+        "closeMenu": "Cerrar menú"
     },
     "appFooter": {
         "copy": "Construido con Nuxt 4 — Desarrollado por Ricardo Canul"
@@ -80,7 +82,54 @@
         },
         "education": "Educación",
         "certifications": "Certificaciones",
-        "itassociate": "TSU en Tecnología de la información área Desarrollo de Software Multiplataforma"
+        "itassociate": "TSU en Tecnología de la información área Desarrollo de Software Multiplataforma",
+        "workExperienceList": [
+            {
+                "dates": "Octubre 2025 - Marzo 2026",
+                "title": "Ingeniero de Software Full Stack - Kiwee Software",
+                "descriptionPoints": [
+                    "Desarrollar plugins personalizados de Shopware.",
+                    "Automatizar pipelines de despliegue mediante el diseño de flujos de trabajo de CI/CD con Github Actions, Ansible y Docker.",
+                    "Realizar mejoras en el tema Storefront para Shopware 6.",
+                    "Llevar a cabo una migración mayor de Shopware 6.6 a 6.7, refactorizando bases de código heredadas para garantizar una compatibilidad del 100%.",
+                    "Liderar auditorías de rendimiento y ejecución, logrando mejoras masivas en LCP (33.7%) e INP (74.5%)."
+                ]
+            },
+            {
+                "dates": "Diciembre 2023 - Octubre 2025",
+                "title": "Desarrollador PHP Full Stack - Affenbits",
+                "descriptionPoints": [
+                    "Desarrollar y mantener sitios web utilizando un CMS propietario.",
+                    "Traducir diseños de Figma en páginas frontend adaptables.",
+                    "Implementar Docker para optimizar los flujos de trabajo del equipo, automatizando significativamente los procesos de desarrollo local y despliegue."
+                ]
+            },
+            {
+                "dates": "Septiembre 2021 - Agosto 2023",
+                "title": "Desarrollador PHP - Divante (Cloudflight)",
+                "descriptionPoints": [
+                    "Desarrollar y mantener un proyecto basado en Pimcore para una importante empresa de envíos.",
+                    "Desarrollar el backend para una plataforma de comercio electrónico que automatiza el empaquetado de productos, mejorando la experiencia del usuario y la eficiencia de ventas.",
+                    "Desarrollar una herramienta de KPI para estadísticas internas del equipo utilizando APIs de GitLab, Jira y Testrail.",
+                    "Liderar la migración de proyectos a la versión más reciente de BoltCMS, actualizando la lógica de negocio y migrando la estructura de bases de datos."
+                ]
+            }
+        ],
+        "educationList": [
+            {
+                "institution": "Universidad Tecnológica Metropolitana de Mérida",
+                "degree": "TSU en Tecnología de la información área Desarrollo de Software Multiplataforma",
+                "dates": "Septiembre 2018 - Agosto 2020"
+            }
+        ],
+        "certificationsList": [
+            {
+                "icon": "simple-icons:pimcore",
+                "title": "Pimcore Developer Senior",
+                "institution": "Pimcore",
+                "year": "2023"
+            }
+        ]
     },
     "aboutPage": {
         "title": "Transformando ideas en <br><span class=\"text-violet-300\">sistemas de alto impacto.</span>",

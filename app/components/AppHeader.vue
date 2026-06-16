@@ -40,9 +40,15 @@ const getClasses = (exact: boolean) => `${linkClasses} ${exact ? exactActiveClas
             <div class="flex items-center gap-4">
                 <LanguageSwitcher />
                 <!-- Mobile Menu Button -->
-                <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-slate-400 hover:text-white">
-                    <span class="sr-only">Open menu</span>
-                    <div class="w-6 h-5 flex flex-col justify-between">
+                <button 
+                    @click="isMenuOpen = !isMenuOpen" 
+                    class="md:hidden text-slate-400 hover:text-white"
+                    :aria-expanded="isMenuOpen"
+                    aria-controls="mobile-menu"
+                    type="button"
+                >
+                    <span class="sr-only">{{ isMenuOpen ? $t('appHeader.closeMenu') : $t('appHeader.openMenu') }}</span>
+                    <div class="w-6 h-5 flex flex-col justify-between" aria-hidden="true">
                         <span :class="['h-0.5 w-full bg-current transition-all', isMenuOpen ? 'rotate-45 translate-y-2' : '']"></span>
                         <span :class="['h-0.5 w-full bg-current transition-all', isMenuOpen ? 'opacity-0' : '']"></span>
                         <span :class="['h-0.5 w-full bg-current transition-all', isMenuOpen ? '-rotate-45 -translate-y-2' : '']"></span>
@@ -52,7 +58,12 @@ const getClasses = (exact: boolean) => `${linkClasses} ${exact ? exactActiveClas
         </div>
 
         <!-- Mobile Navigation -->
-        <div v-show="isMenuOpen" class="md:hidden border-t border-slate-900 bg-slate-900 px-6 py-4 flex flex-col gap-4 text-center text-sm font-semibold">
+        <nav 
+            v-show="isMenuOpen" 
+            id="mobile-menu"
+            aria-label="Mobile Navigation"
+            class="md:hidden border-t border-slate-900 bg-slate-900 px-6 py-4 flex flex-col gap-4 text-center text-sm font-semibold"
+        >
             <NuxtLink 
                 v-for="link in navLinks" 
                 :key="link.path" 
@@ -63,6 +74,6 @@ const getClasses = (exact: boolean) => `${linkClasses} ${exact ? exactActiveClas
             >
                 {{ $t(link.name) }}
             </NuxtLink>
-        </div>
+        </nav>
     </header>
 </template>

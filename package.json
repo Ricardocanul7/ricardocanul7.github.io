@@ -22,6 +22,8 @@
     "vue-router": "^5.1.0"
   },
   "devDependencies": {
+    "@iconify-json/material-symbols": "^1.2.78",
+    "@iconify-json/simple-icons": "^1.2.86",
     "@types/node": "^25.9.3",
     "sass": "^1.101.0"
   }
