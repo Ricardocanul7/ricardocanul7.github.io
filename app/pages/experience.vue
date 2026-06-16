@@ -1,5 +1,27 @@
 <script setup lang="ts">
 const { workExperience, education, certifications } = useExperienceData()
+
+useSeoMeta({
+  title: 'Experience - Ricardo Canul',
+  description: $t('experiencePage.summary.description'),
+  keywords: 'Ricardo Canul, Experience, Full-Stack Developer, Software Engineer, PHP, Python, Laravel, Django, Shopware, Pimcore, Work History, Education, Certifications',
+  author: 'Ricardo Canul',
+  ogTitle: 'Experience - Ricardo Canul',
+  ogDescription: $t('experiencePage.summary.description'),
+  ogType: 'website',
+  ogUrl: 'https://ricardocanul7.github.io/experience',
+  ogImageAlt: 'Ricardo Canul - Full-Stack Software Developer',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Experience - Ricardo Canul',
+  twitterDescription: $t('experiencePage.summary.description'),
+})
+
+defineOgImage('NuxtSeo.satori', {
+  title: 'Experience - Ricardo Canul',
+  description: $t('experiencePage.summary.description'),
+  colorMode: 'dark'
+})
+
 </script>
 
 <template>

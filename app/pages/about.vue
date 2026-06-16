@@ -1,3 +1,28 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'About - Ricardo Canul',
+  description: $t('aboutPage.description'),
+  keywords: 'Ricardo Canul, About, Full-Stack Developer, Software Engineer, PHP, Python, Web Development, AI, Machine Learning, Web Performance',
+  author: 'Ricardo Canul',
+  ogTitle: 'About - Ricardo Canul',
+  ogDescription: $t('aboutPage.description'),
+  ogType: 'website',
+  ogUrl: 'https://ricardocanul7.github.io/about',
+  ogImage: 'https://ricardocanul7.github.io/og-image.jpg',
+  ogImageAlt: 'Ricardo Canul - Full-Stack Software Developer',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'About - Ricardo Canul',
+  twitterDescription: $t('aboutPage.description'),
+  twitterImage: 'https://ricardocanul7.github.io/og-image.jpg',
+})
+
+defineOgImage('NuxtSeo.satori', {
+  title: 'About - Ricardo Canul',
+  description: $t('aboutPage.description'),
+  colorMode: 'dark'
+})
+</script>
+
 <template>
   <div>
     <section class="intro-section bg-slate-900 pt-16 pb-10 text-center md:text-left">

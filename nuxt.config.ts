@@ -31,9 +31,16 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image'],
+  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/sitemap', 'nuxt-og-image'],
   lucide: {
     namePrefix: 'Icon',
+  },
+  ogImage: {
+    defaults: {
+      width: 1200,
+      height: 630,
+    },
+    zeroRuntime: true,
   },
   nitro: {
     prerender: {
@@ -43,9 +50,24 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NODE_ENV === 'production' ? baseURL : '/',
     head: {
-      title: 'Portfolio',
+      title: 'Ricardo Canul - Full-Stack Software Developer',
       meta: [
-        { name: 'description', content: 'Ricardo Canul\'s portfolio' },
+        { name: 'description', content: 'Ricardo Canul - Full-Stack Software Engineer specializing in PHP, Python, and modern web development. Building robust and scalable digital ecosystems with 4+ years of experience.' },
+        { name: 'keywords', content: 'Ricardo Canul, Full-Stack Developer, PHP Developer, Python Developer, Web Development, Software Engineer, Laravel, Django, Shopware, Pimcore' },
+        { name: 'author', content: 'Ricardo Canul' },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Ricardo Canul Portfolio' },
+        { property: 'og:title', content: 'Ricardo Canul - Full-Stack Software Developer' },
+        { property: 'og:description', content: 'Full-Stack Software Engineer specializing in PHP, Python, and modern web development. Building robust and scalable digital ecosystems with 4+ years of experience.' },
+        { property: 'og:url', content: 'https://ricardocanul7.github.io' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt', content: 'Ricardo Canul - Full-Stack Software Developer' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Ricardo Canul - Full-Stack Software Developer' },
+        { name: 'twitter:description', content: 'Full-Stack Software Engineer specializing in PHP, Python, and modern web development. Building robust and scalable digital ecosystems with 4+ years of experience.' },
+        { name: 'twitter:creator', content: '@ricardocanul7' },
       ],
       htmlAttrs: { lang: 'en' },
       link: [
@@ -53,6 +75,10 @@ export default defineNuxtConfig({
           rel: 'icon',
           type: 'image/x-icon',
           href: process.env.NODE_ENV === 'production' ? baseURL + 'favicon.ico' : '/favicon.ico'
+        },
+        {
+          rel: 'canonical',
+          href: 'https://ricardocanul7.github.io'
         },
       ],
     },
