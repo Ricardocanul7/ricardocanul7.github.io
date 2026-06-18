@@ -1,25 +1,43 @@
 <script setup lang="ts">
-const { hasDecided, accept, decline } = useAnalyticsConsent()
+import { ref, onMounted } from 'vue'
 
-// Show the banner only when the user hasn't decided yet
+const { consent } = useScriptGoogleAnalytics()
+
+const consentCookie = useCookie<'accepted' | 'declined' | null>('analytics-consent', {
+  maxAge: 60 * 60 * 24 * 365,   // 1 year
+  sameSite: 'lax',
+  default: () => null,
+})
+
 const isVisible = ref(false)
 
 onMounted(() => {
-  if (!hasDecided.value) {
+  if (consentCookie.value === null) {
     isVisible.value = true
+  } else if (consentCookie.value === 'accepted') {
+    grantGA()
   }
 })
 
+const grantGA = () => {
+  consent?.update({
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    analytics_storage: 'granted',
+  })
+}
+
 const acceptCookies = () => {
-  accept()
+  consentCookie.value = 'accepted'
+  grantGA()
   isVisible.value = false
 }
 
 const declineCookies = () => {
-  decline()
+  consentCookie.value = 'declined'
   isVisible.value = false
 }
-
 </script>
 
 <template>
@@ -61,7 +79,6 @@ const declineCookies = () => {
             </button>
           </div>
         </div>
-        
       </div>
     </div>
   </Transition>

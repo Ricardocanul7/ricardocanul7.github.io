@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css', '~/assets/scss/main.scss'],
   i18n: {
-    baseUrl: 'https://ricardocanul7.github.io',
+    baseUrl: baseURL,
     langDir: 'locales',
     defaultLocale: 'en',
     locales: [
@@ -90,7 +90,16 @@ export default defineNuxtConfig({
   },
   scripts: {
     registry: {
-      googleAnalytics: { trigger: 'onNuxtReady' },
+      googleAnalytics: {
+        trigger: 'onNuxtReady',
+        defaultConsent: {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        },
+        proxy: false,
+      },
     }
   }
 })
