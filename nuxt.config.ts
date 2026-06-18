@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/sitemap', 'nuxt-og-image'],
+  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/sitemap', 'nuxt-og-image', '@nuxt/scripts'],
   lucide: {
     namePrefix: 'Icon',
   },
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      gaId: process.env.NUXT_GA_ID || ''
+      gaId: ''
     }
   },
   nitro: {

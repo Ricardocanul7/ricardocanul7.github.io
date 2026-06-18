@@ -1,70 +1,22 @@
 <script setup lang="ts">
-const consent = ref<'granted' | 'denied' | null>(null)
+const { hasDecided, accept, decline } = useAnalyticsConsent()
+
+// Show the banner only when the user hasn't decided yet
 const isVisible = ref(false)
 
-// Declare gtag on window
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void
-  }
-}
-
 onMounted(() => {
-  // Check if consent was already given
-  try {
-    const savedConsent = localStorage.getItem('cookie-consent')
-    if (savedConsent) {
-      consent.value = savedConsent as 'granted' | 'denied'
-      updateConsentMode(consent.value)
-    } else {
-      // Show banner for all users
-      isVisible.value = true
-    }
-  } catch (error) {
-    // If localStorage is not available, show banner
+  if (!hasDecided.value) {
     isVisible.value = true
   }
 })
 
-
-const updateConsentMode = (consentValue: 'granted' | 'denied') => {
-  if (import.meta.client && window.gtag) {
-    window.gtag('consent', 'update', {
-      'analytics_storage': consentValue,
-      'ad_storage': consentValue,
-      'ad_user_data': consentValue,
-      'ad_personalization': consentValue
-    })
-    
-    // If consent is granted, send initial page view
-    if (consentValue === 'granted') {
-      window.gtag('event', 'page_view', {
-        page_title: document.title,
-        page_location: window.location.href
-      })
-    }
-  }
-}
-
 const acceptCookies = () => {
-  consent.value = 'granted'
-  try {
-    localStorage.setItem('cookie-consent', 'granted')
-  } catch (error) {
-    // Ignore localStorage errors
-  }
-  updateConsentMode('granted')
+  accept()
   isVisible.value = false
 }
 
 const declineCookies = () => {
-  consent.value = 'denied'
-  try {
-    localStorage.setItem('cookie-consent', 'denied')
-  } catch (error) {
-    // Ignore localStorage errors
-  }
-  updateConsentMode('denied')
+  decline()
   isVisible.value = false
 }
 

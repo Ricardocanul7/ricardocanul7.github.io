@@ -13,6 +13,7 @@
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.3",
     "@nuxt/image": "^2.0.0",
+    "@nuxt/scripts": "^1.2.1",
     "@nuxtjs/i18n": "^10.4.0",
     "@nuxtjs/sitemap": "^8.2.1",
     "@resvg/resvg-js": "^2.6.2",
