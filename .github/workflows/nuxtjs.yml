@@ -68,8 +68,8 @@ jobs:
       - name: Static HTML export with Nuxt
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
         env:
-          NUXT_APP_BASE_URL: /
-          NUXT_PUBLIC_GA_ID: ${{ secrets.NUXT_GA_ID }}
+          NUXT_APP_BASE_URL: 'https://ricardocanul7.github.io'
+          NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID: ${{ secrets.NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
