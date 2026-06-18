@@ -42,6 +42,11 @@ export default defineNuxtConfig({
     },
     zeroRuntime: true,
   },
+  runtimeConfig: {
+    public: {
+      gaId: process.env.NUXT_GA_ID || ''
+    }
+  },
   nitro: {
     prerender: {
       failOnError: false,

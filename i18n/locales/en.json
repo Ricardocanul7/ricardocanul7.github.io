@@ -10,6 +10,13 @@
     "appFooter": {
         "copy": "Built with Nuxt 4 — Developed by Ricardo Canul"
     },
+    "cookieConsent": {
+        "title": "Cookie Consent",
+        "description": "We use cookies to analyze website traffic and optimize your website experience. By accepting, you consent to the use of cookies for analytics purposes.",
+        "accept": "Accept",
+        "decline": "Decline",
+        "manage": "Manage cookie preferences"
+    },
     "homeHero": {
         "title": "Hi, I'm Ricardo Canul",
         "description": "A passionate software developer specializing in web development. I create modern and responsive websites and applications that provide seamless user experiences.",
