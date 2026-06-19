@@ -12,6 +12,7 @@
                             :alt="$t('homeAbout.profilePhotoAlt')"
                             :img-attrs="{
                                 class: 'rounded-lg border-2 border-violet-300/20',
+                                fetchpriority: 'high'
                             }"
                         />
                         <div class="absolute bottom-0 right-0 w-fit bg-slate-950/40 backdrop-blur-xs border-t border border-violet-300/20 rounded-2xl">

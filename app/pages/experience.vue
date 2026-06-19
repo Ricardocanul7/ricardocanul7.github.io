@@ -50,6 +50,7 @@ defineOgImage('NuxtSeo.satori', {
                                 :alt="$t('homeAbout.profilePhotoAlt')"
                                 :img-attrs="{
                                     class: 'rounded-lg border-2 border-violet-300/20',
+                                    fetchpriority: 'high'
                                 }" />
                         </div>
                     </LayoutColumn>
