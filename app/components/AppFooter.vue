@@ -4,9 +4,9 @@ const footer = appConfig.footer;
 </script>
 
 <template>
-    <footer id="contacto" class="bg-slate-950 text-slate-500 py-6 mt-auto border-t border-slate-900 relative">
+    <footer id="contacto" class="bg-slate-950 text-slate-300 py-6 mt-auto border-t border-slate-900 relative">
         <LayoutContainer>
-            <div class="w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-4">
+            <div class="w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
                 <p>{{ $t('appFooter.copy') }}</p>
                 <div class="flex gap-4">
                     <div v-for="(link, index) in footer.socialLinks" :key="index" class="social-links">
