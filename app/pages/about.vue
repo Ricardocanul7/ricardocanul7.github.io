@@ -25,7 +25,7 @@ defineOgImage('NuxtSeo.satori', {
 
 <template>
   <div>
-    <section class="intro-section bg-slate-900 pt-16 pb-10 text-center md:text-left">
+    <section class="intro-section bg-slate-900 pt-16 pb-10 text-center lg:text-left">
       <LayoutContainer>
         <LayoutRow>
           <LayoutColumn span="8" class="flex flex-col justify-center">
@@ -40,7 +40,7 @@ defineOgImage('NuxtSeo.satori', {
           </LayoutColumn>
 
           <LayoutColumn span="4">
-            <div class="photo-container">
+            <div class="photo-container mx-auto">
               <NuxtPicture 
                 format="avif,webp" src="./images/about-intro.webp" 
                 height="400" width="400" 

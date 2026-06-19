@@ -26,7 +26,7 @@ defineProps<{
             />
         </div>
 
-        <div class="p-6 flex flex-col flex-grow">
+        <div class="p-6 flex flex-col grow">
             <!-- Tags (Similar to SkillCard style) -->
             <div class="flex flex-wrap gap-2 mb-4">
                 <span 

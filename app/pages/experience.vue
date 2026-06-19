@@ -27,7 +27,7 @@ defineOgImage('NuxtSeo.satori', {
 <template>
     <div>
         <!-- Summary -->
-        <section class="summary-section bg-slate-900 pt-16 pb-10 text-center md:text-left">
+        <section class="summary-section bg-slate-900 pt-16 pb-10 text-center lg:text-left">
             <LayoutContainer>
                 <LayoutRow>
                     <LayoutColumn span="8" class="flex flex-col justify-center">
@@ -42,7 +42,7 @@ defineOgImage('NuxtSeo.satori', {
                     </LayoutColumn>
 
                     <LayoutColumn span="4">
-                        <div class="photo-container">
+                        <div class="photo-container mx-auto">
                             <NuxtPicture 
                                 format="avif,webp" src="./images/profile.webp",
                                 width="400"
@@ -81,7 +81,7 @@ defineOgImage('NuxtSeo.satori', {
         </section>
 
         <!-- Work Experience-->
-        <section class="bg-slate-900 pt-16 pb-10 text-center md:text-left">
+        <section class="bg-slate-900 pt-16 pb-10 text-center lg:text-left">
             <LayoutContainer>
                 <LayoutRow>
                     <LayoutColumn span="4">

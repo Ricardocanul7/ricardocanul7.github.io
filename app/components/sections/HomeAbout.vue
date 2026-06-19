@@ -3,7 +3,7 @@
         <LayoutContainer>
             <LayoutRow>
                 <LayoutColumn span="5">
-                    <div class="photo-container relative p-5">
+                    <div class="photo-container relative p-5 mx-auto">
                         <NuxtPicture 
                             format="avif,webp"
                             src="./images/home-about.webp"
@@ -24,7 +24,7 @@
                     </div>
                 </LayoutColumn>
                 <LayoutColumn span="7" class="flex flex-col justify-center text-center md:text-left">
-                    <div class="content">
+                    <div class="content text-center lg:text-left">
                         <span class="uppercase text-emerald-300 font-semibold font-inter text-xs">{{ $t('homeAbout.title') }}</span>
                         <h3 class="text-2xl font-bold font-plus-jakarta-sans text-indigo-100 mb-4">
                             {{ $t('homeAbout.header') }}
