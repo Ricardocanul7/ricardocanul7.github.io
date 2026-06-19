@@ -28,7 +28,8 @@
         "description_paragraphs": [
             "Hi! I'm Ricardo Canul, a <span class=\"font-bold text-indigo-100\">Full-Stack developer</span> passionate about writing clean, efficient, and scalable code. I move fluently between backend development with <span class=\"text-violet-300\">PHP</span> / <span class=\"text-emerald-300\">Python</span> and creating dynamic, responsive interfaces.",
             "My focus isn't just on making things work, but making them work fast: I have proven experience auditing web performance and designing automated pipelines (Docker, Ansible, GitHub Actions) that make life easier for development teams. I live in Poland, speak Spanish, English and basic Polish, and am always ready to join collaborative teams where innovation and creative problem-solving are the priority."
-        ]
+        ],
+        "profilePhotoAlt": "Ricardo's profile photo"
     },
     "homeSkills": {
         "header": "Technical arsenal",
@@ -139,6 +140,7 @@
         ]
     },
     "aboutPage": {
+        "introImage": "Computer picture",
         "title": "Transforming ideas into <br><span class=\"text-violet-300\">high-impact systems.</span>",
         "description": "Software Engineer specializing in the development of robust and scalable digital ecosystems. My approach combines technical excellence in backend architectures with a results-oriented mindset, optimizing critical processes and raising performance standards to deliver exceptional user experiences.",
         "interestsInTech": "Interests in technology",

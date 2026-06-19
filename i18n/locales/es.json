@@ -28,7 +28,8 @@
         "description_paragraphs": [
             "¡Hola! Soy Ricardo Canul, un <span class=\"font-bold text-indigo-100\">desarrollador Full-Stack</span> apasionado por escribir código limpio, eficiente y escalable. Me muevo con fluidez entre el desarrollo backend con <span class=\"text-violet-300\">PHP</span> / <span class=\"text-emerald-300\">Python</span> y la creación de interfaces dinámicas y responsivas.",
             "Mi enfoque no es solo hacer que las cosas funcionen, sino que funcionen rápido: cuento con experiencia comprobada auditando el rendimiento web y diseñando pipelines automatizados (Docker, Ansible, GitHub Actions) que facilitan la vida de los equipos de desarrollo. Vivo en Polonia, hablo español, inglés y polaco básico, y siempre estoy listo para unirme a equipos colaborativos donde la innovación y la resolución creativa de problemas sean la prioridad."
-        ]
+        ],
+        "profilePhotoAlt": "Foto de perfil de Ricardo"
     },
     "homeSkills": {
         "header": "Arsenal técnico",
@@ -139,6 +140,7 @@
         ]
     },
     "aboutPage": {
+        "introImage": "Foto de una computadora",
         "title": "Transformando ideas en <br><span class=\"text-violet-300\">sistemas de alto impacto.</span>",
         "description": " Ingeniero de Software especializado en el desarrollo de ecosistemas digitales robustos y escalables. Mi enfoque combina la excelencia técnica en arquitecturas backend con una mentalidad orientada a resultados, optimizando procesos críticos y elevando los estándares de rendimiento para ofrecer experiencias de usuario excepcionales.",
         "interestsInTech": "Intereses en tecnología",

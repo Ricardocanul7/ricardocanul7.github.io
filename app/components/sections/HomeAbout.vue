@@ -9,6 +9,7 @@
                             src="./images/home-about.webp"
                             height="400"
                             width="400"
+                            :alt="$t('homeAbout.profilePhotoAlt')"
                             :img-attrs="{
                                 class: 'rounded-lg border-2 border-violet-300/20',
                             }"

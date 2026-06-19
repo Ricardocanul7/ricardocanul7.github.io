@@ -44,9 +44,10 @@ defineOgImage('NuxtSeo.satori', {
                     <LayoutColumn span="4">
                         <div class="photo-container mx-auto">
                             <NuxtPicture 
-                                format="avif,webp" src="./images/profile.webp",
+                                format="avif,webp" src="./images/profile.webp"
                                 width="400"
                                 height="400"
+                                :alt="$t('homeAbout.profilePhotoAlt')"
                                 :img-attrs="{
                                     class: 'rounded-lg border-2 border-violet-300/20',
                                 }" />
