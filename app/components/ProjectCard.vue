@@ -37,10 +37,10 @@ defineProps<{
             </div>
 
             <!-- Content -->
-            <h3
+            <h2
                 class="font-plus-jakarta-sans text-2xl font-bold text-slate-100 mb-2 group-hover:text-emerald-400 transition-colors">
                 {{ title }}
-            </h3>
+            </h2>
             <p class="font-inter text-base text-slate-400 mb-6 grow">
                 {{ description }}
             </p>

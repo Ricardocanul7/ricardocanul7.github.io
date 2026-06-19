@@ -9,9 +9,9 @@
             </span>
         </div>
 
-        <h4 class="font-plus-jakarta-sans font-bold text-2xl text-indigo-100 leading-tight">
+        <h3 class="font-plus-jakarta-sans font-bold text-2xl text-indigo-100 leading-tight">
             {{ title }}
-        </h4>
+        </h3>
 
         <p class="font-inter text-sm text-slate-300 line-clamp-3">
             {{ description }}

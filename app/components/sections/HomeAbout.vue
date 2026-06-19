@@ -27,9 +27,9 @@
                 <LayoutColumn span="7" class="flex flex-col justify-center text-center md:text-left">
                     <div class="content text-center lg:text-left">
                         <span class="uppercase text-emerald-300 font-semibold font-inter text-xs">{{ $t('homeAbout.title') }}</span>
-                        <h3 class="text-2xl font-bold font-plus-jakarta-sans text-indigo-100 mb-4">
+                        <h2 class="text-2xl font-bold font-plus-jakarta-sans text-indigo-100 mb-4">
                             {{ $t('homeAbout.header') }}
-                        </h3>
+                        </h2>
                         <p 
                             v-for="(paragraph, index) in $tm('homeAbout.description_paragraphs')"
                             :key="index"
