@@ -31,7 +31,17 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/sitemap', 'nuxt-og-image', '@nuxt/scripts'],
+  modules: [
+    'nuxt-lucide-icons',
+    '@nuxtjs/i18n',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxtjs/sitemap',
+    'nuxt-og-image',
+    '@nuxt/scripts',
+    '@nuxt/eslint'
+  ],
   lucide: {
     namePrefix: 'Icon',
   },
