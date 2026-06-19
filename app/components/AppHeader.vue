@@ -41,11 +41,11 @@ const getClasses = (exact: boolean) => `${linkClasses} ${exact ? exactActiveClas
                 <LanguageSwitcher />
                 <!-- Mobile Menu Button -->
                 <button 
-                    @click="isMenuOpen = !isMenuOpen" 
                     class="md:hidden text-slate-400 hover:text-white"
                     :aria-expanded="isMenuOpen"
                     aria-controls="mobile-menu"
                     type="button"
+                    @click="isMenuOpen = !isMenuOpen" 
                 >
                     <span class="sr-only">{{ isMenuOpen ? $t('appHeader.closeMenu') : $t('appHeader.openMenu') }}</span>
                     <div class="w-6 h-5 flex flex-col justify-between" aria-hidden="true">
@@ -68,9 +68,9 @@ const getClasses = (exact: boolean) => `${linkClasses} ${exact ? exactActiveClas
                 v-for="link in navLinks" 
                 :key="link.path" 
                 :to="localePath(link.path)" 
-                @click="isMenuOpen = false" 
                 class="text-slate-400 hover:text-indigo-400 transition-colors"
                 active-class="text-white"
+                @click="isMenuOpen = false" 
             >
                 {{ $t(link.name) }}
             </NuxtLink>

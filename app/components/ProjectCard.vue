@@ -18,7 +18,7 @@ defineProps<{
                 :src="image"
                 height="270"
                 width="480"
-                :imgAttrs="{
+                :img-attrs="{
                     alt: title,
                     loading: 'lazy',
                     class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
@@ -29,7 +29,8 @@ defineProps<{
         <div class="p-6 flex flex-col flex-grow">
             <!-- Tags (Similar to SkillCard style) -->
             <div class="flex flex-wrap gap-2 mb-4">
-                <span v-for="tag in tags" :key="tag"
+                <span 
+                    v-for="tag in tags" :key="tag"
                     class="px-2 py-1 text-[10px] font-jetbrains-mono uppercase tracking-wider bg-slate-800 text-emerald-400 rounded border border-slate-700">
                     {{ tag }}
                 </span>
@@ -45,11 +46,13 @@ defineProps<{
             </p>
 
             <!-- CTA -->
-            <a :href="link" target="_blank" rel="noopener noreferrer"
+            <a 
+                :href="link" target="_blank" rel="noopener noreferrer"
                 :aria-label="$t('projectsPage.viewProject') + ': ' + title"
                 class="flex items-center justify-center gap-2 text-violet-300 hover:bg-violet-300 hover:text-indigo-800 px-4 py-2 rounded-lg border-violet-300/50 border transition-colors font-inter text-xs font-semibold">
                 {{ $t('projectsPage.viewProject') || 'View Project' }}
-                <Icon name="heroicons:arrow-right-20-solid"
+                <Icon 
+                    name="heroicons:arrow-right-20-solid"
                     class="transform group-hover:translate-x-1 transition-transform" />
             </a>
         </div>

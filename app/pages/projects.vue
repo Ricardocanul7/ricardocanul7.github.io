@@ -43,13 +43,15 @@ defineOgImage('NuxtSeo.satori', {
 
         <!-- Projects listing section-->
         <section class="project-listing-section bg-slate-900 pt-16 pb-10 text-center md:text-left relative">
-            <div
-                class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-400/10 rounded-full blur-[100px] pointer-events-none z-0">
-            </div>
+            <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-400/10 rounded-full blur-[100px] pointer-events-none z-0"/>
             <LayoutContainer class="position relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                    <ProjectCard v-for="(project, index) in data?.projects" :key="index" :title="project.title"
-                        :description="project.description" :image="project.image" :tags="project.tags"
+                    <ProjectCard 
+                        v-for="(project, index) in data?.projects" :key="index" 
+                        :title="project.title"
+                        :description="project.description" 
+                        :image="project.image" 
+                        :tags="project.tags"
                         :link="project.link" />
                 </div>
             </LayoutContainer>

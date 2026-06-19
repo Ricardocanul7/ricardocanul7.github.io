@@ -52,11 +52,13 @@ const badgeClasses = computed(() => activeColor.value.badge);
 </script>
 
 <template>
-    <div class="group relative p-6 rounded-2xl bg-slate-800/40 border transition-all duration-300 ease-in-out"
+    <div 
+        class="group relative p-6 rounded-2xl bg-slate-800/40 border transition-all duration-300 ease-in-out"
         :class="borderClasses">
         <!-- Glow Effect on Hover -->
-        <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            :class="activeColor.glow"></div>
+        <div 
+            class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            :class="activeColor.glow"/>
 
         <div class="relative z-10">
             <!-- Category/Small Description -->
@@ -76,7 +78,8 @@ const badgeClasses = computed(() => activeColor.value.badge);
 
             <!-- Tags -->
             <div class="flex flex-wrap gap-2">
-                <span v-for="tag in tags" :key="tag" class="px-3 py-1 rounded-full text-xs font-medium border"
+                <span 
+                    v-for="tag in tags" :key="tag" class="px-3 py-1 rounded-full text-xs font-medium border"
                     :class="badgeClasses">
                     {{ tag }}
                 </span>

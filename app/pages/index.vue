@@ -62,7 +62,9 @@ useHead({
 </script>
 
 <template>
-  <SectionsHomeHero />
-  <SectionsHomeAbout />
-  <SectionsHomeSkills />
+  <div>
+    <SectionsHomeHero />
+    <SectionsHomeAbout />
+    <SectionsHomeSkills />
+  </div>
 </template>

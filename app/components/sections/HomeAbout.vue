@@ -9,7 +9,7 @@
                             src="./images/home-about.webp"
                             height="400"
                             width="400"
-                            :imgAttrs="{
+                            :img-attrs="{
                                 class: 'rounded-lg border-2 border-violet-300/20',
                             }"
                         />
@@ -29,11 +29,12 @@
                         <h3 class="text-2xl font-bold font-plus-jakarta-sans text-indigo-100 mb-4">
                             {{ $t('homeAbout.header') }}
                         </h3>
-                        <p class="font-inter text-base text-slate-300 mb-4"
+                        <p 
                             v-for="(paragraph, index) in $tm('homeAbout.description_paragraphs')"
                             :key="index"
-                            v-html="$rt(paragraph)">
-                        </p>
+                            class="font-inter text-base text-slate-300 mb-4"
+                            v-html="$rt(paragraph)"
+                        />
                     </div>
                 </LayoutColumn>
             </LayoutRow>

@@ -29,18 +29,18 @@ onUnmounted(() => {
 
 <template>
     <div 
-        class="relative inline-block text-left" 
         ref="container"
+        class="relative inline-block text-left" 
         @keydown.escape="isOpen = false"
     >
         <button 
-            @click="toggleDropdown"
             type="button"
             class="flex items-center gap-2 bg-slate-900/50 text-slate-400 text-xs font-medium border border-slate-800 hover:border-indigo-500/50 hover:text-white rounded-lg px-3 py-1.5 transition-all duration-200"
             aria-haspopup="listbox"
             :aria-expanded="isOpen"
             aria-controls="language-options-list"
             aria-label="Select language / Seleccionar idioma"
+            @click="toggleDropdown"
         >
             <span class="uppercase">{{ currentLocale }}</span>
             <svg 
@@ -74,13 +74,13 @@ onUnmounted(() => {
                     <button
                         v-for="loc in locales" 
                         :key="loc.code"
-                        @click="selectLocale(loc.code)"
                         role="option"
                         :aria-selected="currentLocale === loc.code"
                         :class="[
                             currentLocale === loc.code ? 'bg-indigo-600/10 text-indigo-400 font-semibold' : 'text-slate-400 hover:bg-slate-900 hover:text-white',
                             'block w-full text-left px-4 py-2 text-xs font-medium transition-colors'
                         ]"
+                        @click="selectLocale(loc.code)"
                     >
                         {{ loc.name?.toUpperCase() }}
                     </button>

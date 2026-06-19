@@ -66,14 +66,14 @@ const declineCookies = () => {
           
           <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <button
-              @click="declineCookies"
               class="px-4 py-2 text-sm font-medium text-slate-300 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors border border-slate-700"
+              @click="declineCookies"
             >
               {{ $t('cookieConsent.decline') }}
             </button>
             <button
-              @click="acceptCookies"
               class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors"
+              @click="acceptCookies"
             >
               {{ $t('cookieConsent.accept') }}
             </button>

@@ -47,9 +47,9 @@ defineOgImage('NuxtSeo.satori', {
                                 format="avif,webp" src="./images/profile.webp",
                                 width="400"
                                 height="400"
-                                :imgAttrs="{
-                                class: 'rounded-lg border-2 border-violet-300/20',
-                            }" />
+                                :img-attrs="{
+                                    class: 'rounded-lg border-2 border-violet-300/20',
+                                }" />
                         </div>
                     </LayoutColumn>
                 </LayoutRow>
@@ -61,14 +61,18 @@ defineOgImage('NuxtSeo.satori', {
         <section class="bg-slate-900 py-10">
             <LayoutContainer>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <SkillCard icon="material-symbols:terminal"
+                    <SkillCard 
+                        icon="material-symbols:terminal"
                         :title="$t('experiencePage.skills.backendDevelopment.title')"
                         :description="$t('experiencePage.skills.backendDevelopment.description')"
                         :tags="['PHP', 'Python', 'Laravel', 'Django']" :expertise=null />
-                    <SkillCard icon="material-symbols:api" :title="$t('experiencePage.skills.apiDesign.title')"
+                    <SkillCard 
+                        icon="material-symbols:api" 
+                        :title="$t('experiencePage.skills.apiDesign.title')"
                         :description="$t('experiencePage.skills.apiDesign.description')"
                         :tags="['FastAPI', 'OpenAPI', 'JWT', 'OAuth2']" , :expertise=null />
-                    <SkillCard icon="material-symbols:database-outline"
+                    <SkillCard 
+                        icon="material-symbols:database-outline"
                         :title="$t('experiencePage.skills.dataAndDevOps.title')"
                         :description="$t('experiencePage.skills.dataAndDevOps.description')"
                         :tags="['PostgreSQL', 'Docker', 'CI/CD', 'Redis']" , :expertise=null />
@@ -91,9 +95,10 @@ defineOgImage('NuxtSeo.satori', {
                         </div>
                     </LayoutColumn>
                     <LayoutColumn span="8">
-                        <WorkExperience v-for="(experience, index) in workExperience" :key="index"
+                        <WorkExperience 
+                            v-for="(experience, index) in workExperience" :key="index"
                             :dates="experience.dates" :title="experience.title"
-                            :descriptionPoints="experience.descriptionPoints" />
+                            :description-points="experience.descriptionPoints" />
                     </LayoutColumn>
                 </LayoutRow>
             </LayoutContainer>
@@ -111,7 +116,8 @@ defineOgImage('NuxtSeo.satori', {
                             </h2>
                         </div>
                         <div class="bg-slate-900 py-10 px-4 md:px-10">
-                            <div v-for="(edu, index) in education" :key="index"
+                            <div 
+                                v-for="(edu, index) in education" :key="index"
                                 class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50">
                                 <p class="text-slate-100 font-inter text-base font-bold">{{ edu.degree }}</p>
                                 <h3 class="text-slate-400 font-inter text-base mt-1">
@@ -131,7 +137,8 @@ defineOgImage('NuxtSeo.satori', {
                             </h2>
                         </div>
                         <div class="bg-slate-900 py-10 px-4 md:px-10">
-                            <div v-for="(cert, index) in certifications" :key="index"
+                            <div 
+                                v-for="(cert, index) in certifications" :key="index"
                                 class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50 flex items-center gap-5">
                                 <div class="icon-container text-violet-300 text-4xl">
                                     <Icon :name="cert.icon" />

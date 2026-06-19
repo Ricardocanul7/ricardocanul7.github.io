@@ -16,7 +16,8 @@ defineProps<{
             <span class="font-jetbrains-mono text-xs text-emerald-400 font-semibold uppercase tracking-wider">{{ dates }}</span>
             <h3 class="font-plus-jakarta-sans text-xl font-bold text-indigo-100 mt-1 mb-3">{{ title }}</h3>
             <ul class="list-none space-y-2">
-                <li v-for="(point, index) in descriptionPoints" :key="index" 
+                <li 
+                    v-for="(point, index) in descriptionPoints" :key="index" 
                     class="font-inter text-slate-400 text-sm flex items-start before:content-['◦'] before:text-violet-300 before:mr-2 before:font-bold">
                     {{ point }}
                 </li>
