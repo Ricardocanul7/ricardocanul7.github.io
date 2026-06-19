@@ -1,14 +1,12 @@
 import tailwindcss from "@tailwindcss/vite";
 
-const baseURL = '/';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css', '~/assets/scss/main.scss'],
   i18n: {
-    baseUrl: baseURL,
+    baseUrl: 'https://ricardocanul7.github.io',
     langDir: 'locales',
     defaultLocale: 'en',
     locales: [
@@ -63,7 +61,6 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? baseURL : '/',
     head: {
       title: 'Ricardo Canul - Full-Stack Software Developer',
       meta: [
@@ -89,7 +86,7 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/x-icon',
-          href: process.env.NODE_ENV === 'production' ? baseURL + 'favicon.ico' : '/favicon.ico'
+          href: '/favicon.ico'
         },
         {
           rel: 'canonical',
