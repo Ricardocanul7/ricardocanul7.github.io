@@ -54,7 +54,7 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Ricardo Canul' },
         { name: 'robots', content: 'index, follow' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Ricardo Canul Portfolio' },
+        { property: 'og:site_name', content: 'Ricardo Canul' },
         { property: 'og:title', content: 'Ricardo Canul - Full-Stack Software Developer' },
         { property: 'og:description', content: 'Full-Stack Software Engineer specializing in PHP, Python, and modern web development. Building robust and scalable digital ecosystems with 4+ years of experience.' },
         { property: 'og:url', content: 'https://ricardocanul7.github.io' },
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    name: 'Ricardo Canul Portfolio',
+    name: 'Ricardo Canul',
     url: 'https://ricardocanul7.github.io',
   },
   scripts: {
