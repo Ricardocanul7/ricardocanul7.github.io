@@ -10,7 +10,7 @@ const footer = appConfig.footer;
                 <p>{{ $t('appFooter.copy') }}</p>
                 <div class="flex gap-4">
                     <div v-for="(link, index) in footer.socialLinks" :key="index" class="social-links">
-                        <a :href="link.link" class="font-inter text-xs font-semibold text-slate-300 hover:text-white hover:underline decoration-emerald-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                        <a :href="link.link" class="font-inter text-xs font-semibold text-slate-300 hover:text-white hover:underline decoration-violet-300 transition-colors" target="_blank" rel="noopener noreferrer">
                             {{link.name}}
                         </a>
                     </div>

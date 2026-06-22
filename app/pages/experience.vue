@@ -88,7 +88,7 @@ useHead({
                 <LayoutRow>
                     <LayoutColumn span="8" class="flex flex-col justify-center">
                         <div class="content">
-                            <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-violet-300 mb-5">
+                            <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
                                 {{ $t('profesionalSummary') }}
                             </h1>
                             <p class="font-inter text-lg text-slate-300 mb-5">
@@ -145,7 +145,7 @@ useHead({
                 <LayoutRow>
                     <LayoutColumn span="4">
                         <div class="content">
-                            <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-violet-300 mb-4">
+                            <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-4">
                                 {{ $t('experiencePage.workExperience.title') }}
                             </h2>
                             <p class="font-inter text-base text-slate-300">

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    accentColor: 'sky'
+    accentColor: 'violet'
 });
 
 const colorMap = {
