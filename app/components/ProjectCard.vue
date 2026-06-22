@@ -76,7 +76,7 @@ const ctaClasses = computed(() => `flex items-center justify-center gap-2 px-4 p
                 width="480"
                 :img-attrs="{
                     alt: title,
-                    loading: 'lazy',
+                    loading: 'eager',
                     class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
                 }"
             />

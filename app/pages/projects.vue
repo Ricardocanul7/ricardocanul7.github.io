@@ -1,6 +1,44 @@
 <script setup lang="ts">
 const { data } = await useFetch('/api/projects')
 
+const allImagesLoaded = ref(false)
+const gridRef = ref<HTMLElement | null>(null)
+
+onMounted(async () => {
+  await nextTick()
+
+  const container = gridRef.value
+  if (!container) {
+    allImagesLoaded.value = true
+    return
+  }
+
+  const images = container.querySelectorAll('img')
+  if (images.length === 0) {
+    allImagesLoaded.value = true
+    return
+  }
+
+  let loadedCount = 0
+  const totalImages = images.length
+
+  const checkAllLoaded = () => {
+    loadedCount++
+    if (loadedCount >= totalImages) {
+      allImagesLoaded.value = true
+    }
+  }
+
+  images.forEach((img) => {
+    if (img.complete) {
+      checkAllLoaded()
+    } else {
+      img.addEventListener('load', checkAllLoaded, { once: true })
+      img.addEventListener('error', checkAllLoaded, { once: true })
+    }
+  })
+})
+
 useSeoMeta({
   title: $t('appHeader.projects'),
   description: $t('projectsPage.listingDescription'),
@@ -77,7 +115,20 @@ useHead({
         <section class="project-listing-section bg-slate-900 pt-16 pb-10 text-center md:text-left relative">
             <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/10 rounded-full blur-[100px] pointer-events-none z-0"/>
             <LayoutContainer class="position relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                <!-- Skeleton grid (shown while images load) -->
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out"
+                    :class="allImagesLoaded ? 'opacity-0 absolute pointer-events-none' : 'opacity-100'">
+                    <ProjectCardSkeleton
+                        v-for="(_, index) in data?.projects"
+                        :key="'skeleton-' + index" />
+                </div>
+
+                <!-- Actual project grid (shown after images load) -->
+                <div
+                    ref="gridRef"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out"
+                    :class="allImagesLoaded ? 'opacity-100' : 'opacity-0 absolute pointer-events-none'">
                     <ProjectCard 
                         v-for="(project, index) in data?.projects" :key="index" 
                         :title="project.title"
