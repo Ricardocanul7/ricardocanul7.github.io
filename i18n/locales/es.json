@@ -68,7 +68,7 @@
     },
     "experiencePage": {
         "summary": {
-            "description": "Ingeniero de Software Full-Stack con más de 4 años de experiencia especializado en el desarrollo de aplicaciones web integrales. Desarrollo de arquitecturas tanto monolíticas como de microservicios. Experto en la creación de interfaces responsivas y en la optimización de flujos de trabajo de desarrollo con Docker. Buscando aplicar conocimientos técnicos y resolución creativa de problemas para impulsar resultados impactantes en un equipo colaborativo."
+            "description": "Ingeniero de Software Full-Stack con 4+ años de experiencia en apps web, arquitecturas monolíticas y microservicios, interfaces responsivas y flujos Docker."
         },
         "skills": {
             "backendDevelopment": {
@@ -142,7 +142,7 @@
     "aboutPage": {
         "introImage": "Foto de una computadora",
         "title": "Transformando ideas en <br><span class=\"text-violet-300\">sistemas de alto impacto.</span>",
-        "description": " Ingeniero de Software especializado en el desarrollo de ecosistemas digitales robustos y escalables. Mi enfoque combina la excelencia técnica en arquitecturas backend con una mentalidad orientada a resultados, optimizando procesos críticos y elevando los estándares de rendimiento para ofrecer experiencias de usuario excepcionales.",
+        "description": "Ingeniero de Software en ecosistemas digitales robustos. Combino excelencia técnica con mentalidad orientada a resultados para optimizar rendimiento.",
         "interestsInTech": "Intereses en tecnología",
         "interestItems": {
             "pythonForIA": {

@@ -80,6 +80,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+  site: {
+    name: 'Ricardo Canul Portfolio',
+    url: 'https://ricardocanul7.github.io',
+  },
   scripts: {
     registry: {
       googleAnalytics: {

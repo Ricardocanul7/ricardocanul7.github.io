@@ -19,7 +19,7 @@
     },
     "homeHero": {
         "title": "Hi, I'm Ricardo Canul",
-        "description": "A passionate software developer specializing in web development. I create modern and responsive websites and applications that provide seamless user experiences.",
+        "description": "A passionate software developer specializing in web development. I create modern, responsive websites and applications that provide seamless user experiences.",
         "cta": "View My Work"
     },
     "homeAbout": {
@@ -68,7 +68,7 @@
     },
     "experiencePage": {
         "summary": {
-            "description": "Full-Stack Software Engineer with 4+ years of experience specializing in full-stack web application development. Developing both monolithic and microservices architectures . Adept at creating responsive interfaces and streamlining development workflows with Docker. Seeking to apply technical expertise and creative problem-solving to drive impactful results in a collaborative team."
+            "description": "Full-Stack Engineer with 4+ years of experience in web apps, monolithic and microservices architectures, responsive interfaces, and Docker workflows."
         },
         "skills": {
             "backendDevelopment": {
@@ -142,7 +142,7 @@
     "aboutPage": {
         "introImage": "Computer picture",
         "title": "Transforming ideas into <br><span class=\"text-violet-300\">high-impact systems.</span>",
-        "description": "Software Engineer specializing in the development of robust and scalable digital ecosystems. My approach combines technical excellence in backend architectures with a results-oriented mindset, optimizing critical processes and raising performance standards to deliver exceptional user experiences.",
+        "description": "Software Engineer building robust and scalable digital ecosystems. I combine backend expertise with a results-driven mindset to optimize performance.",
         "interestsInTech": "Interests in technology",
         "interestItems": {
             "pythonForIA": {
