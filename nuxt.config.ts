@@ -73,10 +73,6 @@ export default defineNuxtConfig({
           type: 'image/x-icon',
           href: '/favicon.ico'
         },
-        {
-          rel: 'canonical',
-          href: 'https://ricardocanul7.github.io'
-        },
       ],
     },
   },

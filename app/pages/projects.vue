@@ -22,6 +22,38 @@ defineOgImage('NuxtSeo.satori', {
   colorMode: 'dark'
 })
 
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Ricardo Canul - Projects',
+        description: $t('projectsPage.listingDescription'),
+        url: 'https://ricardocanul7.github.io/projects',
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: data.value?.projects?.map((project, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+              '@type': 'SoftwareSourceCode',
+              name: project.title,
+              description: project.description,
+              url: project.link,
+              programmingLanguage: project.tags,
+              author: {
+                '@type': 'Person',
+                name: 'Ricardo Canul'
+              }
+            }
+          })) || []
+        }
+      })
+    }
+  ]
+})
 </script>
 
 <template>
