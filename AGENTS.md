@@ -196,7 +196,10 @@ Configured via `@nuxt/scripts` module:
 - Triggered on NuxtReady
 - Proxy disabled (direct to GA4)
 
-See `runtimeConfig.public.gaId` for the tracking ID.
+The Google Analytics tracking ID is passed as an environment variable from the `.env` file:
+- **Environment variable**: `NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID`
+- The gaId is not hardcoded in the project for security and flexibility
+- Reference `.env.example` for the required variable format
 
 ---
 

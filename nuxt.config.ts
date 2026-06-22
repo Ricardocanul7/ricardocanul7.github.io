@@ -40,11 +40,6 @@ export default defineNuxtConfig({
     },
     zeroRuntime: true,
   },
-  runtimeConfig: {
-    public: {
-      gaId: ''
-    }
-  },
   nitro: {
     prerender: {
       failOnError: false,
