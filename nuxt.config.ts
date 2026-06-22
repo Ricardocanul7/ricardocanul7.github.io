@@ -47,7 +47,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Ricardo Canul - Full-Stack Software Developer',
+      title: 'Ricardo Canul',
       meta: [
         { name: 'description', content: 'Ricardo Canul - Full-Stack Software Engineer specializing in PHP, Python, and modern web development. Building robust and scalable digital ecosystems with 4+ years of experience.' },
         { name: 'keywords', content: 'Ricardo Canul, Full-Stack Developer, PHP Developer, Python Developer, Web Development, Software Engineer, Laravel, Django, Shopware, Pimcore' },

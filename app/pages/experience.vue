@@ -2,17 +2,17 @@
 const { workExperience, education, certifications } = useExperienceData()
 
 useSeoMeta({
-  title: 'Experience - Ricardo Canul',
+  title: $t('appHeader.experience'),
   description: $t('experiencePage.summary.description'),
   keywords: 'Ricardo Canul, Experience, Full-Stack Developer, Software Engineer, PHP, Python, Laravel, Django, Shopware, Pimcore, Work History, Education, Certifications',
   author: 'Ricardo Canul',
-  ogTitle: 'Experience - Ricardo Canul',
+  ogTitle: $t('appHeader.experience'),
   ogDescription: $t('experiencePage.summary.description'),
   ogType: 'website',
   ogUrl: 'https://ricardocanul7.github.io/experience',
   ogImageAlt: 'Ricardo Canul - Full-Stack Software Developer',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Experience - Ricardo Canul',
+  twitterTitle: $t('appHeader.experience'),
   twitterDescription: $t('experiencePage.summary.description'),
 })
 

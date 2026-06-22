@@ -2,17 +2,17 @@
 const { data } = await useFetch('/api/projects')
 
 useSeoMeta({
-  title: 'Projects - Ricardo Canul',
+  title: $t('appHeader.projects'),
   description: $t('projectsPage.listingDescription'),
   keywords: 'Ricardo Canul, Projects, Portfolio, Web Development, Full-Stack Developer, PHP, Python, Laravel, Django, Shopware, Pimcore, Web Applications',
   author: 'Ricardo Canul',
-  ogTitle: 'Projects - Ricardo Canul',
+  ogTitle: $t('appHeader.projects'),
   ogDescription: $t('projectsPage.listingDescription'),
   ogType: 'website',
   ogUrl: 'https://ricardocanul7.github.io/projects',
   ogImageAlt: 'Ricardo Canul - Full-Stack Software Developer',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Projects - Ricardo Canul',
+  twitterTitle: $t('appHeader.projects'),
   twitterDescription: $t('projectsPage.listingDescription'),
 })
 

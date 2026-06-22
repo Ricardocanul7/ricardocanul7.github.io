@@ -1,16 +1,16 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Ricardo Canul - Full-Stack Software Developer',
+  title: $t('appHeader.home'),
   description: $t('homeHero.description'),
   keywords: 'Ricardo Canul, Full-Stack Developer, PHP Developer, Python Developer, Web Development, Software Engineer, Laravel, Django, Shopware, Pimcore',
   author: 'Ricardo Canul',
-  ogTitle: 'Ricardo Canul - Full-Stack Software Developer',
+  ogTitle: $t('appHeader.home'),
   ogDescription: $t('homeHero.description'),
   ogType: 'website',
   ogUrl: 'https://ricardocanul7.github.io',
   ogImageAlt: 'Ricardo Canul - Full-Stack Software Developer',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Ricardo Canul - Full-Stack Software Developer',
+  twitterTitle: $t('appHeader.home'),
   twitterDescription: $t('homeHero.description'),
 })
 
