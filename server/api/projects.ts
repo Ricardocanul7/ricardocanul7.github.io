@@ -99,6 +99,13 @@ export default defineEventHandler((event) => {
       image: `${imagesDirectory}terrakaan.png`,
       link: "https://terrakaan.org/",
       tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+    },
+    {
+      title: "Enigma project",
+      description: "CLI application to encrypt and decrypt texts",
+      image: `${imagesDirectory}enigma-project.png`,
+      link: "https://github.com/Ricardocanul7/enigma-project",
+      tags: ['C', 'Makefile']
     }
   ]
 
