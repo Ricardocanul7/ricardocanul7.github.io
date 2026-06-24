@@ -3,6 +3,13 @@ export default defineEventHandler((event) => {
 
   const projects: Project[] = [
     {
+      title: "Family tree generator",
+      description: "Family tree generator web withh admin panel to register all family members",
+      image: `${imagesDirectory}family-tree-project.webp`,
+      link: "https://github.com/Ricardocanul7/family-tree-generator",
+      tags: ['PHP', 'Laravel', 'Filament', 'Tailwindcss', 'JavaScript', 'CSS', 'Docker', 'MySQL']
+    },
+    {
       title: "BC Studio",
       description: "Real state Website",
       image: `${imagesDirectory}bc-studio.png`,
