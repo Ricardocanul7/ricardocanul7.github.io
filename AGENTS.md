@@ -86,16 +86,16 @@ ricardocanul7.github.io/
 ### Development
 ```bash
 # Start dev server with hot reload
-npm run dev
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Preview production build
-npm run preview
+pnpm preview
 
 # Type checking
-npx tsc --noEmit
+pnpm tsc --noEmit
 ```
 
 ### Component Creation Pattern
@@ -256,10 +256,10 @@ The Google Analytics tracking ID is passed as an environment variable from the `
 ### For Production Deployment
 ```bash
 # 1. Build the project
-npm run build
+pnpm build
 
 # 2. Preview to verify
-npm run preview
+pnpm preview
 
 # 3. Deploy the .output directory contents
 ```
@@ -295,12 +295,12 @@ npm run preview
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production |
+| `pnpm preview` | Preview production build |
 | `nuxt prepare` | Prepare for SSR/SSG |
-| `npm run lint` | Run ESLint |
-| `npx tsc --noEmit` | TypeScript type check |
+| `pnpm lint` | Run ESLint |
+| `pnpm tsc --noEmit` | TypeScript type check |
 
 ---
 
