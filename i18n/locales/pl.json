@@ -1,0 +1,190 @@
+{
+    "appHeader": {
+        "home": "Strona główna",
+        "about": "O mnie",
+        "projects": "Projekty",
+        "experience": "Doświadczenie",
+        "openMenu": "Otwórz menu",
+        "closeMenu": "Zamknij menu"
+    },
+    "appFooter": {
+        "copy": "Zbudowane z Nuxt 4 — Opracowane przez Ricardo Canul"
+    },
+    "cookieConsent": {
+        "title": "Zgoda na pliki cookie",
+        "description": "Używamy plików cookie do analizy ruchu na stronie i optymalizacji doświadczeń. Akceptując, wyrażasz zgodę na wykorzystanie plików cookie do celów analitycznych.",
+        "accept": "Akceptuję",
+        "decline": "Odrzucam",
+        "manage": "Zarządzaj preferencjami plików cookie"
+    },
+    "homeHero": {
+        "title": "Cześć, jestem Ricardo Canul",
+        "description": "Pasjonat tworzenia oprogramowania specjalizujący się w rozwoju stron internetowych. Tworzę nowoczesne, responsywne aplikacje zapewniające płynne doświadczenia użytkownika.",
+        "cta": "Zobacz moje prace"
+    },
+    "homeAbout": {
+        "title": "O mnie",
+        "header": "Budując backend jutra i optymalizując dzisiejszy frontend",
+        "description_paragraphs": [
+            "Cześć! Jestem Ricardo Canul, <span class=\"font-bold text-indigo-100\">Full-Stack developer</span> z pasją do pisania czystego, wydajnego i skalowalnego kodu. Płynnie poruszam się między backendem w <span class=\"text-violet-300\">PHP</span> / <span class=\"text-emerald-300\">Python</span> a tworzeniem dynamicznych, responsywnych interfejsów.",
+            "Skupiam się nie tylko na działaniu, ale na szybkim działaniu: mam udokumentowane doświadczenie w audytowaniu wydajności stron i projektowaniu zautomatyzowanych pipeline'ów (Docker, Ansible, GitHub Actions), które ułatwiają pracę zespołom deweloperskim. Mieszkam w Polsce, mówię po hiszpańsku, angielsku i podstawowym polskim, i zawsze jestem gotowy dołączyć do zespołów, gdzie innowacja i kreatywne rozwiązywanie problemów są priorytetem."
+        ],
+        "profilePhotoAlt": "Zdjęcie profilowe Ricardo"
+    },
+    "homeSkills": {
+        "header": "Arsenał techniczny",
+        "title": "Wyróżnione umiejętności i technologie",
+        "skills": {
+            "phpDevelopment": {
+                "title": "PHP Development",
+                "description": "Solidny backend skoncentrowany na nowoczesnych ekosystemach i rozwiązaniach korporacyjnych."
+            },
+            "pythonDevelopment": {
+                "title": "Python Development",
+                "description": "Wszechstronne programowanie dla API webowych, automatyzacji i przetwarzania danych."
+            },
+            "databases": {
+                "title": "Bazy danych",
+                "description": "Zarządzanie relacyjnymi i NoSQL bazami danych."
+            },
+            "webcore": {
+                "title": "Podstawy Web",
+                "description": "Podstawowe technologie internetowe."
+            },
+            "testing": {
+                "title": "Testowanie",
+                "description": "Zapewnienie jakości i testy automatyczne."
+            },
+            "architecture": {
+                "title": "Architektura",
+                "description": "Systemy rozproszone i infrastruktura."
+            }
+        }
+    },
+    "projectsPage": {
+        "viewProject": "Odwiedź",
+        "featuredProjects": "Wyróżnione projekty",
+        "listingDescription": "Kolekcja aplikacji webowych i skalowalnych systemów opracowanych z precyzją techniczną i skupieniem na doświadczeniu użytkownika."
+    },
+    "experiencePage": {
+        "summary": {
+            "description": "Inżynier Full-Stack z ponad 4-letnim doświadczeniem w aplikacjach webowych, architekturach monolitycznych i mikroserwisowych, responsywnych interfejsach i workflow'ach Docker."
+        },
+        "skills": {
+            "backendDevelopment": {
+                "title": "Backend Development",
+                "description": "Ekspertyza w budowaniu skalowalnej logiki serwerowej i złożonych procesów biznesowych."
+            },
+            "apiDesign": {
+                "title": "Projektowanie API",
+                "description": "Projektowanie i implementacja RESTful i GraphQL API z naciskiem na bezpieczeństwo i wydajność."
+            },
+            "dataAndDevOps": {
+                "title": "Dane i DevOps",
+                "description": "Zarządzanie trwałością danych i automatyzacja pipeline'ów wdrożeniowych dla niezawodnej dostawy."
+            }
+        },
+        "workExperience": {
+            "title": "Doświadczenie zawodowe",
+            "description": "Ścieżka zawodowa w tworzeniu produktów technologicznych o dużym wpływie."
+        },
+        "education": "Edukacja",
+        "certifications": "Certyfikaty",
+        "itassociate": "Technik Informatyk",
+        "workExperienceList": [
+            {
+                "dates": "Październik 2025 - Marzec 2026",
+                "title": "Inżynier Full Stack Software - Kiwee Software",
+                "descriptionPoints": [
+                    "Tworzenie niestandardowych wtyczek Shopware.",
+                    "Automatyzacja pipeline'ów wdrożeniowych poprzez architekturę CI/CD z GitHub Actions, Ansible i Docker.",
+                    "Wprowadzenie ulepszeń do motywu sklepu Shopware 6.",
+                    "Przeprowadzenie głównej migracji z Shopware 6.6 do 6.7, refaktoryzacja starszych kodów bazowych w celu zapewnienia 100% zgodności.",
+                    "Przeprowadzenie audytu wydajności i wykonanie optymalizacji, uzyskując znaczące poprawy LCP (33,7%) i INP (74,5%)."
+                ]
+            },
+            {
+                "dates": "Grudzień 2023 - Październik 2025",
+                "title": "Full Stack PHP Developer - Affenbits",
+                "descriptionPoints": [
+                    "Tworzenie i utrzymanie stron internetowych z wykorzystaniem własnego CMS.",
+                    "Przekładanie projektów Figma na responsywne strony frontendowe.",
+                    "Implementacja Dockera w celu usprawnienia workflow'ów zespołu, znacząco automatyzując lokalny rozwój i procesy wdrożeniowe."
+                ]
+            },
+            {
+                "dates": "Wrzesień 2021 - Sierpień 2023",
+                "title": "PHP Developer - Divante (Cloudflight)",
+                "descriptionPoints": [
+                    "Tworzenie i utrzymanie projektu opartego na Pimcore dla dużej firmy spedycyjnej.",
+                    "Rozwój backendu dla platformy e-commerce, która automatyzowała pakowanie produktów, poprawiając doświadczenie użytkownika i efektywność sprzedaży.",
+                    "Tworzenie narzędzia KPI do wewnętrznych statystyk zespołu z wykorzystaniem API Gitlaba, Jiry i Testrails.",
+                    "Przeprowadzenie migracji projektu do najnowszej wersji BoltCMS, aktualizując logikę biznesową i migrując strukturę bazy danych."
+                ]
+            }
+        ],
+        "educationList": [
+            {
+                "institution": "Universidad Tecnológica Metropolitana de Mérida",
+                "degree": "Technik Informatyk",
+                "dates": "Wrzesień 2018 - Sierpień 2020"
+            }
+        ],
+        "certificationsList": [
+            {
+                "icon": "simple-icons:pimcore",
+                "title": "Pimcore Developer Senior",
+                "institution": "Pimcore",
+                "year": "2023"
+            }
+        ]
+    },
+    "aboutPage": {
+        "introImage": "Zdjęcie komputera",
+        "title": "Przekształcam pomysły w <br><span class=\"text-violet-300\">systemy o dużym wpływie.</span>",
+        "description": "Inżynier oprogramowania budujący solidne i skalowalne ekosystemy cyfrowe. Łączę wiedzę backendową z nastawieniem na wyniki, aby optymalizować wydajność.",
+        "interestsInTech": "Zainteresowania technologiczne",
+        "interestItems": {
+            "pythonForIA": {
+                "title": "Python dla sztucznej inteligencji",
+                "description": "Odkrywanie ekosystemu PyTorch i TensorFlow w celu integracji modeli predykcyjnych z nowoczesnymi aplikacjami webowymi. Moim celem jest przekształcanie surowych danych w inteligentne, interaktywne doświadczenia."
+            },
+            "migration": {
+                "title": "Migracja systemów legacy",
+                "description": "Modernizacja systemów krytycznych do architektur opartych na usługach, zapewniając integralność biznesową przy jednoczesnej znaczącej poprawie wydajności."
+            },
+            "webPerformance": {
+                "title": "Wydajność stron internetowych",
+                "description": "Skupienie na Core Web Vitals i progresywnym ładowaniu. Dążę do wysokiej wydajności, celując w sub-sekundowy LCP, gdy tylko jest to możliwe."
+            },
+            "networking": {
+                "title": "Sieć kontaktów zawodowych",
+                "description": "Bardzo cenię wartościowe relacje. Wierzę, że kod to tylko narzędzie, a prawdziwe rozwiązania budują ludzie. Zawsze otwarty na dyskusje o architekturze, open source lub nowych trendach w branży."
+            }
+        }
+    },
+    "siteName": "Portfolio Ricardo Canul",
+    "portfolio": "portfolio",
+    "advanced": "Zaawansowany",
+    "basic": "Podstawowy",
+    "intermediate": "Średniozaawansowany",
+    "profesionalSummary": "Profil zawodowy",
+    "learning": "Nauka",
+    "experience": "Doświadczenie",
+    "approach": "Podejście",
+    "philosophy": "Filozofia",
+    "calendar": {
+        "january": "Styczeń",
+        "february": "Luty",
+        "march": "Marzec",
+        "april": "Kwiecień",
+        "may": "Maj",
+        "june": "Czerwiec",
+        "july": "Lipiec",
+        "august": "Sierpień",
+        "september": "Wrzesień",
+        "october": "Październik",
+        "november": "Listopad",
+        "december": "Grudzień"
+    }
+}
