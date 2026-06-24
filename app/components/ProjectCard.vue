@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import type { LocalizedString } from '~/shared/types/projects'
+
 interface Props {
     accentColor?: string;
-    title: string;
-    description: string;
+    title: LocalizedString;
+    description: LocalizedString;
     image: string;
     tags: string[];
     link: string;
@@ -11,6 +13,11 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
     accentColor: 'sky'
 });
+
+const { locale } = useI18n()
+
+const localizedTitle = computed(() => props.title[locale.value] ?? props.title.en)
+const localizedDescription = computed(() => props.description[locale.value] ?? props.description.en)
 
 const colorMap = {
     violet: {
@@ -75,7 +82,7 @@ const ctaClasses = computed(() => `flex items-center justify-center gap-2 px-4 p
                 height="270"
                 width="480"
                 :img-attrs="{
-                    alt: title,
+                    alt: localizedTitle,
                     loading: 'eager',
                     class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
                 }"
@@ -95,16 +102,16 @@ const ctaClasses = computed(() => `flex items-center justify-center gap-2 px-4 p
 
             <!-- Content -->
             <h2 :class="titleClasses">
-                {{ title }}
+                {{ localizedTitle }}
             </h2>
             <p class="font-inter text-base text-slate-400 mb-6 grow">
-                {{ description }}
+                {{ localizedDescription }}
             </p>
 
             <!-- CTA -->
             <a 
                 :href="link" target="_blank" rel="noopener noreferrer"
-                :aria-label="$t('projectsPage.viewProject') + ': ' + title"
+                :aria-label="$t('projectsPage.viewProject') + ': ' + localizedTitle"
                 :class="ctaClasses">
                 {{ $t('projectsPage.viewProject') || 'View Project' }}
                 <Icon 

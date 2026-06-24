@@ -1,5 +1,14 @@
 <script setup lang="ts">
+const { locale } = useI18n()
 const { data } = await useFetch('/api/projects')
+
+const localizedProjects = computed(() =>
+  data.value?.projects?.map(project => ({
+    ...project,
+    localizedTitle: project.title[locale.value] ?? project.title.en,
+    localizedDescription: project.description[locale.value] ?? project.description.en,
+  })) ?? []
+)
 
 const allImagesLoaded = ref(false)
 const gridRef = ref<HTMLElement | null>(null)
@@ -72,13 +81,13 @@ useHead({
         url: 'https://ricardocanul7.github.io/projects',
         mainEntity: {
           '@type': 'ItemList',
-          itemListElement: data.value?.projects?.map((project, index) => ({
+          itemListElement: localizedProjects.value.map((project, index) => ({
             '@type': 'ListItem',
             position: index + 1,
             item: {
               '@type': 'SoftwareSourceCode',
-              name: project.title,
-              description: project.description,
+              name: project.localizedTitle,
+              description: project.localizedDescription,
               url: project.link,
               programmingLanguage: project.tags,
               author: {
