@@ -18,6 +18,9 @@ logs
 .fleet
 .idea
 
+# pnpm store
+.pnpm-store
+
 # Local env files
 .env
 .env.*
