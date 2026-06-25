@@ -90,7 +90,7 @@ useHead({
       </LayoutContainer>
     </section>
 
-    <section class="project-listing-section bg-slate-900 pt-16 pb-10 text-center md:text-left relative">
+    <section class="project-listing-section bg-slate-900 pb-10 text-center md:text-left relative">
       <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/10 rounded-full blur-[100px] pointer-events-none z-0" />
       <LayoutContainer class="position relative z-10">
         <div
