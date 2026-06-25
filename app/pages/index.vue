@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 usePageSeo({
   title: $t('appHeader.home'),
   description: $t('homeHero.description'),

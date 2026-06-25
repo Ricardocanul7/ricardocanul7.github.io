@@ -40,13 +40,21 @@ ricardocanul7.github.io/
 │   │   ├── AppBadge.vue
 │   │   ├── AppFooter.vue
 │   │   ├── AppHeader.vue
+│   │   ├── AppTag.vue
+│   │   ├── CertificationCard.vue
+│   │   ├── EducationCard.vue
+│   │   ├── InterestCard.vue
 │   │   ├── ProjectCard.vue
+│   │   ├── SectionHeading.vue
 │   │   ├── SkillCard.vue
 │   │   ├── WorkExperience.vue
 │   │   └── layout/        # Layout components (Row, Column, Container)
 │   │
 │   ├── composables/       # Nuxt composables
-│   │   └── useExperienceData.ts
+│   │   ├── useColorMap.ts      # Shared accent color system
+│   │   ├── useExperienceData.ts
+│   │   ├── usePageSeo.ts       # Shared SEO meta + OG images
+│   │   └── usePersonSchema.ts  # JSON-LD Person base data
 │   │
 │   ├── layouts/           # Page layouts
 │   │   └── default.vue
@@ -125,6 +133,18 @@ pnpm tsc --noEmit
     { code: 'es', iso: 'es-ES', language: 'es-ES', name: 'Español', file: 'es.json' }
   ]
 }
+```
+
+### Usage in Code
+- Use `$t('key')` directly in `<script setup>` and `<template>` — no `useI18n()` destructuring needed for basic translations.
+- Only destructure `useI18n()` for other i18n features (e.g. `const { locale } = useI18n()` for locale-aware logic, or `const { tm, rt } = useI18n()` for rich/message arrays).
+- Example:
+```ts
+// Correct - $t is available globally
+useSeoMeta({ title: $t('appHeader.home') })
+
+// Unnecessary destructuring (avoid):
+const { t } = useI18n()   // ✗ not needed for $t
 ```
 
 ### Adding New Content
