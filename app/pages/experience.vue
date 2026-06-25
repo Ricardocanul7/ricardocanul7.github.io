@@ -1,26 +1,14 @@
 <script setup lang="ts">
 const { workExperience, education, certifications } = useExperienceData()
 
-useSeoMeta({
+usePageSeo({
   title: $t('appHeader.experience'),
   description: $t('experiencePage.summary.description'),
+  path: '/experience',
   keywords: 'Ricardo Canul, Experience, Full-Stack Developer, Software Engineer, PHP, Python, Laravel, Django, Shopware, Pimcore, Work History, Education, Certifications',
-  author: 'Ricardo Canul',
-  ogTitle: $t('appHeader.experience'),
-  ogDescription: $t('experiencePage.summary.description'),
-  ogType: 'website',
-  ogUrl: 'https://ricardocanul7.github.io/experience',
-  ogImageAlt: 'Ricardo Canul - Full-Stack Software Developer',
-  twitterCard: 'summary_large_image',
-  twitterTitle: $t('appHeader.experience'),
-  twitterDescription: $t('experiencePage.summary.description'),
 })
 
-defineOgImage('NuxtSeo.satori', {
-  title: 'Experience - Ricardo Canul',
-  description: $t('experiencePage.summary.description'),
-  colorMode: 'dark'
-})
+const { person } = usePersonSchema()
 
 useHead({
   script: [
@@ -30,190 +18,149 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'ProfilePage',
         mainEntity: {
-          '@type': 'Person',
-          name: 'Ricardo Canul',
-          url: 'https://ricardocanul7.github.io',
-          image: 'https://ricardocanul7.github.io/og-image.jpg',
-          sameAs: [
-            'https://github.com/ricardocanul7',
-            'https://linkedin.com/in/ricardocanul7'
-          ],
-          jobTitle: 'Full-Stack Software Engineer',
-          description: 'Full-Stack Software Engineer specializing in PHP, Python, and modern web development. Building robust and scalable digital ecosystems with 4+ years of experience.',
+          ...person,
           hasOccupation: {
             '@type': 'Occupation',
             name: 'Full-Stack Software Engineer',
             occupationLocation: {
               '@type': 'Country',
-              name: 'Poland'
-            }
+              name: 'Poland',
+            },
           },
           alumniOf: [
             {
               '@type': 'EducationalOrganization',
-              name: 'Universidad Tecnológica Metropolitana de Mérida'
-            }
+              name: 'Universidad Tecnológica Metropolitana de Mérida',
+            },
           ],
-          knowsAbout: [
-            'PHP',
-            'Python',
-            'Laravel',
-            'Django',
-            'Shopware',
-            'Pimcore',
-            'Web Development',
-            'Full-Stack Development',
-            'API Design',
-            'Docker',
-            'CI/CD',
-            'PostgreSQL',
-            'Redis'
-          ],
-          address: {
-            '@type': 'PostalAddress',
-            addressCountry: 'Poland'
-          }
-        }
-      })
-    }
-  ]
+        },
+      }),
+    },
+  ],
 })
 </script>
 
 <template>
-    <div>
-        <!-- Summary -->
-        <section class="summary-section bg-slate-900 pt-16 pb-10 text-center lg:text-left">
-            <LayoutContainer>
-                <LayoutRow>
-                    <LayoutColumn span="8" class="flex flex-col justify-center">
-                        <div class="content">
-                            <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
-                                {{ $t('profesionalSummary') }}
-                            </h1>
-                            <p class="font-inter text-lg text-slate-300 mb-5">
-                                {{ $t('experiencePage.summary.description') }}
-                            </p>
-                        </div>
-                    </LayoutColumn>
+  <div>
+    <section class="summary-section bg-slate-900 pt-16 pb-10 text-center lg:text-left">
+      <LayoutContainer>
+        <LayoutRow>
+          <LayoutColumn span="8" class="flex flex-col justify-center">
+            <div class="content">
+              <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
+                {{ $t('profesionalSummary') }}
+              </h1>
+              <p class="font-inter text-lg text-slate-300 mb-5">
+                {{ $t('experiencePage.summary.description') }}
+              </p>
+            </div>
+          </LayoutColumn>
+          <LayoutColumn span="4">
+            <div class="photo-container mx-auto">
+              <NuxtPicture
+                format="avif,webp"
+                src="./images/profile.webp"
+                width="396"
+                height="396"
+                :alt="$t('homeAbout.profilePhotoAlt')"
+                sizes="(max-width: 768px) 640px, 396px"
+                :img-attrs="{
+                  class: 'rounded-lg border-2 border-violet-300/20',
+                  fetchpriority: 'high',
+                }"
+              />
+            </div>
+          </LayoutColumn>
+        </LayoutRow>
+      </LayoutContainer>
+    </section>
 
-                    <LayoutColumn span="4">
-                        <div class="photo-container mx-auto">
-                            <NuxtPicture 
-                                format="avif,webp" src="./images/profile.webp"
-                                width="396"
-                                height="396"
-                                :alt="$t('homeAbout.profilePhotoAlt')"
-                                sizes="(max-width: 768px) 640px, 396px"
-                                :img-attrs="{
-                                    class: 'rounded-lg border-2 border-violet-300/20',
-                                    fetchpriority: 'high'
-                                }" />
-                        </div>
-                    </LayoutColumn>
-                </LayoutRow>
-            </LayoutContainer>
-        </section>
-
-        <!-- Skills -->
-        <SeparatorHeading text="Skills" />
-        <section class="bg-slate-900 py-10">
-            <LayoutContainer>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <SkillCard 
-                        icon="material-symbols:terminal"
-                        :title="$t('experiencePage.skills.backendDevelopment.title')"
-                        :description="$t('experiencePage.skills.backendDevelopment.description')"
-                        :tags="['PHP', 'Python', 'Laravel', 'Django']" :expertise=null />
-                    <SkillCard 
-                        icon="material-symbols:api" 
-                        :title="$t('experiencePage.skills.apiDesign.title')"
-                        :description="$t('experiencePage.skills.apiDesign.description')"
-                        :tags="['FastAPI', 'OpenAPI', 'JWT', 'OAuth2']" , :expertise=null />
-                    <SkillCard 
-                        icon="material-symbols:database-outline"
-                        :title="$t('experiencePage.skills.dataAndDevOps.title')"
-                        :description="$t('experiencePage.skills.dataAndDevOps.description')"
-                        :tags="['PostgreSQL', 'Docker', 'CI/CD', 'Redis']" , :expertise=null />
-                </div>
-            </LayoutContainer>
-        </section>
-
-        <!-- Work Experience-->
-        <section class="bg-slate-900 pt-16 pb-10 text-center lg:text-left">
-            <LayoutContainer>
-                <LayoutRow>
-                    <LayoutColumn span="4">
-                        <div class="content">
-                            <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-4">
-                                {{ $t('experiencePage.workExperience.title') }}
-                            </h2>
-                            <p class="font-inter text-base text-slate-300">
-                                {{ $t('experiencePage.workExperience.description') }}
-                            </p>
-                        </div>
-                    </LayoutColumn>
-                    <LayoutColumn span="8">
-                        <WorkExperience 
-                            v-for="(experience, index) in workExperience" :key="index"
-                            :dates="experience.dates" :title="experience.title"
-                            :description-points="experience.descriptionPoints" />
-                    </LayoutColumn>
-                </LayoutRow>
-            </LayoutContainer>
-        </section>
-
-        <div class="bg-slate-900">
-            <LayoutContainer>
-                <div class="grid grid-cols-1 lg:grid-cols-2 bg-slate-900">
-                    <!-- Education -->
-                    <section class="education-section">
-                        <div class="education-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
-                            <Icon name="material-symbols:school-outline" />
-                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">
-                                {{ $t('experiencePage.education') }}
-                            </h2>
-                        </div>
-                        <div class="bg-slate-900 py-10 px-4 md:px-10">
-                            <div 
-                                v-for="(edu, index) in education" :key="index"
-                                class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50">
-                                <p class="text-slate-100 font-inter text-base font-bold">{{ edu.degree }}</p>
-                                <h3 class="text-slate-400 font-inter text-base mt-1">
-                                    {{ edu.institution }}
-                                </h3>
-                                <span class="text-emerald-300 font-mono text-sm">{{ edu.dates }}</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Certifications -->
-                    <section class="certifications-section">
-                        <div class="certifications-header text-violet-300 flex items-center gap-3 px-4 md:px-10">
-                            <Icon name="material-symbols:verified-outline" />
-                            <h2 class="font-plus-jakarta-sans font-bold text-2xl">
-                                {{ $t('experiencePage.certifications') }}
-                            </h2>
-                        </div>
-                        <div class="bg-slate-900 py-10 px-4 md:px-10">
-                            <div 
-                                v-for="(cert, index) in certifications" :key="index"
-                                class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50 flex items-center gap-5">
-                                <div class="icon-container text-violet-300 text-4xl">
-                                    <Icon :name="cert.icon" />
-                                </div>
-                                <div>
-                                    <h3 class="text-slate-100 font-plus-jakarta-sans font-bold text-base mt-1">
-                                        {{ cert.title }}
-                                    </h3>
-                                    <p class="text-slate-400 font-inter italic">{{ cert.institution }} • {{ cert.year }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </LayoutContainer>
+    <SeparatorHeading text="Skills" />
+    <section class="bg-slate-900 py-10">
+      <LayoutContainer>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <SkillCard
+            icon="material-symbols:terminal"
+            :title="$t('experiencePage.skills.backendDevelopment.title')"
+            :description="$t('experiencePage.skills.backendDevelopment.description')"
+            :tags="['PHP', 'Python', 'Laravel', 'Django']"
+            :expertise="null"
+          />
+          <SkillCard
+            icon="material-symbols:api"
+            :title="$t('experiencePage.skills.apiDesign.title')"
+            :description="$t('experiencePage.skills.apiDesign.description')"
+            :tags="['FastAPI', 'OpenAPI', 'JWT', 'OAuth2']"
+            :expertise="null"
+          />
+          <SkillCard
+            icon="material-symbols:database-outline"
+            :title="$t('experiencePage.skills.dataAndDevOps.title')"
+            :description="$t('experiencePage.skills.dataAndDevOps.description')"
+            :tags="['PostgreSQL', 'Docker', 'CI/CD', 'Redis']"
+            :expertise="null"
+          />
         </div>
+      </LayoutContainer>
+    </section>
+
+    <section class="bg-slate-900 pt-16 pb-10 text-center lg:text-left">
+      <LayoutContainer>
+        <LayoutRow>
+          <LayoutColumn span="4">
+            <div class="content">
+              <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-4">
+                {{ $t('experiencePage.workExperience.title') }}
+              </h2>
+              <p class="font-inter text-base text-slate-300">
+                {{ $t('experiencePage.workExperience.description') }}
+              </p>
+            </div>
+          </LayoutColumn>
+          <LayoutColumn span="8">
+            <WorkExperience
+              v-for="(experience, index) in workExperience"
+              :key="index"
+              :dates="experience.dates"
+              :title="experience.title"
+              :description-points="experience.descriptionPoints"
+            />
+          </LayoutColumn>
+        </LayoutRow>
+      </LayoutContainer>
+    </section>
+
+    <div class="bg-slate-900">
+      <LayoutContainer>
+        <div class="grid grid-cols-1 lg:grid-cols-2 bg-slate-900">
+          <section class="education-section">
+            <SectionHeading icon="material-symbols:school-outline" :title="$t('experiencePage.education')" />
+            <div class="bg-slate-900 py-10 px-4 md:px-10">
+              <EducationCard
+                v-for="(edu, index) in education"
+                :key="index"
+                :degree="edu.degree"
+                :institution="edu.institution"
+                :dates="edu.dates"
+              />
+            </div>
+          </section>
+
+          <section class="certifications-section">
+            <SectionHeading icon="material-symbols:verified-outline" :title="$t('experiencePage.certifications')" />
+            <div class="bg-slate-900 py-10 px-4 md:px-10">
+              <CertificationCard
+                v-for="(cert, index) in certifications"
+                :key="index"
+                :icon="cert.icon"
+                :title="cert.title"
+                :institution="cert.institution"
+                :year="cert.year"
+              />
+            </div>
+          </section>
+        </div>
+      </LayoutContainer>
     </div>
+  </div>
 </template>

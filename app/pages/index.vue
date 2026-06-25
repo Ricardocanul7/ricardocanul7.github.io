@@ -1,24 +1,14 @@
 <script setup lang="ts">
-useSeoMeta({
+
+usePageSeo({
   title: $t('appHeader.home'),
   description: $t('homeHero.description'),
+  path: '/',
   keywords: 'Ricardo Canul, Full-Stack Developer, PHP Developer, Python Developer, Web Development, Software Engineer, Laravel, Django, Shopware, Pimcore',
-  author: 'Ricardo Canul',
-  ogTitle: $t('appHeader.home'),
-  ogDescription: $t('homeHero.description'),
-  ogType: 'website',
-  ogUrl: 'https://ricardocanul7.github.io',
-  ogImageAlt: 'Ricardo Canul - Full-Stack Software Developer',
-  twitterCard: 'summary_large_image',
-  twitterTitle: $t('appHeader.home'),
-  twitterDescription: $t('homeHero.description'),
+  ogImageTitle: 'Ricardo Canul - Full-Stack Software Developer',
 })
 
-defineOgImage('NuxtSeo.satori', {
-  title: 'Ricardo Canul - Full-Stack Software Developer',
-  description: $t('homeHero.description'),
-  colorMode: 'dark'
-})
+const { person } = usePersonSchema()
 
 useHead({
   script: [
@@ -26,38 +16,10 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: 'Ricardo Canul',
-        url: 'https://ricardocanul7.github.io',
-        image: 'https://ricardocanul7.github.io/og-image.jpg',
-        sameAs: [
-          'https://github.com/ricardocanul7',
-          'https://linkedin.com/in/ricardocanul7'
-        ],
-        jobTitle: 'Full-Stack Software Engineer',
-        description: 'Full-Stack Software Engineer specializing in PHP, Python, and modern web development. Building robust and scalable digital ecosystems with 4+ years of experience.',
-        knowsAbout: [
-          'PHP',
-          'Python',
-          'Laravel',
-          'Django',
-          'Shopware',
-          'Pimcore',
-          'Web Development',
-          'Full-Stack Development',
-          'API Design',
-          'Docker',
-          'CI/CD',
-          'PostgreSQL',
-          'Redis'
-        ],
-        address: {
-          '@type': 'PostalAddress',
-          addressCountry: 'Poland'
-        }
-      })
-    }
-  ]
+        ...person,
+      }),
+    },
+  ],
 })
 </script>
 
