@@ -8,7 +8,7 @@ Personal portfolio website built with [Nuxt 4](https://nuxt.com), showcasing ful
 
 ## ✨ Features
 
-- **Dual language** — English / Spanish via `@nuxtjs/i18n`
+- **Trilingual** — English, Spanish & Polish via `@nuxtjs/i18n`
 - **SEO optimized** — Sitemap, Open Graph, JSON-LD structured data, auto-generated OG images
 - **Image optimization** — Responsive images with `@nuxt/image`
 - **Dark UI** — Tailwind CSS 4 with SCSS utilities
@@ -62,7 +62,7 @@ app/
 ├── pages/          # Route pages
 └── sections/       # Section components (HomeHero, HomeSkills, etc.)
 
-i18n/locales/       # English & Spanish content (JSON)
+i18n/locales/       # English, Spanish & Polish content (JSON)
 shared/types/       # TypeScript interfaces
 server/api/         # API endpoints
 public/images/      # Static images
@@ -75,6 +75,7 @@ public/images/      # Static images
 Content is managed in `i18n/locales/`:
 - `en.json` — English
 - `es.json` — Español
+- `pl.json` — Polski
 
 ---
 
