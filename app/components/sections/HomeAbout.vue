@@ -12,13 +12,13 @@
                             :alt="$t('homeAbout.profilePhotoAlt')"
                             sizes="(max-width: 768px) 640px, 396px"
                             :img-attrs="{
-                                class: 'rounded-lg border-2 border-violet-300/20',
+                                class: 'rounded-lg border-2 border-sky-300/20',
                                 fetchpriority: 'high'
                             }"
                         />
-                        <div class="absolute bottom-0 right-0 w-fit bg-slate-950/40 backdrop-blur-xs border-t border border-violet-300/20 rounded-2xl">
+                        <div class="absolute bottom-0 right-0 w-fit bg-slate-950/40 backdrop-blur-xs border-t border border-sky-300/20 rounded-2xl">
                             <div class="flex flex-col gap-1 items-start justify-center p-5">
-                                <div class="font-jakarta-sans text-3xl text-violet-300">
+                                <div class="font-jakarta-sans text-3xl text-sky-300">
                                     4+
                                 </div>
                                 <p class="font-inter font-semibold text-sm">Years of experience</p>

@@ -66,7 +66,7 @@ useHead({
                 :alt="$t('homeAbout.profilePhotoAlt')"
                 sizes="(max-width: 768px) 640px, 396px"
                 :img-attrs="{
-                  class: 'rounded-lg border-2 border-violet-300/20',
+                  class: 'rounded-lg border-2 border-sky-300/20',
                   fetchpriority: 'high',
                 }"
               />

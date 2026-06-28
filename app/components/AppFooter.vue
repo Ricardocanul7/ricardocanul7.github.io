@@ -11,7 +11,7 @@ const footer = appConfig.footer;
                 <nav :aria-label="$t('appFooter.socialLinks')" class="flex gap-4">
                     <ul class="flex gap-4 list-none p-0">
                         <li v-for="(link, index) in footer.socialLinks" :key="index">
-                            <a :href="link.link" class="font-inter text-xs font-semibold text-slate-300 hover:text-white hover:underline decoration-violet-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                            <a :href="link.link" class="font-inter text-xs font-semibold text-slate-300 hover:text-white hover:underline decoration-sky-300 transition-colors" target="_blank" rel="noopener noreferrer">
                                 {{link.name}}
                             </a>
                         </li>

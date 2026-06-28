@@ -51,7 +51,7 @@ useHead({
                 :alt="$t('aboutPage.introImage')"
                 sizes="(max-width: 768px) 640px, 396px"
                 :img-attrs="{
-                  class: 'rounded-lg border-2 border-violet-300/20',
+                  class: 'rounded-lg border-2 border-sky-300/20',
                   fetchpriority: 'high',
                 }"
               />
@@ -79,7 +79,7 @@ useHead({
           </li>
           <li class="contents">
             <InterestCard
-              accent-color="violet"
+              accent-color="sky"
               :category="$t('experience')"
               :title="$t('aboutPage.interestItems.migration.title')"
               :description="$t('aboutPage.interestItems.migration.description')"

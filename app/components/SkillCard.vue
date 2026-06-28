@@ -9,7 +9,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  accentColor: 'violet',
+  accentColor: 'sky',
 })
 
 const { borderClasses, badgeClasses, glowClasses, iconClasses } = useColorMap(toRef(props, 'accentColor'))

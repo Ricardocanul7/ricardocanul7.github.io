@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="text-violet-300 flex items-center gap-3 px-4 md:px-10">
+  <div class="text-sky-300 flex items-center gap-3 px-4 md:px-10">
     <Icon :name="icon" aria-hidden="true" />
     <h2 :id="id" class="font-plus-jakarta-sans font-bold text-2xl">
       {{ title }}

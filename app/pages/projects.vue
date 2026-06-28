@@ -79,7 +79,7 @@ useHead({
     <section class="projects-header bg-slate-900 pt-16 pb-10 text-center md:text-left">
       <LayoutContainer>
         <div class="content">
-          <span class="font-jetbrains-mono text-sm text-violet-300 mb-1.5 uppercase">{{ $t('portfolio') }}</span>
+          <span class="font-jetbrains-mono text-sm text-sky-300 mb-1.5 uppercase">{{ $t('portfolio') }}</span>
           <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
             {{ $t('projectsPage.featuredProjects') }}
           </h1>
@@ -91,7 +91,7 @@ useHead({
     </section>
 
     <section class="project-listing-section bg-slate-900 pb-10 text-center md:text-left relative">
-      <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/10 rounded-full blur-[100px] pointer-events-none z-0" aria-hidden="true" />
+      <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-sky-400/10 rounded-full blur-[100px] pointer-events-none z-0" aria-hidden="true" />
       <LayoutContainer class="relative z-10">
         <ul
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out list-none p-0"

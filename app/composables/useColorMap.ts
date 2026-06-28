@@ -58,7 +58,7 @@ const colorMap: Record<AccentColor, ColorVariant> = {
   },
 }
 
-export function useColorMap(accentColor: MaybeRef<string | undefined>, fallback: AccentColor = 'violet') {
+export function useColorMap(accentColor: MaybeRef<string | undefined>, fallback: AccentColor = 'sky') {
   const key = computed(() => (toValue(accentColor) || fallback) as AccentColor)
   const activeColor = computed(() => colorMap[key.value] || colorMap[fallback])
   const colorName = computed(() => key.value)

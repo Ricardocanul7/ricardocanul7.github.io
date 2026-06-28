@@ -1,6 +1,6 @@
 <template>
     <section id="hero" class="bg-slate-900 text-white relative" aria-labelledby="hero-heading">
-        <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true"/>
+        <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-sky-400/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true"/>
         <LayoutContainer>
             <LayoutRow gap="12" class="gap-12 py-16">
                 <LayoutColumn span="6" class="text-center lg:text-left">
@@ -16,7 +16,7 @@
                     </p>
                     <NuxtLink 
                         :to="localePath('/projects')"
-                        class="inline-flex items-center gap-2 bg-violet-300 hover:bg-violet-300 text-indigo-800 font-medium text-sm px-6 py-3 rounded-xl transition-colors shadow-lg shadow-indigo-600/20 group w-fit mx-auto lg:mx-0">
+                        class="inline-flex items-center gap-2 bg-sky-300 hover:bg-sky-300 text-indigo-800 font-bold text-sm px-6 py-3 rounded-xl transition-colors shadow-lg shadow-indigo-600/20 group w-fit mx-auto lg:mx-0">
                         {{ $t('homeHero.cta') }}
                         <Icon name="heroicons:arrow-right-20-solid" class="transform group-hover:translate-x-1 transition-transform"/>
                     </NuxtLink>
