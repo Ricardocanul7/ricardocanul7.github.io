@@ -38,7 +38,7 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
         width="480"
         :img-attrs="{
           alt: localizedTitle,
-          loading: 'lazy',
+          loading: 'eager',
           class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500',
         }"
       />
