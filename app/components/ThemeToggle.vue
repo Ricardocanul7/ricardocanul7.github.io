@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-const { t } = useI18n()
 
 const isDark = computed(() => colorMode.value === 'dark')
 
