@@ -1,5 +1,5 @@
 <template>
-    <section id="home-about" class="bg-slate-950 text-white py-16" aria-labelledby="home-about-heading">
+    <section id="home-about" class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-white py-16" aria-labelledby="home-about-heading">
         <LayoutContainer>
             <LayoutRow>
                 <LayoutColumn span="5">
@@ -16,9 +16,9 @@
                                 fetchpriority: 'high'
                             }"
                         />
-                        <div class="absolute bottom-0 right-0 w-fit bg-slate-950/40 backdrop-blur-xs border-t border border-sky-300/20 rounded-2xl">
+                        <div class="absolute bottom-0 right-0 w-fit bg-slate-100/80 dark:bg-slate-950/40 backdrop-blur-xs border-t border border-sky-300/20 rounded-2xl">
                             <div class="flex flex-col gap-1 items-start justify-center p-5">
-                                <div class="font-jakarta-sans text-3xl text-sky-300">
+                                <div class="font-jakarta-sans text-3xl text-sky-600 dark:text-sky-300">
                                     4+
                                 </div>
                                 <p class="font-inter font-semibold text-sm">Years of experience</p>
@@ -28,14 +28,14 @@
                 </LayoutColumn>
                 <LayoutColumn span="7" class="flex flex-col justify-center text-center md:text-left">
                     <div class="content text-center lg:text-left">
-                        <span class="uppercase text-emerald-300 font-semibold font-inter text-xs">{{ $t('homeAbout.title') }}</span>
-                        <h2 id="home-about-heading" class="text-2xl font-bold font-plus-jakarta-sans text-indigo-100 mb-4">
+                        <span class="uppercase text-emerald-600 dark:text-emerald-300 font-semibold font-inter text-xs">{{ $t('homeAbout.title') }}</span>
+                        <h2 id="home-about-heading" class="text-2xl font-bold font-plus-jakarta-sans text-slate-800 dark:text-indigo-100 mb-4">
                             {{ $t('homeAbout.header') }}
                         </h2>
                         <p 
                             v-for="(paragraph, index) in $tm('homeAbout.description_paragraphs')"
                             :key="index"
-                            class="font-inter text-base text-slate-300 mb-4"
+                            class="font-inter text-base text-slate-600 dark:text-slate-300 mb-4"
                             v-html="$rt(paragraph)"
                         />
                     </div>

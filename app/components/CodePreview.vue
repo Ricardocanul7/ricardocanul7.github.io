@@ -59,18 +59,18 @@ const highlightedCode = computed(() => {
     const operator = args[4];
     const className = args[5];
 
-    if (stringQuote) return `<span class="text-indigo-400">${match}</span>`;
-    if (keyword) return `<span class="text-sky-300">${match}</span>`;
-    if (variable) return `<span class="text-white">${match}</span>`;
+    if (stringQuote) return `<span class="text-indigo-400 dark:text-indigo-400 text-indigo-600">${match}</span>`;
+    if (keyword) return `<span class="text-sky-300 dark:text-sky-300 text-sky-600">${match}</span>`;
+    if (variable) return `<span class="text-slate-800 dark:text-white">${match}</span>`;
     
     if (methodCall) {
       const op = match.substring(0, 5);
       const name = match.substring(5);
-      return `<span class="text-emerald-400">${op}</span><span class="text-emerald-400">${name}</span>`;
+      return `<span class="text-emerald-400 dark:text-emerald-400 text-emerald-600">${op}</span><span class="text-emerald-400 dark:text-emerald-400 text-emerald-600">${name}</span>`;
     }
 
-    if (operator) return `<span class="text-emerald-400">${match}</span>`;
-    if (className) return `<span class="text-indigo-100">${match}</span>`;
+    if (operator) return `<span class="text-emerald-400 dark:text-emerald-400 text-emerald-600">${match}</span>`;
+    if (className) return `<span class="text-slate-800 dark:text-indigo-100">${match}</span>`;
 
     return match;
   });

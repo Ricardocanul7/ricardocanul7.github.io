@@ -22,7 +22,7 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
 
 <template>
   <article
-    class="group relative rounded-2xl bg-slate-800/40 border overflow-hidden transition-all duration-300 ease-in-out flex flex-col h-full"
+    class="group relative rounded-2xl bg-slate-100 dark:bg-slate-800/40 border overflow-hidden transition-all duration-300 ease-in-out flex flex-col h-full"
     :class="borderClasses"
   >
     <div
@@ -30,7 +30,7 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
       :class="glowClasses"
       aria-hidden="true"
     />
-    <div class="aspect-video overflow-hidden bg-slate-950 relative z-10">
+    <div class="aspect-video overflow-hidden bg-slate-200 dark:bg-slate-950 relative z-10">
       <NuxtPicture
         format="avif,webp"
         :src="image"
@@ -52,7 +52,7 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
       <h2 :class="titleClasses">
         {{ localizedTitle }}
       </h2>
-      <p class="font-inter text-base text-slate-400 mb-6 grow">
+      <p class="font-inter text-base text-slate-500 dark:text-slate-400 mb-6 grow">
         {{ localizedDescription }}
       </p>
       <a

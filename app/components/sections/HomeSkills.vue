@@ -1,11 +1,11 @@
 <template>
-    <section id="home-skills" class="bg-slate-900 text-white py-16" aria-labelledby="home-skills-heading">
+    <section id="home-skills" class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-white py-16" aria-labelledby="home-skills-heading">
         <LayoutContainer>
             <div class="flex flex-col items-center justify-center text-center gap-4 mb-4">
-                <h2 id="home-skills-heading" class="font-inter font-semibold text-xs text-sky-300 uppercase">
+                <h2 id="home-skills-heading" class="font-inter font-semibold text-xs text-sky-600 dark:text-sky-300 uppercase">
                     {{ $t('homeSkills.header') }}
                 </h2>
-                <h3 class="font-plus-jakarta-sans text-2xl font-bold text-indigo-100 mb-4">
+                <h3 class="font-plus-jakarta-sans text-2xl font-bold text-slate-800 dark:text-indigo-100 mb-4">
                     {{ $t('homeSkills.title') }}
                 </h3>
             </div>

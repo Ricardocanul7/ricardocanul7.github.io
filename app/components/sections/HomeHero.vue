@@ -1,5 +1,5 @@
 <template>
-    <section id="hero" class="bg-slate-900 text-white relative" aria-labelledby="hero-heading">
+    <section id="hero" class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-white relative" aria-labelledby="hero-heading">
         <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-sky-400/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true"/>
         <LayoutContainer>
             <LayoutRow gap="12" class="gap-12 py-16">
@@ -11,7 +11,7 @@
                     <h1 id="hero-heading" class="text-4xl font-bold mb-4 font-plus-jakarta-sans">
                         {{ $t('homeHero.title') }}
                     </h1>
-                    <p class="text-lg text-slate-300 mb-6 font-inter">
+                    <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 font-inter">
                         {{ $t('homeHero.description') }}
                     </p>
                     <NuxtLink 

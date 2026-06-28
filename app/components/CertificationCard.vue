@@ -8,15 +8,15 @@ defineProps<{
 </script>
 
 <template>
-  <article class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50 flex items-center gap-5">
-    <div class="icon-container text-sky-300 text-4xl" aria-hidden="true">
+  <article class="mb-8 bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50 flex items-center gap-5">
+    <div class="icon-container text-sky-600 dark:text-sky-300 text-4xl" aria-hidden="true">
       <Icon :name="icon" />
     </div>
     <div>
-      <h3 class="text-slate-100 font-plus-jakarta-sans font-bold text-base mt-1">
+      <h3 class="text-slate-800 dark:text-slate-100 font-plus-jakarta-sans font-bold text-base mt-1">
         {{ title }}
       </h3>
-      <p class="text-slate-400 font-inter italic">{{ institution }} &bull; {{ year }}</p>
+      <p class="text-slate-500 dark:text-slate-400 font-inter italic">{{ institution }} &bull; {{ year }}</p>
     </div>
   </article>
 </template>

@@ -1,4 +1,8 @@
 {
+    "themeToggle": {
+        "light": "Switch to light mode",
+        "dark": "Switch to dark mode"
+    },
     "skipToContent": "Skip to main content",
     "appHeader": {
         "home": "Home",

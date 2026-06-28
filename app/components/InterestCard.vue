@@ -16,7 +16,7 @@ const { borderClasses, badgeClasses, glowClasses, categoryClasses } = useColorMa
 
 <template>
   <article
-    class="group relative p-6 rounded-2xl bg-slate-800/40 border transition-all duration-300 ease-in-out"
+    class="group relative p-6 rounded-2xl bg-slate-100 dark:bg-slate-800/40 border transition-all duration-300 ease-in-out"
     :class="borderClasses"
   >
     <div
@@ -31,10 +31,10 @@ const { borderClasses, badgeClasses, glowClasses, categoryClasses } = useColorMa
       >
         {{ category }}
       </span>
-      <h3 class="text-xl font-plus-jakarta-sans font-bold text-slate-100 mb-3">
+      <h3 class="text-xl font-plus-jakarta-sans font-bold text-slate-800 dark:text-slate-100 mb-3">
         {{ title }}
       </h3>
-      <p class="text-slate-400 font-inter text-sm leading-relaxed mb-6">
+      <p class="text-slate-500 dark:text-slate-400 font-inter text-sm leading-relaxed mb-6">
         {{ description }}
       </p>
       <ul v-if="tags" class="flex flex-wrap gap-2 list-none p-0">

@@ -35,7 +35,7 @@ onUnmounted(() => {
     >
         <button 
             type="button"
-            class="flex items-center gap-2 bg-slate-900/50 text-slate-400 text-xs font-medium border border-slate-800 hover:border-indigo-500/50 hover:text-white rounded-lg px-3 py-1.5 transition-all duration-200"
+            class="flex items-center gap-2 bg-slate-100/50 dark:bg-slate-900/50 text-slate-500 dark:text-slate-400 text-xs font-medium border border-slate-300 dark:border-slate-800 hover:border-indigo-500/50 hover:text-slate-900 dark:hover:text-white rounded-lg px-3 py-1.5 transition-all duration-200"
             aria-haspopup="listbox"
             :aria-expanded="isOpen"
             aria-controls="language-options-list"
@@ -63,7 +63,7 @@ onUnmounted(() => {
         >
             <div 
                 v-show="isOpen" 
-                class="absolute right-0 mt-2 w-28 origin-top-right rounded-xl bg-slate-950 border border-slate-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50 overflow-hidden"
+                class="absolute right-0 mt-2 w-28 origin-top-right rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50 overflow-hidden"
             >
                 <div 
                     id="language-options-list" 
@@ -77,7 +77,7 @@ onUnmounted(() => {
                         role="option"
                         :aria-selected="currentLocale === loc.code"
                         :class="[
-                            currentLocale === loc.code ? 'bg-indigo-600/10 text-indigo-400 font-semibold' : 'text-slate-400 hover:bg-slate-900 hover:text-white',
+                            currentLocale === loc.code ? 'bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white',
                             'block w-full text-left px-4 py-2 text-xs font-medium transition-colors'
                         ]"
                         @click="selectLocale(loc.code)"

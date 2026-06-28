@@ -43,15 +43,15 @@ useHead({
 
 <template>
   <div>
-    <section class="summary-section bg-slate-900 pt-16 pb-10 text-center lg:text-left">
+    <section class="summary-section bg-slate-100 dark:bg-slate-900 pt-16 pb-10 text-center lg:text-left">
       <LayoutContainer>
         <LayoutRow>
           <LayoutColumn span="8" class="flex flex-col justify-center">
             <div class="content">
-              <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
+              <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-slate-800 dark:text-indigo-100 mb-5">
                 {{ $t('profesionalSummary') }}
               </h1>
-              <p class="font-inter text-lg text-slate-300 mb-5">
+              <p class="font-inter text-lg text-slate-600 dark:text-slate-300 mb-5">
                 {{ $t('experiencePage.summary.description') }}
               </p>
             </div>
@@ -77,7 +77,7 @@ useHead({
     </section>
   
     <SeparatorHeading text="Skills" id="skills-heading" />
-    <section id="skills" class="bg-slate-900 py-10" aria-labelledby="skills-heading">
+    <section id="skills" class="bg-slate-100 dark:bg-slate-900 py-10" aria-labelledby="skills-heading">
       <LayoutContainer>
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 list-none p-0">
           <li class="contents">
@@ -111,15 +111,15 @@ useHead({
       </LayoutContainer>
     </section>
   
-    <section id="work-experience" class="bg-slate-900 pt-16 pb-10 text-center lg:text-left" aria-labelledby="work-experience-heading">
+    <section id="work-experience" class="bg-slate-100 dark:bg-slate-900 pt-16 pb-10 text-center lg:text-left" aria-labelledby="work-experience-heading">
       <LayoutContainer>
         <LayoutRow>
           <LayoutColumn span="4">
             <div class="content">
-              <h2 id="work-experience-heading" class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-4">
+              <h2 id="work-experience-heading" class="font-plus-jakarta-sans font-extrabold text-5xl text-slate-800 dark:text-indigo-100 mb-4">
                 {{ $t('experiencePage.workExperience.title') }}
               </h2>
-              <p class="font-inter text-base text-slate-300">
+              <p class="font-inter text-base text-slate-600 dark:text-slate-300">
                 {{ $t('experiencePage.workExperience.description') }}
               </p>
             </div>
@@ -139,12 +139,12 @@ useHead({
       </LayoutContainer>
     </section>
   
-    <div class="bg-slate-900">
+    <div class="bg-slate-100 dark:bg-slate-900">
       <LayoutContainer>
-        <div class="grid grid-cols-1 lg:grid-cols-2 bg-slate-900">
+        <div class="grid grid-cols-1 lg:grid-cols-2 bg-slate-100 dark:bg-slate-900">
           <section id="education" class="education-section" aria-labelledby="education-heading">
               <SectionHeading icon="material-symbols:school-outline" :title="$t('experiencePage.education')" id="education-heading" />
-            <div class="bg-slate-900 py-10 px-4 md:px-10">
+            <div class="bg-slate-100 dark:bg-slate-900 py-10 px-4 md:px-10">
               <ul class="list-none p-0">
                 <li v-for="(edu, index) in education" :key="index" class="contents">
                   <EducationCard
@@ -159,7 +159,7 @@ useHead({
   
           <section id="certifications" class="certifications-section" aria-labelledby="certifications-heading">
               <SectionHeading icon="material-symbols:verified-outline" :title="$t('experiencePage.certifications')" id="certifications-heading" />
-            <div class="bg-slate-900 py-10 px-4 md:px-10">
+            <div class="bg-slate-100 dark:bg-slate-900 py-10 px-4 md:px-10">
               <ul class="list-none p-0">
                 <li v-for="(cert, index) in certifications" :key="index" class="contents">
                   <CertificationCard

@@ -30,7 +30,13 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/sitemap', 'nuxt-og-image', '@nuxt/scripts', '@nuxt/eslint', 'nuxt-seo-utils'],
+  modules: ['nuxt-lucide-icons', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/sitemap', 'nuxt-og-image', '@nuxt/scripts', '@nuxt/eslint', 'nuxt-seo-utils', '@nuxtjs/color-mode'],
+
+  colorMode: {
+    classSuffix: '',
+    preference: 'dark',
+    fallback: 'dark',
+  },
   lucide: {
     namePrefix: 'Icon',
   },

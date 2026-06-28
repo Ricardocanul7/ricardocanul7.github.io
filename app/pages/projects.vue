@@ -76,25 +76,25 @@ useHead({
 
 <template>
   <div>
-    <section class="projects-header bg-slate-900 pt-16 pb-10 text-center md:text-left">
+    <section class="projects-header bg-slate-100 dark:bg-slate-900 pt-16 pb-10 text-center md:text-left">
       <LayoutContainer>
         <div class="content">
-          <span class="font-jetbrains-mono text-sm text-sky-300 mb-1.5 uppercase">{{ $t('portfolio') }}</span>
-          <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-5">
+          <span class="font-jetbrains-mono text-sm text-sky-600 dark:text-sky-300 mb-1.5 uppercase">{{ $t('portfolio') }}</span>
+          <h1 class="font-plus-jakarta-sans font-extrabold text-5xl text-slate-800 dark:text-indigo-100 mb-5">
             {{ $t('projectsPage.featuredProjects') }}
           </h1>
-          <p class="font-inter text-lg text-slate-300 md:max-w-1/2">
+          <p class="font-inter text-lg text-slate-600 dark:text-slate-300 md:max-w-1/2">
             {{ $t('projectsPage.listingDescription') }}
           </p>
         </div>
       </LayoutContainer>
     </section>
 
-    <section class="project-listing-section bg-slate-900 pb-10 text-center md:text-left relative">
+    <section class="project-listing-section bg-slate-100 dark:bg-slate-900 pb-10 text-center md:text-left relative">
       <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-sky-400/10 rounded-full blur-[100px] pointer-events-none z-0" aria-hidden="true" />
       <LayoutContainer class="relative z-10">
         <ul
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out list-none p-0"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-500 ease-in-out list-none p-0"
           :class="allImagesLoaded ? 'opacity-0 absolute pointer-events-none' : 'opacity-100'"
         >
           <li v-for="(_, index) in data?.projects" :key="'skeleton-' + index" class="contents">
@@ -103,7 +103,7 @@ useHead({
         </ul>
         <ul
           ref="gridRef"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out list-none p-0"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-500 ease-in-out list-none p-0"
           :class="allImagesLoaded ? 'opacity-100' : 'opacity-0 absolute pointer-events-none'"
         >
           <li

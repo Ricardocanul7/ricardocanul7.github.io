@@ -26,17 +26,17 @@ useHead({
 
 <template>
   <div>
-    <section class="intro-section bg-slate-900 pt-16 pb-10 text-center lg:text-left">
+    <section class="intro-section bg-slate-100 dark:bg-slate-900 pt-16 pb-10 text-center lg:text-left">
       <LayoutContainer>
         <LayoutRow>
           <LayoutColumn span="8" class="flex flex-col justify-center">
             <div class="content">
               <h1
-                class="font-plus-jakarta-sans font-extrabold text-4xl lg:text-5xl text-indigo-100 mb-5"
+                class="font-plus-jakarta-sans font-extrabold text-4xl lg:text-5xl text-slate-800 dark:text-indigo-100 mb-5"
                 v-html="$t('aboutPage.title')"
               />
               <p
-                class="font-inter text-lg text-slate-300 mb-5"
+                class="font-inter text-lg text-slate-600 dark:text-slate-300 mb-5"
                 v-html="$t('aboutPage.description')"
               />
             </div>
@@ -61,9 +61,9 @@ useHead({
       </LayoutContainer>
     </section>
 
-    <section id="interests" class="interests-section bg-slate-900 pt-16 pb-10 text-center md:text-left" aria-labelledby="interests-heading">
+    <section id="interests" class="interests-section bg-slate-100 dark:bg-slate-900 pt-16 pb-10 text-center md:text-left" aria-labelledby="interests-heading">
       <LayoutContainer>
-        <h2 id="interests-heading" class="font-plus-jakarta-sans font-bold text-2xl text-indigo-100 mb-10">
+        <h2 id="interests-heading" class="font-plus-jakarta-sans font-bold text-2xl text-slate-800 dark:text-indigo-100 mb-10">
           {{ $t('aboutPage.interestsInTech') }}
         </h2>
         <ul class="grid grid-cols-1 lg:grid-cols-3 gap-4 list-none p-0">

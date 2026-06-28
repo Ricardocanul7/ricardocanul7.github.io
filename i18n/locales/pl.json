@@ -1,4 +1,8 @@
 {
+    "themeToggle": {
+        "light": "Przełącz na tryb jasny",
+        "dark": "Przełącz na tryb ciemny"
+    },
     "skipToContent": "Przejdź do głównej treści",
     "appHeader": {
         "home": "Strona główna",

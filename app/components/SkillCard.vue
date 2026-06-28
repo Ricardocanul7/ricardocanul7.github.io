@@ -17,7 +17,7 @@ const { borderClasses, badgeClasses, glowClasses, iconClasses } = useColorMap(to
 
 <template>
   <article
-    class="group relative p-6 rounded-2xl bg-slate-800/40 border transition-all duration-300 ease-in-out flex flex-col gap-4"
+    class="group relative p-6 rounded-2xl bg-slate-100 dark:bg-slate-800/40 border transition-all duration-300 ease-in-out flex flex-col gap-4"
     :class="borderClasses"
   >
     <div
@@ -32,15 +32,15 @@ const { borderClasses, badgeClasses, glowClasses, iconClasses } = useColorMap(to
         </div>
         <span
           v-if="expertise"
-          class="font-jetbrains-mono text-sm font-bold px-2 py-1 text-emerald-300"
+          class="font-jetbrains-mono text-sm font-bold px-2 py-1 text-emerald-600 dark:text-emerald-300"
         >
           {{ expertise }}
         </span>
       </div>
-      <h3 class="font-plus-jakarta-sans font-bold text-2xl text-indigo-100 leading-tight">
+      <h3 class="font-plus-jakarta-sans font-bold text-2xl text-slate-800 dark:text-indigo-100 leading-tight">
         {{ title }}
       </h3>
-      <p class="font-inter text-sm text-slate-300 line-clamp-3">
+      <p class="font-inter text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
         {{ description }}
       </p>
       <ul class="flex flex-wrap gap-2 mt-auto pt-4 list-none p-0">
