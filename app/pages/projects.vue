@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const { data } = await useFetch('/api/projects')
 
 const localizedProjects = computed(() =>
@@ -35,8 +35,8 @@ onMounted(async () => {
 })
 
 usePageSeo({
-  title: $t('appHeader.projects'),
-  description: $t('projectsPage.listingDescription'),
+  title: t('appHeader.projects'),
+  description: t('projectsPage.listingDescription'),
   path: '/projects',
   keywords: 'Ricardo Canul, Projects, Portfolio, Web Development, Full-Stack Developer, PHP, Python, Laravel, Django, Shopware, Pimcore, Web Applications',
 })
@@ -51,7 +51,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
         name: 'Ricardo Canul - Projects',
-        description: $t('projectsPage.listingDescription'),
+        description: t('projectsPage.listingDescription'),
         url: 'https://ricardocanul7.github.io/projects',
         mainEntity: {
           '@type': 'ItemList',
@@ -91,29 +91,35 @@ useHead({
     </section>
 
     <section class="project-listing-section bg-slate-900 pb-10 text-center md:text-left relative">
-      <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/10 rounded-full blur-[100px] pointer-events-none z-0" />
-      <LayoutContainer class="position relative z-10">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out"
+      <div class="absolute top-1/2 left-1/10 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/10 rounded-full blur-[100px] pointer-events-none z-0" aria-hidden="true" />
+      <LayoutContainer class="relative z-10">
+        <ul
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out list-none p-0"
           :class="allImagesLoaded ? 'opacity-0 absolute pointer-events-none' : 'opacity-100'"
         >
-          <ProjectCardSkeleton v-for="(_, index) in data?.projects" :key="'skeleton-' + index" />
-        </div>
-        <div
+          <li v-for="(_, index) in data?.projects" :key="'skeleton-' + index" class="contents">
+            <ProjectCardSkeleton />
+          </li>
+        </ul>
+        <ul
           ref="gridRef"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-opacity duration-500 ease-in-out list-none p-0"
           :class="allImagesLoaded ? 'opacity-100' : 'opacity-0 absolute pointer-events-none'"
         >
-          <ProjectCard
+          <li
             v-for="(project, index) in data?.projects"
             :key="index"
-            :title="project.title"
-            :description="project.description"
-            :image="project.image"
-            :tags="project.tags"
-            :link="project.link"
-          />
-        </div>
+            class="contents"
+          >
+            <ProjectCard
+              :title="project.title"
+              :description="project.description"
+              :image="project.image"
+              :tags="project.tags"
+              :link="project.link"
+            />
+          </li>
+        </ul>
       </LayoutContainer>
     </section>
   </div>

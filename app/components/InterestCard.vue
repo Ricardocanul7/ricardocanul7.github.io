@@ -15,13 +15,14 @@ const { borderClasses, badgeClasses, glowClasses, categoryClasses } = useColorMa
 </script>
 
 <template>
-  <div
+  <article
     class="group relative p-6 rounded-2xl bg-slate-800/40 border transition-all duration-300 ease-in-out"
     :class="borderClasses"
   >
     <div
       class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
       :class="glowClasses"
+      aria-hidden="true"
     />
     <div class="relative z-10">
       <span
@@ -36,9 +37,11 @@ const { borderClasses, badgeClasses, glowClasses, categoryClasses } = useColorMa
       <p class="text-slate-400 font-inter text-sm leading-relaxed mb-6">
         {{ description }}
       </p>
-      <div v-if="tags" class="flex flex-wrap gap-2">
-        <AppTag v-for="tag in tags" :key="tag" :tag="tag" :color="badgeClasses" />
-      </div>
+      <ul v-if="tags" class="flex flex-wrap gap-2 list-none p-0">
+        <li v-for="tag in tags" :key="tag">
+          <AppTag :tag="tag" :color="badgeClasses" />
+        </li>
+      </ul>
     </div>
-  </div>
+  </article>
 </template>

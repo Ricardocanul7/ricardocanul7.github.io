@@ -136,15 +136,20 @@ pnpm tsc --noEmit
 ```
 
 ### Usage in Code
-- Use `$t('key')` directly in `<script setup>` and `<template>` — no `useI18n()` destructuring needed for basic translations.
-- Only destructure `useI18n()` for other i18n features (e.g. `const { locale } = useI18n()` for locale-aware logic, or `const { tm, rt } = useI18n()` for rich/message arrays).
+- Use `$t('key')` directly in `<template>` blocks only.
+- In `<script setup>`, destructure `useI18n()` to get the `t` function: `const { t } = useI18n()`.
+- `$t` is a template-only compiler macro — it is NOT available in `<script setup>` and will cause ESLint `no-undef` errors.
 - Example:
-```ts
-// Correct - $t is available globally
-useSeoMeta({ title: $t('appHeader.home') })
+```vue
+<script setup lang="ts">
+const { t } = useI18n()
 
-// Unnecessary destructuring (avoid):
-const { t } = useI18n()   // ✗ not needed for $t
+useSeoMeta({ title: t('appHeader.home') })
+</script>
+
+<template>
+  <h1>{{ $t('appHeader.home') }}</h1>
+</template>
 ```
 
 ### Adding New Content

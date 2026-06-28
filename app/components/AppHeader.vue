@@ -26,7 +26,7 @@ const getClasses = (exact: boolean) => `${linkClasses} ${exact ? exactActiveClas
             </NuxtLink>
 
             <!-- Desktop Navigation -->
-            <nav class="font-inter hidden md:flex gap-6 text-sm font-semibold text-slate-400">
+            <nav :aria-label="$t('appHeader.mainNav')" class="font-inter hidden md:flex gap-6 text-sm font-semibold text-slate-400">
                 <NuxtLink 
                     v-for="link in navLinks" 
                     :key="link.path" 

@@ -8,8 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50 flex items-center gap-5">
-    <div class="icon-container text-violet-300 text-4xl">
+  <article class="mb-8 bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-700/50 flex items-center gap-5">
+    <div class="icon-container text-violet-300 text-4xl" aria-hidden="true">
       <Icon :name="icon" />
     </div>
     <div>
@@ -18,5 +18,5 @@ defineProps<{
       </h3>
       <p class="text-slate-400 font-inter italic">{{ institution }} &bull; {{ year }}</p>
     </div>
-  </div>
+  </article>
 </template>

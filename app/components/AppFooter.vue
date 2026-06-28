@@ -8,13 +8,15 @@ const footer = appConfig.footer;
         <LayoutContainer>
             <div class="w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
                 <p>{{ $t('appFooter.copy') }}</p>
-                <div class="flex gap-4">
-                    <div v-for="(link, index) in footer.socialLinks" :key="index" class="social-links">
-                        <a :href="link.link" class="font-inter text-xs font-semibold text-slate-300 hover:text-white hover:underline decoration-violet-300 transition-colors" target="_blank" rel="noopener noreferrer">
-                            {{link.name}}
-                        </a>
-                    </div>
-                </div>
+                <nav :aria-label="$t('appFooter.socialLinks')" class="flex gap-4">
+                    <ul class="flex gap-4 list-none p-0">
+                        <li v-for="(link, index) in footer.socialLinks" :key="index">
+                            <a :href="link.link" class="font-inter text-xs font-semibold text-slate-300 hover:text-white hover:underline decoration-violet-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                                {{link.name}}
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </LayoutContainer>
     </footer>

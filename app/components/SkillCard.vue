@@ -16,17 +16,18 @@ const { borderClasses, badgeClasses, glowClasses, iconClasses } = useColorMap(to
 </script>
 
 <template>
-  <div
+  <article
     class="group relative p-6 rounded-2xl bg-slate-800/40 border transition-all duration-300 ease-in-out flex flex-col gap-4"
     :class="borderClasses"
   >
     <div
       class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
       :class="glowClasses"
+      aria-hidden="true"
     />
     <div class="relative z-10 flex flex-col flex-1">
       <div class="flex justify-between items-start">
-        <div class="text-3xl" :class="iconClasses">
+        <div class="text-3xl" :class="iconClasses" aria-hidden="true">
           <Icon :name="icon" />
         </div>
         <span
@@ -42,9 +43,11 @@ const { borderClasses, badgeClasses, glowClasses, iconClasses } = useColorMap(to
       <p class="font-inter text-sm text-slate-300 line-clamp-3">
         {{ description }}
       </p>
-      <div class="flex flex-wrap gap-2 mt-auto pt-4">
-        <AppTag v-for="tag in tags" :key="tag" :tag="tag" :color="badgeClasses" />
-      </div>
+      <ul class="flex flex-wrap gap-2 mt-auto pt-4 list-none p-0">
+        <li v-for="tag in tags" :key="tag">
+          <AppTag :tag="tag" :color="badgeClasses" />
+        </li>
+      </ul>
     </div>
-  </div>
+  </article>
 </template>

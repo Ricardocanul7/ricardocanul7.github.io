@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-slate-950 text-white py-16">
+    <section id="home-about" class="bg-slate-950 text-white py-16" aria-labelledby="home-about-heading">
         <LayoutContainer>
             <LayoutRow>
                 <LayoutColumn span="5">
@@ -29,7 +29,7 @@
                 <LayoutColumn span="7" class="flex flex-col justify-center text-center md:text-left">
                     <div class="content text-center lg:text-left">
                         <span class="uppercase text-emerald-300 font-semibold font-inter text-xs">{{ $t('homeAbout.title') }}</span>
-                        <h2 class="text-2xl font-bold font-plus-jakarta-sans text-indigo-100 mb-4">
+                        <h2 id="home-about-heading" class="text-2xl font-bold font-plus-jakarta-sans text-indigo-100 mb-4">
                             {{ $t('homeAbout.header') }}
                         </h2>
                         <p 

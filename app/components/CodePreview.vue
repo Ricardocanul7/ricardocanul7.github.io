@@ -1,6 +1,6 @@
 <template>
   <div class="code-preview overflow-x-auto h-64">
-    <pre class="text-sm leading-relaxed whitespace-pre"><code class="font-liberation-mono" v-html="highlightedCode"></code></pre>
+    <pre class="text-sm leading-relaxed whitespace-pre"><code class="font-liberation-mono language-php" v-html="highlightedCode"></code></pre>
   </div>
 </template>
 

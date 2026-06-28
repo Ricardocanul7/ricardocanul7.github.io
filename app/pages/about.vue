@@ -1,7 +1,9 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 usePageSeo({
-  title: $t('appHeader.about'),
-  description: $t('aboutPage.description'),
+  title: t('appHeader.about'),
+  description: t('aboutPage.description'),
   path: '/about',
   keywords: 'Ricardo Canul, About, Full-Stack Developer, Software Engineer, PHP, Python, Web Development, AI, Machine Learning, Web Performance',
 })
@@ -59,45 +61,51 @@ useHead({
       </LayoutContainer>
     </section>
 
-    <section class="interests-section bg-slate-900 pt-16 pb-10 text-center md:text-left">
+    <section id="interests" class="interests-section bg-slate-900 pt-16 pb-10 text-center md:text-left" aria-labelledby="interests-heading">
       <LayoutContainer>
-        <h2 class="font-plus-jakarta-sans font-bold text-2xl text-indigo-100 mb-10">
+        <h2 id="interests-heading" class="font-plus-jakarta-sans font-bold text-2xl text-indigo-100 mb-10">
           {{ $t('aboutPage.interestsInTech') }}
         </h2>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <InterestCard
-            accent-color="emerald"
-            :category="$t('learning')"
-            :title="$t('aboutPage.interestItems.pythonForIA.title')"
-            :description="$t('aboutPage.interestItems.pythonForIA.description')"
-            :tags="['PyTorch', 'Data Science', 'Machine Learning']"
-            class="lg:col-span-2"
-          />
-          <InterestCard
-            accent-color="violet"
-            :category="$t('experience')"
-            :title="$t('aboutPage.interestItems.migration.title')"
-            :description="$t('aboutPage.interestItems.migration.description')"
-            :tags="null"
-            class="lg:col-span-1"
-          />
-          <InterestCard
-            accent-color="sky"
-            :category="$t('approach')"
-            :title="$t('aboutPage.interestItems.webPerformance.title')"
-            :description="$t('aboutPage.interestItems.webPerformance.description')"
-            :tags="null"
-            class="lg:col-span-1"
-          />
-          <InterestCard
-            accent-color="indigo"
-            :category="$t('philosophy')"
-            :title="$t('aboutPage.interestItems.networking.title')"
-            :description="$t('aboutPage.interestItems.networking.description')"
-            :tags="null"
-            class="lg:col-span-2"
-          />
-        </div>
+        <ul class="grid grid-cols-1 lg:grid-cols-3 gap-4 list-none p-0">
+          <li class="contents">
+            <InterestCard
+              class="lg:col-span-2"
+              accent-color="emerald"
+              :category="$t('learning')"
+              :title="$t('aboutPage.interestItems.pythonForIA.title')"
+              :description="$t('aboutPage.interestItems.pythonForIA.description')"
+              :tags="['PyTorch', 'Data Science', 'Machine Learning']"
+            />
+          </li>
+          <li class="contents">
+            <InterestCard
+              accent-color="violet"
+              :category="$t('experience')"
+              :title="$t('aboutPage.interestItems.migration.title')"
+              :description="$t('aboutPage.interestItems.migration.description')"
+              :tags="null"
+            />
+          </li>
+          <li class="contents">
+            <InterestCard
+              accent-color="sky"
+              :category="$t('approach')"
+              :title="$t('aboutPage.interestItems.webPerformance.title')"
+              :description="$t('aboutPage.interestItems.webPerformance.description')"
+              :tags="null"
+            />
+          </li>
+          <li class="contents">
+            <InterestCard
+              class="lg:col-span-2"
+              accent-color="indigo"
+              :category="$t('philosophy')"
+              :title="$t('aboutPage.interestItems.networking.title')"
+              :description="$t('aboutPage.interestItems.networking.description')"
+              :tags="null"
+            />
+          </li>
+        </ul>
       </LayoutContainer>
     </section>
   </div>

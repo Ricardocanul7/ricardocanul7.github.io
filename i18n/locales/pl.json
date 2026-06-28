@@ -1,14 +1,17 @@
 {
+    "skipToContent": "Przejdź do głównej treści",
     "appHeader": {
         "home": "Strona główna",
         "about": "O mnie",
         "projects": "Projekty",
         "experience": "Doświadczenie",
         "openMenu": "Otwórz menu",
-        "closeMenu": "Zamknij menu"
+        "closeMenu": "Zamknij menu",
+        "mainNav": "Nawigacja główna"
     },
     "appFooter": {
-        "copy": "Zbudowane z Nuxt 4 — Opracowane przez Ricardo Canul"
+        "copy": "Zbudowane z Nuxt 4 — Opracowane przez Ricardo Canul",
+        "socialLinks": "Linki społecznościowe"
     },
     "cookieConsent": {
         "title": "Zgoda na pliki cookie",

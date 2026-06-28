@@ -1,9 +1,10 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const { workExperience, education, certifications } = useExperienceData()
 
 usePageSeo({
-  title: $t('appHeader.experience'),
-  description: $t('experiencePage.summary.description'),
+  title: t('appHeader.experience'),
+  description: t('experiencePage.summary.description'),
   path: '/experience',
   keywords: 'Ricardo Canul, Experience, Full-Stack Developer, Software Engineer, PHP, Python, Laravel, Django, Shopware, Pimcore, Work History, Education, Certifications',
 })
@@ -74,42 +75,48 @@ useHead({
         </LayoutRow>
       </LayoutContainer>
     </section>
-
-    <SeparatorHeading text="Skills" />
-    <section class="bg-slate-900 py-10">
+  
+    <SeparatorHeading text="Skills" id="skills-heading" />
+    <section id="skills" class="bg-slate-900 py-10" aria-labelledby="skills-heading">
       <LayoutContainer>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <SkillCard
-            icon="material-symbols:terminal"
-            :title="$t('experiencePage.skills.backendDevelopment.title')"
-            :description="$t('experiencePage.skills.backendDevelopment.description')"
-            :tags="['PHP', 'Python', 'Laravel', 'Django']"
-            :expertise="null"
-          />
-          <SkillCard
-            icon="material-symbols:api"
-            :title="$t('experiencePage.skills.apiDesign.title')"
-            :description="$t('experiencePage.skills.apiDesign.description')"
-            :tags="['FastAPI', 'OpenAPI', 'JWT', 'OAuth2']"
-            :expertise="null"
-          />
-          <SkillCard
-            icon="material-symbols:database-outline"
-            :title="$t('experiencePage.skills.dataAndDevOps.title')"
-            :description="$t('experiencePage.skills.dataAndDevOps.description')"
-            :tags="['PostgreSQL', 'Docker', 'CI/CD', 'Redis']"
-            :expertise="null"
-          />
-        </div>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 list-none p-0">
+          <li class="contents">
+            <SkillCard
+              icon="material-symbols:terminal"
+              :title="$t('experiencePage.skills.backendDevelopment.title')"
+              :description="$t('experiencePage.skills.backendDevelopment.description')"
+              :tags="['PHP', 'Python', 'Laravel', 'Django']"
+              :expertise="null"
+            />
+          </li>
+          <li class="contents">
+            <SkillCard
+              icon="material-symbols:api"
+              :title="$t('experiencePage.skills.apiDesign.title')"
+              :description="$t('experiencePage.skills.apiDesign.description')"
+              :tags="['FastAPI', 'OpenAPI', 'JWT', 'OAuth2']"
+              :expertise="null"
+            />
+          </li>
+          <li class="contents">
+            <SkillCard
+              icon="material-symbols:database-outline"
+              :title="$t('experiencePage.skills.dataAndDevOps.title')"
+              :description="$t('experiencePage.skills.dataAndDevOps.description')"
+              :tags="['PostgreSQL', 'Docker', 'CI/CD', 'Redis']"
+              :expertise="null"
+            />
+          </li>
+        </ul>
       </LayoutContainer>
     </section>
-
-    <section class="bg-slate-900 pt-16 pb-10 text-center lg:text-left">
+  
+    <section id="work-experience" class="bg-slate-900 pt-16 pb-10 text-center lg:text-left" aria-labelledby="work-experience-heading">
       <LayoutContainer>
         <LayoutRow>
           <LayoutColumn span="4">
             <div class="content">
-              <h2 class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-4">
+              <h2 id="work-experience-heading" class="font-plus-jakarta-sans font-extrabold text-5xl text-indigo-100 mb-4">
                 {{ $t('experiencePage.workExperience.title') }}
               </h2>
               <p class="font-inter text-base text-slate-300">
@@ -118,45 +125,51 @@ useHead({
             </div>
           </LayoutColumn>
           <LayoutColumn span="8">
-            <WorkExperience
-              v-for="(experience, index) in workExperience"
-              :key="index"
-              :dates="experience.dates"
-              :title="experience.title"
-              :description-points="experience.descriptionPoints"
-            />
+            <ol class="list-none p-0">
+              <li v-for="(experience, index) in workExperience" :key="index" class="contents">
+                <WorkExperience
+                  :dates="experience.dates"
+                  :title="experience.title"
+                  :description-points="experience.descriptionPoints"
+                />
+              </li>
+            </ol>
           </LayoutColumn>
         </LayoutRow>
       </LayoutContainer>
     </section>
-
+  
     <div class="bg-slate-900">
       <LayoutContainer>
         <div class="grid grid-cols-1 lg:grid-cols-2 bg-slate-900">
-          <section class="education-section">
-            <SectionHeading icon="material-symbols:school-outline" :title="$t('experiencePage.education')" />
+          <section id="education" class="education-section" aria-labelledby="education-heading">
+              <SectionHeading icon="material-symbols:school-outline" :title="$t('experiencePage.education')" id="education-heading" />
             <div class="bg-slate-900 py-10 px-4 md:px-10">
-              <EducationCard
-                v-for="(edu, index) in education"
-                :key="index"
-                :degree="edu.degree"
-                :institution="edu.institution"
-                :dates="edu.dates"
-              />
+              <ul class="list-none p-0">
+                <li v-for="(edu, index) in education" :key="index" class="contents">
+                  <EducationCard
+                    :degree="edu.degree"
+                    :institution="edu.institution"
+                    :dates="edu.dates"
+                  />
+                </li>
+              </ul>
             </div>
           </section>
-
-          <section class="certifications-section">
-            <SectionHeading icon="material-symbols:verified-outline" :title="$t('experiencePage.certifications')" />
+  
+          <section id="certifications" class="certifications-section" aria-labelledby="certifications-heading">
+              <SectionHeading icon="material-symbols:verified-outline" :title="$t('experiencePage.certifications')" id="certifications-heading" />
             <div class="bg-slate-900 py-10 px-4 md:px-10">
-              <CertificationCard
-                v-for="(cert, index) in certifications"
-                :key="index"
-                :icon="cert.icon"
-                :title="cert.title"
-                :institution="cert.institution"
-                :year="cert.year"
-              />
+              <ul class="list-none p-0">
+                <li v-for="(cert, index) in certifications" :key="index" class="contents">
+                  <CertificationCard
+                    :icon="cert.icon"
+                    :title="cert.title"
+                    :institution="cert.institution"
+                    :year="cert.year"
+                  />
+                </li>
+              </ul>
             </div>
           </section>
         </div>

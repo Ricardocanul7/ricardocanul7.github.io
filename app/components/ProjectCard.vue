@@ -21,13 +21,14 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
 </script>
 
 <template>
-  <div
+  <article
     class="group relative rounded-2xl bg-slate-800/40 border overflow-hidden transition-all duration-300 ease-in-out flex flex-col h-full"
     :class="borderClasses"
   >
     <div
       class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
       :class="glowClasses"
+      aria-hidden="true"
     />
     <div class="aspect-video overflow-hidden bg-slate-950 relative z-10">
       <NuxtPicture
@@ -37,15 +38,17 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
         width="480"
         :img-attrs="{
           alt: localizedTitle,
-          loading: 'eager',
+          loading: 'lazy',
           class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500',
         }"
       />
     </div>
     <div class="p-6 flex flex-col grow relative z-10">
-      <div class="flex flex-wrap gap-2 mb-4">
-        <AppTag v-for="tag in tags" :key="tag" :tag="tag" :color="badgeClasses" />
-      </div>
+      <ul class="flex flex-wrap gap-2 mb-4 list-none p-0">
+        <li v-for="tag in tags" :key="tag">
+          <AppTag :tag="tag" :color="badgeClasses" />
+        </li>
+      </ul>
       <h2 :class="titleClasses">
         {{ localizedTitle }}
       </h2>
@@ -66,5 +69,5 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
         />
       </a>
     </div>
-  </div>
+  </article>
 </template>
