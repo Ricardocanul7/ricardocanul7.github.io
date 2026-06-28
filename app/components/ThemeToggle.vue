@@ -22,7 +22,7 @@ const toggle = () => {
         isDark ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-0 opacity-0'
       ]"
     >
-      <Icon name="lucide:moon" class="w-4 h-4" />
+      <Icon name="lucide:moon" class="w-4 h-4 text-slate-200 dark:text-indigo-300" />
     </span>
     <span
       :class="[
