@@ -21,7 +21,7 @@ useHead(() => ({
             {{ $t('skipToContent') }}
         </a>
         <AppHeader />
-        <main id="main-content" class="page-content grow">
+        <main id="main-content" class="page-content grow flex flex-col">
             <slot />
         </main>
         <AppFooter />

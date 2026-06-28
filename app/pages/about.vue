@@ -25,7 +25,7 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col grow">
     <section class="intro-section bg-slate-100 dark:bg-slate-900 pt-16 pb-10 text-center lg:text-left">
       <LayoutContainer>
         <LayoutRow>
@@ -61,7 +61,7 @@ useHead({
       </LayoutContainer>
     </section>
 
-    <section id="interests" class="interests-section bg-slate-100 dark:bg-slate-900 pt-16 pb-10 text-center md:text-left" aria-labelledby="interests-heading">
+    <section id="interests" class="interests-section bg-slate-100 dark:bg-slate-900 pt-16 pb-10 flex-1 text-center md:text-left" aria-labelledby="interests-heading">
       <LayoutContainer>
         <h2 id="interests-heading" class="font-plus-jakarta-sans font-bold text-2xl text-slate-800 dark:text-indigo-100 mb-10">
           {{ $t('aboutPage.interestsInTech') }}
