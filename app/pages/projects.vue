@@ -3,11 +3,17 @@ const { t, locale } = useI18n()
 const { data } = await useFetch('/api/projects')
 
 const localizedProjects = computed(() =>
-  data.value?.projects?.map(project => ({
-    ...project,
-    localizedTitle: project.title[locale.value] ?? project.title.en,
-    localizedDescription: project.description[locale.value] ?? project.description.en,
-  })) ?? []
+  (data.value?.projects ?? [])
+    .sort((a, b) => {
+      if (a.active && !b.active) return -1
+      if (!a.active && b.active) return 1
+      return 0
+    })
+    .map(project => ({
+      ...project,
+      localizedTitle: project.title[locale.value] ?? project.title.en,
+      localizedDescription: project.description[locale.value] ?? project.description.en,
+    }))
 )
 
 const allImagesLoaded = ref(false)
@@ -107,7 +113,7 @@ useHead({
           :class="allImagesLoaded ? 'opacity-100' : 'opacity-0 absolute pointer-events-none'"
         >
           <li
-            v-for="(project, index) in data?.projects"
+            v-for="(project, index) in localizedProjects"
             :key="index"
             class="contents"
           >
