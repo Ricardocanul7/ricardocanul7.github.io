@@ -1,7 +1,23 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+const isDark = ref(true)
 
-const isDark = computed(() => colorMode.value === 'dark')
+const observer = ref()
+
+onMounted(() => {
+  isDark.value = document.documentElement.classList.contains('dark')
+
+  observer.value = new MutationObserver(() => {
+    isDark.value = document.documentElement.classList.contains('dark')
+  })
+  observer.value.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+})
+
+onUnmounted(() => {
+  if (observer.value) {
+    observer.value.disconnect()
+  }
+})
 
 const toggle = () => {
   colorMode.preference = isDark.value ? 'light' : 'dark'
