@@ -7,7 +7,6 @@ const navLinks = [
   { name: 'appHeader.home', path: '/', exact: true },
   { name: 'appHeader.projects', path: '/projects', exact: false },
   { name: 'appHeader.experience', path: '/experience', exact: false },
-  { name: 'appHeader.about', path: '/about', exact: false },
 ];
 
 const linkClasses = "hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-indigo-500 after:scale-x-0 after:transition-transform after:origin-left";
