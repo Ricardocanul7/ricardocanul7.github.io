@@ -7,10 +7,12 @@ interface Props {
   image: string
   tags: string[]
   link: string
+  active?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   accentColor: 'sky',
+  active: true,
 })
 
 const { locale } = useI18n()
@@ -56,6 +58,7 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
         {{ localizedDescription }}
       </p>
       <a
+        v-if="active"
         :href="link"
         target="_blank"
         rel="noopener noreferrer"
@@ -68,6 +71,13 @@ const localizedDescription = computed(() => props.description[locale.value] ?? p
           class="transform group-hover:translate-x-1 transition-transform"
         />
       </a>
+      <span
+        v-else
+        aria-disabled="true"
+        class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border transition-colors font-inter text-xs font-semibold border-slate-300 dark:border-slate-600 text-slate-400 dark:text-slate-500 opacity-60 cursor-not-allowed"
+      >
+        {{ $t('projectsPage.notLiveMessage') }}
+      </span>
     </div>
   </article>
 </template>

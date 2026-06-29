@@ -117,6 +117,7 @@ useHead({
               :image="project.image"
               :tags="project.tags"
               :link="project.link"
+              :active="project.active"
             />
           </li>
         </ul>

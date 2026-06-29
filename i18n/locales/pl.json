@@ -71,7 +71,8 @@
     "projectsPage": {
         "viewProject": "Odwiedź",
         "featuredProjects": "Wyróżnione projekty",
-        "listingDescription": "Kolekcja aplikacji webowych i skalowalnych systemów opracowanych z precyzją techniczną i skupieniem na doświadczeniu użytkownika."
+        "listingDescription": "Kolekcja aplikacji webowych i skalowalnych systemów opracowanych z precyzją techniczną i skupieniem na doświadczeniu użytkownika.",
+        "notLiveMessage": "Już niedostępne"
     },
     "experiencePage": {
         "summary": {

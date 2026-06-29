@@ -15,7 +15,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}family-tree-project.webp`,
       link: "https://github.com/Ricardocanul7/family-tree-generator",
-      tags: ['PHP', 'Laravel', 'Filament', 'Tailwindcss', 'JavaScript', 'CSS', 'Docker', 'MySQL']
+      tags: ['PHP', 'Laravel', 'Filament', 'Tailwindcss', 'JavaScript', 'CSS', 'Docker', 'MySQL'],
+      active: true
     },
     {
       title: {
@@ -30,7 +31,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}bc-studio.png`,
       link: "https://bcstudio.com.mx/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -45,7 +47,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}gomart.png`,
       link: "https://gomart.com.mx/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -60,7 +63,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}torneo-de-golf-2025.png`,
       link: "https://torneogolfccq.com/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: false
     },
     {
       title: {
@@ -75,7 +79,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}nenisclub.png`,
       link: "https://nenisclub.mx/",
-      tags: ['HubSpot', 'HTML', 'SCSS', 'JavaScript']
+      tags: ['HubSpot', 'HTML', 'SCSS', 'JavaScript'],
+      active: true
     },
     {
       title: {
@@ -90,7 +95,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}inmobiliaria110.png`,
       link: "https://inmobiliaria110.com/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -105,7 +111,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}sistemico.png`,
       link: "https://sistemico.mx/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -120,7 +127,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}asso-desarrollos.png`,
       link: "https://assodesarrollo.com/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'Vue 2', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'Vue 2', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -135,7 +143,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}electromax.png`,
       link: "https://electromax.com.mx/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -150,7 +159,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}triventto-2.png`,
       link: "https://triventto.mx",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -165,7 +175,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}caminata.png`,
       link: "https://caminata.c-urbano.com",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: true
     },
     {
       title: {
@@ -180,7 +191,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}cuanticapizza.png`,
       link: "https://cuanticapizza.com",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: false
     },
     {
       title: {
@@ -195,7 +207,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}primus.png`,
       link: "https://primusrealtygroup.com/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: false
     },
     {
       title: {
@@ -210,7 +223,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}decomarmol.png`,
       link: "https://decomarmol.com.mx/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: false
     },
     {
       title: {
@@ -225,7 +239,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}terrakaan.png`,
       link: "https://terrakaan.org/",
-      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP']
+      tags: ['PHP', 'HTML', 'SCSS', 'JavaScript', 'CakePHP'],
+      active: false
     },
     {
       title: {
@@ -240,7 +255,8 @@ export default defineEventHandler((event) => {
       },
       image: `${imagesDirectory}enigma-project.png`,
       link: "https://github.com/Ricardocanul7/enigma-project",
-      tags: ['C', 'Makefile']
+      tags: ['C', 'Makefile'],
+      active: true
     }
   ]
 

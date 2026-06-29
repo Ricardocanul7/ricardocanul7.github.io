@@ -71,7 +71,8 @@
     "projectsPage": {
         "viewProject": "Visit",
         "featuredProjects": "Featured projects",
-        "listingDescription": " A collection of web applications and scalable systems developed with technical precision and a focus on user experience."
+        "listingDescription": " A collection of web applications and scalable systems developed with technical precision and a focus on user experience.",
+        "notLiveMessage": "No longer available"
     },
     "experiencePage": {
         "summary": {

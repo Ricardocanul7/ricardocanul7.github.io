@@ -71,7 +71,8 @@
     "projectsPage": {
         "viewProject": "Visitar",
         "featuredProjects": "Proyectos destacados",
-        "listingDescription": "Una colección de aplicaciones web y sistemas escalables desarrollados con precisión técnica y un enfoque en la experiencia del usuario."
+        "listingDescription": "Una colección de aplicaciones web y sistemas escalables desarrollados con precisión técnica y un enfoque en la experiencia del usuario.",
+        "notLiveMessage": "Ya no disponible"
     },
     "experiencePage": {
         "summary": {
